@@ -46,13 +46,13 @@ import {
 
 // Web app's Firebase configuration
 export const firebaseConfig = {
-  apiKey: "AIzaSyBpgYE2OzLBDgwHdgoT6brXR9hXVGyHzr8",
-  authDomain: "waltaircabs-58d0d.firebaseapp.com",
-  projectId: "waltaircabs-58d0d",
-  storageBucket: "waltaircabs-58d0d.firebasestorage.app",
-  messagingSenderId: "821723482456",
-  appId: "1:821723482456:web:8daea51c8f6a5427167d2d",
-  measurementId: "G-4MX7ZXV2JW"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyCU9Zb2n7EWAOqdCJvD3G0o18lM7F_io8Y",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "tiyanshi-24e57.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "tiyanshi-24e57",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "tiyanshi-24e57.firebasestorage.app",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "180027974200",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:180027974200:web:b710f07cf0318f696dbccd",
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-YCPB7801HR"
 };
 
 // Initialize Firebase
