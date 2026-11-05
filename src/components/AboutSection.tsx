@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  ShieldCheck, 
-  Award, 
-  Users, 
-  Clock, 
-  Plane, 
-  ChevronDown, 
+import {
+  ShieldCheck,
+  Award,
+  Users,
+  Clock,
+  Plane,
+  ChevronDown,
   CheckCircle2
 } from 'lucide-react';
 import { FAQS } from '../data/mockData';
@@ -20,8 +20,8 @@ export const AboutSection: React.FC = () => {
 
   const trustPillars = [
     {
-      title: 'Bhogapuram Express',
-      desc: 'Dedicated round-the-clock connectivity to Bhogapuram ASI Airport.',
+      title: 'Kempegowda BLR Express',
+      desc: 'Dedicated round-the-clock connectivity to Kempegowda BLR Airport (T1 & T2).',
       icon: Plane,
       color: 'teal'
     },
@@ -48,22 +48,22 @@ export const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-16 sm:py-20 bg-white border-b border-slate-200/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* About Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-14 sm:mb-18">
-          
+
           {/* Left Column: Story & Trust Pillars */}
           <div className="lg:col-span-6 space-y-5">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-100 text-teal-800 text-xs font-semibold">
-              <span>Visakhapatnam's Dedicated Cab Network</span>
+              <span>Bangalore's Dedicated Airport Cab Network</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Setting New Standards for Airport & Intercity Travel in Andhra Pradesh
+              Setting New Standards for Airport & Intercity Travel in Bengaluru & Karnataka
             </h2>
 
             <p className="text-slate-600 text-xs sm:text-sm sm:leading-relaxed leading-normal">
-              Founded to eliminate last-minute ride cancellations and opaque surge charges, <strong>Waltair Cabs</strong> has grown into the region's preferred cab service. Whether landing at Bhogapuram International Airport (ASI) or touring Araku Valley, we guarantee punctuality, safety, and fixed transparent tariffs.
+              Founded to eliminate last-minute ride cancellations and opaque surge charges, <strong>Tiyanshi Airport Taxi</strong> has grown into the region's preferred cab service. Whether landing at Kempegowda International Airport (BLR) or touring Mysore and Nandi Hills, we guarantee punctuality, safety, and fixed transparent tariffs.
             </p>
 
             {/* 4 Trust Pillars */}
@@ -88,10 +88,10 @@ export const AboutSection: React.FC = () => {
             <div className="p-4 rounded-2xl bg-gradient-to-r from-teal-900 via-slate-900 to-teal-950 text-white flex flex-col sm:flex-row items-center justify-between gap-3 shadow-md">
               <div>
                 <div className="text-[11px] text-teal-200 font-medium">Need Urgent Ride Dispatch?</div>
-                <div className="text-sm sm:text-base font-bold text-white">24/7 Control Desk: +91 94418 73821</div>
+                <div className="text-sm sm:text-base font-bold text-white">24/7 Control Desk: +91 76762 52579</div>
               </div>
               <a
-                href="tel:+919441873821"
+                href="tel:+917676252579"
                 className="px-4 py-2 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-bold transition-colors whitespace-nowrap cursor-pointer"
               >
                 Call Hotline
@@ -102,17 +102,17 @@ export const AboutSection: React.FC = () => {
 
           {/* Right Column: Stats Bento Grid */}
           <div className="lg:col-span-6 grid grid-cols-2 gap-3.5 sm:gap-4">
-            
-            <motion.div 
+
+            <motion.div
               whileHover={{ y: -3 }}
               className="bg-slate-50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-xs text-center space-y-1.5"
             >
               <div className="text-3xl sm:text-4xl font-extrabold text-teal-800">50k+</div>
               <div className="text-xs sm:text-sm font-bold text-slate-900">Airport Trips</div>
-              <p className="text-[11px] text-slate-500 leading-snug">VTZ & Bhogapuram international routes</p>
+              <p className="text-[11px] text-slate-500 leading-snug">Kempegowda BLR Airport (T1 & T2) routes</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               whileHover={{ y: -3 }}
               className="bg-slate-50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-xs text-center space-y-1.5"
             >
@@ -121,7 +121,7 @@ export const AboutSection: React.FC = () => {
               <p className="text-[11px] text-slate-500 leading-snug">Over 12,000+ verified customer reviews</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               whileHover={{ y: -3 }}
               className="bg-slate-50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-xs text-center space-y-1.5"
             >
@@ -130,7 +130,7 @@ export const AboutSection: React.FC = () => {
               <p className="text-[11px] text-slate-500 leading-snug">Dzire, Ertiga, Carens, Fronx & Crysta</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               whileHover={{ y: -3 }}
               className="bg-slate-50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-xs text-center space-y-1.5"
             >

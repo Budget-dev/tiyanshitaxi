@@ -11,8 +11,8 @@ import {
 } from '../firebase';
 import { LeadFootprint, LeadStatus, RegisteredUserProfile } from '../types';
 
-const LEAD_SESSION_KEY = 'waltair_lead_session_id';
-const LOCAL_LEADS_KEY = 'waltair_local_leads';
+const LEAD_SESSION_KEY = 'tiyanshi_lead_session_id';
+const LOCAL_LEADS_KEY = 'tiyanshi_local_leads';
 
 async function getAdminAuthHeaders(): Promise<Record<string, string>> {
   try {
@@ -59,7 +59,7 @@ export function resetLeadSessionId(): string {
 // Local helper to read logged in user
 function getLoggedInUser() {
   try {
-    const raw = localStorage.getItem('waltair_user_session');
+    const raw = localStorage.getItem('tiyanshi_user_session');
     return raw ? JSON.parse(raw) : null;
   } catch {
     return null;
@@ -146,7 +146,7 @@ export function trackFieldFootprint(partialData: Partial<LeadFootprint>) {
 
   // 2. Dispatch custom in-browser event for open admin views
   try {
-    window.dispatchEvent(new CustomEvent('waltair_lead_captured', { detail: fullLead }));
+    window.dispatchEvent(new CustomEvent('tiyanshi_lead_captured', { detail: fullLead }));
   } catch {
     // ignore
   }
@@ -282,7 +282,7 @@ export async function updateLeadStatus(leadId: string, newStatus: LeadStatus, no
 
     // 2. Dispatch local notification
     if (updatedRecord) {
-      window.dispatchEvent(new CustomEvent('waltair_lead_captured', { detail: updatedRecord }));
+      window.dispatchEvent(new CustomEvent('tiyanshi_lead_captured', { detail: updatedRecord }));
     }
 
     // 3. Backend Persistent Server DB
@@ -319,7 +319,7 @@ export async function deleteLead(leadId: string) {
     }
 
     // 2. Dispatch event
-    window.dispatchEvent(new CustomEvent('waltair_lead_captured', { detail: { id: leadId, deleted: true } }));
+    window.dispatchEvent(new CustomEvent('tiyanshi_lead_captured', { detail: { id: leadId, deleted: true } }));
 
     // 3. Backend Persistent Server DB
     getAdminAuthHeaders().then(authHeaders => {
@@ -457,11 +457,11 @@ export function subscribeToLeads(callback: (leads: LeadFootprint[]) => void): ()
     callback(combined);
   };
 
-  window.addEventListener('waltair_lead_captured', handleLocalEvent);
+  window.addEventListener('tiyanshi_lead_captured', handleLocalEvent);
 
   return () => {
     unsubscribeFirestore();
-    window.removeEventListener('waltair_lead_captured', handleLocalEvent);
+    window.removeEventListener('tiyanshi_lead_captured', handleLocalEvent);
   };
 }
 

@@ -68,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   // Sync with session storage and custom auth change events so Navbar is 100% reactive
   const [localSession, setLocalSession] = useState<AppUser | null>(() => {
     try {
-      const saved = localStorage.getItem('waltair_user_session');
+      const saved = localStorage.getItem('tiyanshi_user_session');
       return saved ? JSON.parse(saved) : null;
     } catch {
       return null;
@@ -76,10 +76,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   });
 
   useEffect(() => {
-    let lastSaved = localStorage.getItem('waltair_user_session') || '';
+    let lastSaved = localStorage.getItem('tiyanshi_user_session') || '';
     const syncSession = () => {
       try {
-        const current = localStorage.getItem('waltair_user_session') || '';
+        const current = localStorage.getItem('tiyanshi_user_session') || '';
         if (current !== lastSaved) {
           lastSaved = current;
           setLocalSession(current ? JSON.parse(current) : null);
@@ -89,10 +89,10 @@ export const Navbar: React.FC<NavbarProps> = ({
       }
     };
     window.addEventListener('storage', syncSession);
-    window.addEventListener('waltair_auth_change', syncSession);
+    window.addEventListener('tiyanshi_auth_change', syncSession);
     return () => {
       window.removeEventListener('storage', syncSession);
-      window.removeEventListener('waltair_auth_change', syncSession);
+      window.removeEventListener('tiyanshi_auth_change', syncSession);
     };
   }, []);
 
@@ -125,8 +125,8 @@ export const Navbar: React.FC<NavbarProps> = ({
     closeAllDropdowns();
     setIsMobileMenuOpen(false);
     try {
-      localStorage.removeItem('waltair_user_session');
-      window.dispatchEvent(new Event('waltair_auth_change'));
+      localStorage.removeItem('tiyanshi_user_session');
+      window.dispatchEvent(new Event('tiyanshi_auth_change'));
     } catch (e) {
       console.warn('Session clear note:', e);
     }
@@ -182,21 +182,21 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span>Airport Express</span>
             </span>
             <span className="text-slate-200 truncate hidden sm:inline">
-              Visakhapatnam & Bhogapuram International Airport (ASI) Transfers • 24/7 Verified Fleet
+              Kempegowda International Airport (BLR) Transfers • 24/7 Verified Fleet
             </span>
             <span className="text-slate-200 truncate sm:hidden">
-              Bhogapuram ASI & Vizag Airport Cabs
+              Kempegowda BLR & Bangalore Airport Cabs
             </span>
           </div>
 
           <div className="flex items-center gap-4 shrink-0 font-medium">
             <a 
-              href="tel:+919441873821" 
+              href="tel:+917676252579" 
               onClick={() => trackPhoneClick('navbar_top')}
               className="text-teal-300 hover:text-white font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
             >
               <Phone className="w-3.5 h-3.5 text-teal-400" />
-              <span>+91 94418 73821</span>
+              <span>+91 76762 52579</span>
             </a>
             <span className="text-teal-700 hidden md:inline">•</span>
             <span className="text-emerald-400 text-[11px] font-semibold hidden md:inline">
@@ -219,20 +219,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl overflow-hidden shadow-xs group-hover:scale-105 transition-transform shrink-0 border border-teal-500/20 bg-slate-900 flex items-center justify-center">
             <img 
               src="/logo.png" 
-              alt="Waltair Cabs Logo" 
+              alt="Tiyanshi Airport Taxi Logo" 
               className="w-full h-full object-cover"
               onError={(e) => {
-                e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                e.currentTarget.src = '/logo.png';
               }}
             />
           </div>
           <div className="flex flex-col min-w-0">
             <div className="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 flex items-center leading-none whitespace-nowrap">
-              <span>Waltair</span>
-              <span className="text-teal-800 ml-1 font-black">Cabs</span>
+              <span>Tiyanshi</span>
+              <span className="text-teal-800 ml-1 font-black">Airport Taxi</span>
             </div>
             <span className="text-[8px] sm:text-[9px] tracking-wider uppercase font-semibold text-slate-400 mt-0.5 whitespace-nowrap">
-              Vizag & Outstation Taxi
+              Bangalore & Outstation Taxi
             </span>
           </div>
         </div>
@@ -304,7 +304,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     </div>
                     <div>
                       <div className="font-semibold text-xs sm:text-sm text-slate-900">Airport Taxi</div>
-                      <div className="text-[11px] text-slate-500">Bhogapuram ASI & VTZ transfers</div>
+                      <div className="text-[11px] text-slate-500">Kempegowda BLR Terminal 1 & 2 transfers</div>
                     </div>
                   </button>
 
@@ -437,7 +437,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-full border border-teal-200/80 bg-teal-50/70 text-slate-800 text-xs font-semibold shrink-0">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
             <MapPin className="w-3.5 h-3.5 text-teal-700 shrink-0" />
-            <span className="font-bold text-teal-950">Visakhapatnam (Vizag)</span>
+            <span className="font-bold text-teal-950">Bengaluru (Bangalore)</span>
             <span className="text-[10px] text-teal-700 bg-white/90 px-1.5 py-0.5 rounded-full font-bold border border-teal-200/60 ml-0.5">Hub</span>
           </div>
 
@@ -552,7 +552,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                           {activeUser.name ? activeUser.name.charAt(0).toUpperCase() : 'U'}
                         </div>
                         <div className="min-w-0 flex-1">
-                          <div className="font-bold text-slate-900 text-xs sm:text-sm truncate">{activeUser.name || 'Waltair Rider'}</div>
+                          <div className="font-bold text-slate-900 text-xs sm:text-sm truncate">{activeUser.name || 'Tiyanshi Rider'}</div>
                           <div className="text-[11px] text-slate-500 truncate">{activeUser.email || activeUser.phone || 'Verified Account'}</div>
                           <div className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded mt-0.5">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
@@ -650,16 +650,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                     <div className="w-8 h-8 rounded-lg overflow-hidden border border-teal-400/40 shadow-xs shrink-0 bg-slate-900 flex items-center justify-center">
                       <img 
                         src="/logo.png" 
-                        alt="Waltair Cabs" 
+                        alt="Tiyanshi Airport Taxi" 
                         className="w-full h-full object-cover" 
                         onError={(e) => {
-                          e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                          e.currentTarget.src = '/logo.png';
                         }}
                       />
                     </div>
                     <div>
-                      <div className="font-bold text-sm text-white">Waltair Cabs</div>
-                      <div className="text-[10px] text-teal-200">Visakhapatnam & Coastal AP</div>
+                      <div className="font-bold text-sm text-white">Tiyanshi Airport Taxi</div>
+                      <div className="text-[10px] text-teal-200">Bengaluru & Karnataka</div>
                     </div>
                   </div>
                   <button
@@ -684,7 +684,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       </div>
                       <div>
                         <div className="text-[10px] font-bold text-teal-800 uppercase tracking-wider">Primary Service Hub</div>
-                        <div className="text-xs font-bold text-slate-900">Visakhapatnam & ASI Airport</div>
+                        <div className="text-xs font-bold text-slate-900">Bengaluru & BLR Airport</div>
                       </div>
                     </div>
                     <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300/60 shrink-0">
@@ -702,7 +702,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     {[
                       { id: 'home', label: 'Home', icon: Car },
                       { id: 'services', label: 'Our Services', icon: Briefcase },
-                      { id: 'airport-taxi', label: 'Airport Taxi (ASI Bhogapuram)', icon: Plane },
+                      { id: 'airport-taxi', label: 'Airport Taxi (Kempegowda BLR)', icon: Plane },
                       { id: 'outstation', label: 'Outstation Cabs', icon: Compass },
                       { id: 'vizag-to-araku-cab', label: 'Vizag to Araku Cab (Borra Caves)', icon: Mountain },
                       { id: 'local-rentals', label: 'Hourly City Rentals', icon: Clock },
@@ -757,7 +757,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                   {/* 24/7 Helpline Card */}
                   <a
-                    href="tel:+919441873821"
+                    href="tel:+917676252579"
                     className="flex items-center justify-between p-3 rounded-2xl bg-teal-50 border border-teal-200 text-teal-950 font-medium text-xs transition-transform active:scale-98"
                   >
                     <div className="flex items-center gap-2">
@@ -766,7 +766,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       </div>
                       <div>
                         <div className="font-bold text-slate-900 text-xs">24/7 Booking Helpline</div>
-                        <div className="text-[10px] text-teal-700">+91 94418 73821</div>
+                        <div className="text-[10px] text-teal-700">+91 76762 52579</div>
                       </div>
                     </div>
                     <span className="text-[10px] font-bold px-2 py-1 bg-teal-800 text-white rounded-lg">Call</span>
@@ -780,7 +780,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                           {activeUser.name ? activeUser.name.charAt(0).toUpperCase() : 'U'}
                         </div>
                         <div className="min-w-0 flex-1">
-                          <div className="font-bold text-xs text-white truncate">{activeUser.name || 'Waltair Rider'}</div>
+                          <div className="font-bold text-xs text-white truncate">{activeUser.name || 'Tiyanshi Rider'}</div>
                           <div className="text-[10px] text-teal-300 truncate">{activeUser.email || activeUser.phone || 'Active Session'}</div>
                         </div>
                         <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 shrink-0">

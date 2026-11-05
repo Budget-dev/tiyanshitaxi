@@ -52,7 +52,7 @@ export class AiTravelService {
 
     try {
       const prompt = `
-You are the Chief Travel & Fleet Specialist for Waltair Cabs in Visakhapatnam, Andhra Pradesh.
+You are the Chief Travel & Fleet Specialist for Tiyanshi Airport Taxi in Bengaluru (Bangalore), Karnataka. You specialize in Kempegowda International Airport (BLR) transfers, Bangalore tech corridor routes, and Karnataka outstation tours to Mysore, Nandi Hills, Coorg, and Ooty.
 Generate a concise, highly practical, expert road trip itinerary and cab recommendation for:
 Destination: ${req.destination}
 Duration: ${req.durationDays} day(s)
@@ -89,7 +89,7 @@ Format your response strictly as JSON with this exact schema:
       const parsed = JSON.parse(text);
 
       const result: TravelAdviceResponse = {
-        answer: parsed.answer || 'Waltair Cabs offers door-to-door customized chauffeur-driven cabs.',
+        answer: parsed.answer || 'Tiyanshi Airport Taxi offers door-to-door customized chauffeur-driven cabs.',
         recommendedPlaces: Array.isArray(parsed.recommendedPlaces) ? parsed.recommendedPlaces : ['Araku Valley', 'Borra Caves', 'Katiki Waterfalls'],
         recommendedVehicle: parsed.recommendedVehicle || 'Toyota Innova Crysta (Best for Ghat Roads)',
         estimatedBudgetInr: typeof parsed.estimatedBudgetInr === 'number' ? parsed.estimatedBudgetInr : 3800,
@@ -144,8 +144,8 @@ Format your response strictly as JSON with this exact schema:
 
     if (isAirport) {
       return {
-        answer: `Waltair Cabs guarantees 100% on-time airport transfers for Visakhapatnam International Airport (VTZ) and the upcoming Bhogapuram Greenfield International Airport. Chauffeurs track real-time flight delays so you are never stranded.`,
-        recommendedPlaces: ['VTZ Departure Gate', 'Bhogapuram Aerocity Corridor', 'Rushikonda IT SEZ', 'City Center'],
+        answer: `Tiyanshi Airport Taxi guarantees 100% on-time airport transfers for Kempegowda International Airport (BLR Terminals 1 & 2). Chauffeurs track real-time flight delays so you are never stranded.`,
+        recommendedPlaces: ['BLR Terminal 1 & 2', 'Whitefield ITPL', 'Electronic City Phase 1', 'MG Road / Indiranagar'],
         recommendedVehicle: 'Swift Dzire Sedan or Toyota Innova for excessive airline luggage.',
         estimatedBudgetInr: 800,
         proTips: [
@@ -157,7 +157,7 @@ Format your response strictly as JSON with this exact schema:
     }
 
     return {
-      answer: `Enjoy a seamless journey to ${req.destination} with Waltair Cabs. Our verified chauffeurs guarantee prompt door-to-door pickup, clean sanitized vehicles, and transparent pricing.`,
+      answer: `Enjoy a seamless journey to ${req.destination} with Tiyanshi Airport Taxi. Our verified chauffeurs guarantee prompt door-to-door pickup, clean sanitized vehicles, and transparent pricing.`,
       recommendedPlaces: ['RK Beach', 'Kailasagiri Hilltop', 'Submarine Museum', 'Rushikonda Beach', 'Simhachalam Temple'],
       recommendedVehicle: 'Swift Dzire Sedan (Family of 4) or Innova (Family of 6-7)',
       estimatedBudgetInr: 2200,

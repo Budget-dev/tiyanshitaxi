@@ -188,10 +188,10 @@ export const ManageBookingModal: React.FC<ManageBookingModalProps> = ({
                 <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md border border-cyan-400/30 shrink-0 bg-slate-900 flex items-center justify-center">
                   <img 
                     src="/logo.png" 
-                    alt="Waltair Cabs" 
+                    alt="Tiyanshi Airport Taxi" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                      e.currentTarget.src = '/logo.png';
                     }}
                   />
                 </div>
@@ -463,7 +463,7 @@ export const ManageBookingModal: React.FC<ManageBookingModalProps> = ({
                       className="sm:col-span-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
                     >
                       <Share2 className="w-4 h-4" />
-                      <span>Share Booking to WhatsApp (9441873821)</span>
+                      <span>Share Booking to WhatsApp (7676252579)</span>
                     </a>
 
                     <button

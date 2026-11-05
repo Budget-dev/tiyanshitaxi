@@ -46,17 +46,17 @@ export const Hero: React.FC<HeroProps> = ({
 
   // Input states with precise coordinates support
   const [pickupLocation, setPickupLocation] = useState<string>(
-    'Alluri Sitharama Raju International Airport ASI , Bhogapuram'
+    'Kempegowda International Airport (BLR), Devanahalli'
   );
   const [pickupCoords, setPickupCoords] = useState<{ lat?: number; lng?: number } | null>({
-    lat: 18.0267,
-    lng: 83.4984,
+    lat: 13.1986,
+    lng: 77.7066,
   });
 
-  const [dropoffLocation, setDropoffLocation] = useState<string>('Siripuram Circle & Waltair Uplands, Visakhapatnam');
+  const [dropoffLocation, setDropoffLocation] = useState<string>('MG Road & Indiranagar, Bengaluru');
   const [dropoffCoords, setDropoffCoords] = useState<{ lat?: number; lng?: number } | null>({
-    lat: 17.7217,
-    lng: 83.3150,
+    lat: 12.9716,
+    lng: 77.5946,
   });
   
   // Format today's date YYYY-MM-DD
@@ -108,31 +108,33 @@ export const Hero: React.FC<HeroProps> = ({
     let newSub: TripSubType = subType;
     if (category === 'airport') {
       newSub = 'pickup';
-      newPickup = 'Alluri Sitharama Raju International Airport ASI , Bhogapuram';
+      newPickup = 'Kempegowda International Airport (BLR), Devanahalli';
       setSubType('pickup');
       setPickupLocation(newPickup);
-      setPickupCoords({ lat: 18.0267, lng: 83.4984 });
-      newDropoff = 'Siripuram Circle & Waltair Uplands, Visakhapatnam';
+      setPickupCoords({ lat: 13.1986,
+    lng: 77.7066 });
+      newDropoff = 'MG Road & Indiranagar, Bengaluru';
       setDropoffLocation(newDropoff);
-      setDropoffCoords({ lat: 17.7217, lng: 83.3150 });
+      setDropoffCoords({ lat: 12.9716,
+    lng: 77.5946 });
     } else if (category === 'outstation') {
       newSub = 'oneway';
-      newPickup = 'Visakhapatnam City Center';
+      newPickup = 'Bengaluru City Center (MG Road / Majestic)';
       setSubType('oneway');
       setPickupLocation(newPickup);
-      setPickupCoords({ lat: 17.7217, lng: 83.2929 });
-      newDropoff = 'Araku Valley (Hill Station)';
+      setPickupCoords({ lat: 12.9716, lng: 77.5946 });
+      newDropoff = 'Mysore Palace Heritage City';
       setDropoffLocation(newDropoff);
-      setDropoffCoords({ lat: 18.3273, lng: 82.8775 });
+      setDropoffCoords({ lat: 12.3051, lng: 76.6552 });
     } else if (category === 'local') {
       newSub = 'local_8hr';
-      newPickup = 'Visakhapatnam (Within City Limits)';
+      newPickup = 'Bengaluru (Within City Limits)';
       setSubType('local_8hr');
       setPickupLocation(newPickup);
-      setPickupCoords({ lat: 17.7217, lng: 83.2929 });
-      newDropoff = 'City Sightseeing & Full Day Rental (80 km / 8 hrs)';
+      setPickupCoords({ lat: 12.9716, lng: 77.5946 });
+      newDropoff = 'Bengaluru City Sightseeing & Tech Hubs (80 km / 8 hrs)';
       setDropoffLocation(newDropoff);
-      setDropoffCoords({ lat: 17.7819, lng: 83.3853 });
+      setDropoffCoords({ lat: 12.9756, lng: 77.6066 });
     }
     syncFootprint({ field: `Selected ${category.toUpperCase()} service`, service: category, sub: newSub, pickup: newPickup, dropoff: newDropoff });
   };
@@ -147,11 +149,11 @@ export const Hero: React.FC<HeroProps> = ({
     onInitiateBooking({
       serviceType,
       subType,
-      pickupLocation: pickupLocation || 'Visakhapatnam Airport (ASI / VTZ)',
-      dropoffLocation: dropoffLocation || 'Visakhapatnam City',
+      pickupLocation: pickupLocation || 'Kempegowda International Airport (BLR)',
+      dropoffLocation: dropoffLocation || 'Bengaluru City',
       travelDate: travelDate || today,
       pickupTime: pickupTime || '10:30',
-      phone: mobileNumber || '9876543210',
+      phone: mobileNumber || '7676252579',
       pickupCoords,
       dropoffCoords,
     });
@@ -159,17 +161,17 @@ export const Hero: React.FC<HeroProps> = ({
 
   return (
     <section id="home" className="relative min-h-[660px] lg:min-h-[720px] bg-slate-950 overflow-hidden flex items-center">
-      {/* Background Hero Visual: Golden-Hour Airport Taxi Arrival Visual */}
+      {/* Background Hero Visual: Bangalore Airport & Landmarks Taxi Hero Visual */}
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-banner.png"
-          alt="Waltair Cabs Golden-Hour Airport Taxi Arrival"
+          alt="Tiyanshi Airport Taxi - Bangalore Kempegowda Airport & City Landmarks"
           className="w-full h-full object-cover object-center scale-100"
           onError={(e) => {
-            e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Golden-Hour%20Airport%20Taxi%20Arrival%20(1).png';
+            e.currentTarget.src = '/hero-banner.jpg';
           }}
         />
-        {/* Balanced contrast overlays: deep slate vignette on left for booking card, bright clear view of taxi & coastline */}
+        {/* Balanced contrast overlays: deep slate vignette on left for booking card, bright clear view of taxi & skyline */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-slate-950/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/40" />
       </div>
@@ -190,7 +192,7 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="flex items-center justify-between gap-2 mb-3 pb-2.5 border-b border-slate-100 w-full">
                 <div className="flex items-center gap-1.5 text-xs text-slate-700 min-w-0">
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-                  <span className="font-bold text-slate-800 truncate">{currentCity || 'Visakhapatnam (Vizag), IN'}</span>
+                  <span className="font-bold text-slate-800 truncate">{currentCity || 'Bengaluru (Bangalore), IN'}</span>
                 </div>
 
                 <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-teal-50 border border-teal-200/80 text-[10.5px] sm:text-[11px] font-bold text-teal-800 whitespace-nowrap shrink-0">
@@ -247,11 +249,11 @@ export const Hero: React.FC<HeroProps> = ({
                         onClick={() => {
                           setSubType(tab.id as TripSubType);
                           if (tab.id === 'pickup') {
-                            setPickupLocation('Alluri Sitharama Raju International Airport ASI , Bhogapuram');
-                            setDropoffLocation('Siripuram Circle & Waltair Uplands, Visakhapatnam');
+                            setPickupLocation('Kempegowda International Airport (BLR), Devanahalli');
+                            setDropoffLocation('MG Road & Indiranagar, Bengaluru');
                           } else if (tab.id === 'drop') {
-                            setPickupLocation('Siripuram Circle & Waltair Uplands, Visakhapatnam');
-                            setDropoffLocation('Alluri Sitharama Raju International Airport ASI , Bhogapuram');
+                            setPickupLocation('MG Road & Indiranagar, Bengaluru');
+                            setDropoffLocation('Kempegowda International Airport (BLR), Devanahalli');
                           }
                         }}
                         className={`w-full py-1.5 sm:py-2 px-1 sm:px-2 rounded-full text-[10px] xs:text-[11px] sm:text-xs font-semibold text-center transition-all duration-200 cursor-pointer active:scale-95 flex items-center justify-center min-h-[32px] sm:min-h-[36px] ${
@@ -389,7 +391,8 @@ export const Hero: React.FC<HeroProps> = ({
                       POPULAR:
                     </span>
                     {[
-                      { name: '✈️ Bhogapuram ASI', loc: 'Alluri Sitharama Raju International Airport (ASI), Bhogapuram', coords: { lat: 18.0267, lng: 83.4984 } },
+                      { name: '✈️ Bhogapuram ASI', loc: 'Alluri Sitharama Raju International Airport (ASI), Bhogapuram', coords: { lat: 13.1986,
+    lng: 77.7066 } },
                       { name: '✈️ Vizag VTZ', loc: 'Visakhapatnam International Airport (VTZ), NAD Junction', coords: { lat: 17.7215, lng: 83.2245 } },
                       { name: '🚆 VSKP Station', loc: 'Visakhapatnam Junction Railway Station (VSKP)', coords: { lat: 17.7217, lng: 83.2929 } },
                       { name: '🏖️ Rushikonda', loc: 'Rushikonda Beach & IT SEZ, Visakhapatnam', coords: { lat: 17.7819, lng: 83.3853 } },
@@ -539,11 +542,11 @@ export const Hero: React.FC<HeroProps> = ({
                   <span className="truncate text-[11px] sm:text-xs">No cancellation fee • Guaranteed pickup</span>
                 </div>
                 <a
-                  href="tel:+919441873821"
+                  href="tel:+917676252579"
                   id="hero-call-link"
                   className="text-teal-800 hover:text-teal-950 font-semibold flex items-center gap-0.5 hover:underline shrink-0 text-[11px] sm:text-xs"
                 >
-                  <span>+91 94418 73821</span>
+                  <span>+91 76762 52579</span>
                   <ChevronRight className="w-3 h-3 shrink-0" />
                 </a>
               </div>
@@ -562,7 +565,7 @@ export const Hero: React.FC<HeroProps> = ({
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/75 backdrop-blur-md border border-teal-400/40 text-teal-300 text-xs font-semibold shadow-lg"
             >
               <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse shrink-0" />
-              <span>Official Airport & Intercity Taxi Partner in Visakhapatnam</span>
+              <span>Official Airport & Intercity Taxi Partner in Bengaluru</span>
             </motion.div>
 
             {/* Editorial Headline */}
@@ -579,7 +582,7 @@ export const Hero: React.FC<HeroProps> = ({
                 </span>
               </h1>
               <p className="text-slate-100 text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed pt-1 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] font-medium">
-                Experience seamless rides across Visakhapatnam, express transfers to Bhogapuram International Airport (ASI), and serene tours to Araku Valley with vetted professional chauffeurs.
+                Experience seamless rides across Bengaluru, express transfers to Kempegowda International Airport (BLR Terminals 1 & 2), and scenic tours to Mysore, Nandi Hills, and Coorg with vetted professional chauffeurs.
               </p>
             </motion.div>
 
@@ -621,7 +624,7 @@ export const Hero: React.FC<HeroProps> = ({
               <span className="font-semibold text-teal-200 uppercase tracking-wider text-[11px] bg-teal-950/80 px-2.5 py-1 rounded-md border border-teal-500/50 shadow-md">
                 Direct Airport Gate:
               </span>
-              <span className="drop-shadow-sm font-medium">Bhogapuram International Airport (ASI) & VTZ Terminal Cabs on Standby</span>
+              <span className="drop-shadow-sm font-medium">Kempegowda International Airport (BLR) Terminal 1 & 2 Cabs on Standby</span>
             </motion.div>
 
           </div>

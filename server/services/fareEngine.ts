@@ -38,6 +38,7 @@ const VEHICLE_PRICING: Record<
   {
     baseRatePerKm: number;
     airportFlatVizag: number;
+    airportFlatBLR: number;
     airportFlatBhogapuram: number;
     hourlyRate: number;
     minOutstationKmPerDay: number;
@@ -48,6 +49,7 @@ const VEHICLE_PRICING: Record<
     baseRatePerKm: 14,
     airportFlatVizag: 800,
     airportFlatBhogapuram: 1200,
+    airportFlatBLR: 1100,
     hourlyRate: 200,
     minOutstationKmPerDay: 300,
     driverBattaPerDay: 400,
@@ -56,6 +58,7 @@ const VEHICLE_PRICING: Record<
     baseRatePerKm: 18,
     airportFlatVizag: 1200,
     airportFlatBhogapuram: 1700,
+    airportFlatBLR: 1600,
     hourlyRate: 280,
     minOutstationKmPerDay: 300,
     driverBattaPerDay: 500,
@@ -64,6 +67,7 @@ const VEHICLE_PRICING: Record<
     baseRatePerKm: 22,
     airportFlatVizag: 1600,
     airportFlatBhogapuram: 2200,
+    airportFlatBLR: 2200,
     hourlyRate: 350,
     minOutstationKmPerDay: 300,
     driverBattaPerDay: 600,
@@ -72,6 +76,7 @@ const VEHICLE_PRICING: Record<
     baseRatePerKm: 12,
     airportFlatVizag: 700,
     airportFlatBhogapuram: 1050,
+    airportFlatBLR: 900,
     hourlyRate: 170,
     minOutstationKmPerDay: 300,
     driverBattaPerDay: 350,
@@ -80,6 +85,7 @@ const VEHICLE_PRICING: Record<
     baseRatePerKm: 28,
     airportFlatVizag: 2200,
     airportFlatBhogapuram: 3000,
+    airportFlatBLR: 2800,
     hourlyRate: 500,
     minOutstationKmPerDay: 350,
     driverBattaPerDay: 800,
@@ -133,7 +139,10 @@ export class FareEngineService {
         request.pickupLocation.toLowerCase().includes('bhogapuram') ||
         request.dropoffLocation.toLowerCase().includes('bhogapuram');
 
-      baseFare = isBhogapuram ? category.airportFlatBhogapuram : category.airportFlatVizag;
+      const isBLR = request.pickupLocation.toLowerCase().includes('kempegowda') || request.pickupLocation.toLowerCase().includes('blr') || request.dropoffLocation.toLowerCase().includes('kempegowda') || request.dropoffLocation.toLowerCase().includes('blr');
+      baseFare = isBLR ? (category.airportFlatBLR || 1100) : (isBhogapuram ? category.airportFlatBhogapuram : category.airportFlatVizag);
+      tollEstimate = isBLR ? 115 : (isBhogapuram ? 120 : 60);
+      minKmCharged = isBLR ? 40 : (isBhogapuram ? 55 : 25);
       tollEstimate = isBhogapuram ? 120 : 60;
       minKmCharged = isBhogapuram ? 55 : 25;
     }
@@ -212,9 +221,13 @@ export class FareEngineService {
     const p = request.pickupLocation.toLowerCase();
     const d = request.dropoffLocation.toLowerCase();
 
-    if (p.includes('airport') || d.includes('airport')) {
+    if (p.includes('airport') || d.includes('airport') || p.includes('kempegowda') || d.includes('kempegowda') || p.includes('blr') || d.includes('blr')) {
+      if (p.includes('blr') || d.includes('blr') || p.includes('kempegowda') || d.includes('kempegowda')) return 38;
       return p.includes('bhogapuram') || d.includes('bhogapuram') ? 55 : 20;
     }
+    if (d.includes('mysore')) return 145;
+    if (d.includes('nandi')) return 60;
+    if (d.includes('coorg')) return 260;
     if (d.includes('araku')) return 115;
     if (d.includes('lambasingi')) return 135;
     if (d.includes('srikakulam')) return 110;

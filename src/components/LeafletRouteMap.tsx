@@ -66,7 +66,7 @@ const KEY_TRANSIT_HUBS = [
     desc: 'Main Railway Terminal',
   },
   {
-    id: 'hub-waltair',
+    id: 'hub-tiyanshi',
     name: 'Siripuram / Waltair Uplands',
     short: 'Siripuram Circle',
     lat: 17.7230,
@@ -185,7 +185,7 @@ export const LeafletRouteMap: React.FC<LeafletRouteMapProps> = ({
   height = '320px',
   interactiveSelection = true,
   showTransitHubs = true,
-  cityCenter = { lat: 17.6868, lng: 83.2185 }, // Visakhapatnam center
+  cityCenter = { lat: 12.9716, lng: 77.5946 }, // Visakhapatnam center
 }) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);

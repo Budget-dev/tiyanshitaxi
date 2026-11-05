@@ -35,11 +35,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage }) => {
           </div>
           <div className="flex items-center gap-2">
             <a
-              href="tel:+919441873821"
+              href="tel:+917676252579"
               onClick={() => trackPhoneClick('footer_banner')}
               className="px-4 py-2.5 rounded-xl bg-white text-teal-900 font-bold text-xs hover:bg-teal-50"
             >
-              Call +91 94418 73821
+              Call +91 76762 52579
             </a>
             <a
               href="#booking"
@@ -65,21 +65,21 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage }) => {
               <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md border border-teal-500/30 shrink-0 group-hover:scale-105 transition-transform bg-slate-900 flex items-center justify-center">
                 <img 
                   src="/logo.png" 
-                  alt="Waltair Cabs" 
+                  alt="Tiyanshi Airport Taxi" 
                   className="w-full h-full object-cover" 
                   onError={(e) => {
-                    e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                    e.currentTarget.src = '/logo.png';
                   }}
                 />
               </div>
               <div className="text-xl font-bold tracking-tight text-white flex items-center">
-                <span>Waltair</span>
-                <span className="text-teal-400 ml-1 font-extrabold">Cabs</span>
+                <span>Tiyanshi</span>
+                <span className="text-teal-400 ml-1 font-extrabold">Airport Taxi</span>
               </div>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Your verified cab partner in Visakhapatnam. Guaranteed airport transfers to Bhogapuram ASI & VTZ, outstation trips, and Araku Valley tours with 100% transparent pricing.
+              Your verified airport taxi partner in Bangalore. Guaranteed airport transfers to Kempegowda International Airport (BLR), outstation trips to Mysore, Nandi Hills, and Coorg with 100% transparent pricing.
             </p>
 
             {/* Social Icons */}
@@ -221,20 +221,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage }) => {
             {/* Direct Contact Links */}
             <div className="pt-1 space-y-1.5 text-xs">
               <a 
-                href="tel:+919441873821" 
+                href="tel:+917676252579" 
                 onClick={() => trackPhoneClick('footer_contact')}
                 className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-teal-400 shrink-0" />
-                <span>+91 94418 73821</span>
+                <span>+91 76762 52579</span>
               </a>
-              <a href="mailto:info@waltairtravels.com" className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors">
+              <a href="mailto:info@tiyanshiairporttaxi.com" className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors">
                 <Mail className="w-3.5 h-3.5 text-teal-400 shrink-0" />
-                <span>info@waltairtravels.com</span>
+                <span>info@tiyanshiairporttaxi.com</span>
               </a>
               <div className="flex items-start gap-2 text-slate-300">
                 <MapPin className="w-3.5 h-3.5 text-teal-400 shrink-0 mt-0.5" />
-                <span>Visakhapatnam, Andhra Pradesh, India</span>
+                <span>Kempegowda International Airport Road, Devanahalli, Bengaluru, Karnataka 560300</span>
               </div>
             </div>
 
@@ -245,7 +245,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage }) => {
         {/* Bottom Copyright */}
         <div className="pt-8 border-t border-slate-900 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div>
-            © {new Date().getFullYear()} Waltair Cabs. All rights reserved. Registered Commercial Fleet Partner.
+            © {new Date().getFullYear()} Tiyanshi Airport Taxi. All rights reserved. Registered Commercial Fleet Partner.
           </div>
           <div className="flex items-center gap-3 text-[11px] text-slate-400">
             <button onClick={(e) => handleLinkClick(e, 'privacy-policy')} className="hover:text-teal-300 transition-colors cursor-pointer">Privacy</button>

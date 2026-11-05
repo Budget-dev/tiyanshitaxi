@@ -117,8 +117,8 @@ export const OurServicesPage: React.FC<OurServicesPageProps> = ({
       heroImage="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1600&q=80"
     >
       <SEOHead
-        title="Cab & Taxi Services in Vizag | Airport, Outstation & Rentals | Waltair Cabs"
-        description="Explore Waltair Cabs services in Visakhapatnam: Bhogapuram airport transfers, one-way outstation cabs, hourly city car rentals, and Araku sightseeing packages."
+        title="Cab & Taxi Services in Vizag | Airport, Outstation & Rentals | Tiyanshi Airport Taxi"
+        description="Explore Tiyanshi Airport Taxi services in Visakhapatnam: Bhogapuram airport transfers, one-way outstation cabs, hourly city car rentals, and Araku sightseeing packages."
         canonicalUrl="/services"
         keywords={["vizag cab services", "taxi services in vizag", "car rental visakhapatnam", "airport cab service", "outstation taxi vizag"]}
       />

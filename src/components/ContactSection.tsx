@@ -28,7 +28,7 @@ export const ContactSection: React.FC = () => {
     setIsSubmitting(true);
     const submissionData = {
       name: name.trim(),
-      email: email.trim() || 'not_provided@waltairtravels.com',
+      email: email.trim() || 'not_provided@tiyanshiairporttaxi.com',
       phone: phone.replace(/\D/g, ''),
       serviceType,
       message: message.trim(),
@@ -69,7 +69,7 @@ export const ContactSection: React.FC = () => {
             </h2>
 
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-              Have questions regarding Bhogapuram Airport terminal pickups, outstation tariffs, corporate GST invoicing, or custom Araku packages? Connect directly with our dispatch supervisors.
+              Have questions regarding Kempegowda Airport terminal pickups, outstation tariffs, corporate GST invoicing, or custom Mysore packages? Connect directly with our dispatch supervisors.
             </p>
 
             <div className="space-y-3 pt-2">
@@ -80,10 +80,9 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">24/7 Booking Helpline</div>
-                  <a href="tel:+919441873821" className="text-base sm:text-lg font-bold text-white hover:text-teal-300 transition-colors">
-                    +91 94418 73821
+                  <a href="tel:+917676252579" className="text-base sm:text-lg font-bold text-white hover:text-teal-300 transition-colors">
+                    +91 76762 52579
                   </a>
-                  <div className="text-xs text-slate-400">Toll Free: 1800 270 4567</div>
                 </div>
               </div>
 
@@ -94,10 +93,10 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Official Correspondence</div>
-                  <a href="mailto:info@waltairtravels.com" className="text-sm sm:text-base font-bold text-white hover:text-teal-300 transition-colors">
-                    info@waltairtravels.com
+                  <a href="mailto:info@tiyanshiairporttaxi.com" className="text-sm sm:text-base font-bold text-white hover:text-teal-300 transition-colors">
+                    info@tiyanshiairporttaxi.com
                   </a>
-                  <div className="text-xs text-slate-400">bookings@waltairtravels.com</div>
+                  <div className="text-xs text-slate-400">bookings@tiyanshiairporttaxi.com</div>
                 </div>
               </div>
 
@@ -107,11 +106,11 @@ export const ContactSection: React.FC = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Vizag Operations Hub</div>
+                  <div className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Bangalore Operations Hub</div>
                   <div className="text-xs sm:text-sm font-bold text-white">
-                    Waltair Uplands, VIP Road, Siripuram Circle
+                    Kempegowda International Airport Terminal Road, Devanahalli
                   </div>
-                  <div className="text-[11px] text-slate-400">Visakhapatnam, Andhra Pradesh 530003</div>
+                  <div className="text-[11px] text-slate-400">Bengaluru, Karnataka 560300</div>
                 </div>
               </div>
             </div>
@@ -137,7 +136,7 @@ export const ContactSection: React.FC = () => {
                   <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto" />
                   <h4 className="text-base font-bold text-emerald-200">Inquiry Received!</h4>
                   <p className="text-xs text-emerald-300">
-                    A Waltair Cabs trip coordinator will call you shortly on your provided mobile number.
+                    A Tiyanshi Airport Taxi trip coordinator will call you shortly on your provided mobile number.
                   </p>
                 </div>
               ) : (

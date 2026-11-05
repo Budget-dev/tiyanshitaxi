@@ -1,14 +1,14 @@
 import { Vehicle, TourPackage, PopularRoute, CustomerReview, NotificationItem, BlogPost } from '../types';
 
 export const CITIES = [
-  { id: 'vizag', name: 'Visakhapatnam, IN', label: 'Visakhapatnam (Vizag)' },
+  { id: 'Bangalore', name: 'Bengaluru, IN', label: 'Bengaluru (Bangalore)' },
 ];
 
 export const POPULAR_LOCATIONS = [
   'Alluri Sitharama Raju International Airport ASI , Bhogapuram',
-  'Visakhapatnam International Airport (VTZ), NAD Junction',
-  'Visakhapatnam Railway Station (Central)',
-  'Siripuram Circle & Waltair Uplands',
+  'Bengaluru International Airport (VTZ), NAD Junction',
+  'Bengaluru Railway Station (Central)',
+  'Kempegowda International Airport (BLR)',
   'MVP Colony & Sector 1-12',
   'Rushikonda IT Park & Beach Road',
   'Madhurawada & Yendada Hill View',
@@ -59,7 +59,7 @@ export const VEHICLE_FLEET: Vehicle[] = [
     baseFare: 900,
     baseKm: 20,
     extraKmRate: 17,
-    popularFor: 'Family trips, outstation tours, Bhogapuram airport & group travel',
+    popularFor: 'Family trips, outstation tours, Kempegowda BLR Airport & group travel',
     features: ['6+1 Passenger Seating', 'Roof AC Vents', 'Luggage Carrier Available', 'High Ground Clearance', 'Smooth Highway Ride']
   },
   {
@@ -143,21 +143,21 @@ export const TOUR_PACKAGES: TourPackage[] = [
     reviewsCount: 342,
     highlights: ['Borra Caves Stalactite Wonders', 'Katiki Waterfalls Trek', 'Padmapuram Botanical Gardens', 'Tribal Museum & Coffee House', 'Ananthagiri Hills Coffee Viewpoints'],
     itinerary: [
-      '06:30 AM: Pickup from Vizag hotel/home',
+      '06:30 AM: Pickup from Bangalore hotel/home',
       '08:30 AM: Scenic ghat road breakfast break at Tyda',
       '10:00 AM: Guided tour of million-year-old Borra Caves',
       '12:30 PM: Katiki Waterfalls jeep & trek (Optional)',
       '01:30 PM: Authentic bamboo chicken & Andhra lunch in Araku',
       '03:00 PM: Padmapuram Gardens & Araku Coffee Museum',
       '05:00 PM: Sunset view at Galikonda viewpoint',
-      '08:30 PM: Return drop at your doorstep in Visakhapatnam'
+      '08:30 PM: Return drop at your doorstep in Bengaluru'
     ],
     vehicleIncluded: 'Sedan / SUV / Innova as selected',
     category: 'hills'
   },
   {
-    id: 'vizag-city-coastal',
-    title: 'Vizag Coastal City & Heritage Grand Tour',
+    id: 'Bangalore-city-coastal',
+    title: 'Bangalore Coastal City & Heritage Grand Tour',
     subtitle: 'Rishikonda beach, submarine museum, aircraft museum, Kailasagiri & Thotlakonda',
     duration: '8 Hours (80 km)',
     distance: '80 km Included',
@@ -167,7 +167,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     reviewsCount: 512,
     highlights: ['INS Kursura Real Submarine Museum', 'TU-142 Aircraft War Museum', 'Kailasagiri Ropeway & Shiva Parvathi Statues', 'Rishikonda Blue Flag Beach', 'Thotlakonda Ancient Buddhist Heritage'],
     itinerary: [
-      '09:00 AM: Home/hotel pickup anywhere in Vizag',
+      '09:00 AM: Home/hotel pickup anywhere in Bangalore',
       '09:30 AM: Kailasagiri Hilltop panoramic bay view & ropeway',
       '11:30 AM: TU-142 Aircraft Museum & Kursura Submarine Museum',
       '01:30 PM: Coastal sea-facing lunch on Beach Road',
@@ -190,7 +190,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     reviewsCount: 220,
     highlights: ['Simhachalam 11th-century Kalinga architecture', 'Annavaram Ratnagiri Hilltop Temple', 'Pampa River Ghats', 'Special Darshan assistance coordination', 'Experienced devout driver'],
     itinerary: [
-      '06:00 AM: Early morning pickup from Vizag',
+      '06:00 AM: Early morning pickup from Bangalore',
       '07:00 AM: Simhachalam Temple Darshan & Chandanotsavam shrine',
       '09:30 AM: Highway drive towards Annavaram with breakfast break',
       '11:30 AM: Reach Ratnagiri Hills, Annavaram Satyanarayana Vratham & Darshan',
@@ -219,7 +219,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       '11:30 AM: Kothapalli Waterfalls hike & bamboo bridges',
       '02:00 PM: Traditional hill-station tribal lunch',
       '03:30 PM: Susan Garden yellow blossom fields (seasonal) & pine woods',
-      '08:00 PM: Safe return to Visakhapatnam'
+      '08:00 PM: Safe return to Bengaluru'
     ],
     vehicleIncluded: 'High-clearance SUV or Ertiga',
     category: 'hills'
@@ -228,9 +228,9 @@ export const TOUR_PACKAGES: TourPackage[] = [
 
 export const POPULAR_ROUTES: PopularRoute[] = [
   {
-    id: 'bhogapuram-vizag',
+    id: 'bhogapuram-Bangalore',
     from: 'Bhogapuram Int\'l Airport (ASI)',
-    to: 'Vizag City Center / Siripuram',
+    to: 'Bangalore City Center / Siripuram',
     distance: '42 km',
     duration: '45 mins',
     startingPrice: 899,
@@ -239,8 +239,8 @@ export const POPULAR_ROUTES: PopularRoute[] = [
     image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80'
   },
   {
-    id: 'vizag-araku',
-    from: 'Visakhapatnam',
+    id: 'Bangalore-araku',
+    from: 'Bengaluru',
     to: 'Araku Valley',
     distance: '115 km',
     duration: '3 hrs 15 mins',
@@ -250,8 +250,8 @@ export const POPULAR_ROUTES: PopularRoute[] = [
     image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80'
   },
   {
-    id: 'vizag-vijayawada',
-    from: 'Visakhapatnam',
+    id: 'Bangalore-vijayawada',
+    from: 'Bengaluru',
     to: 'Vijayawada',
     distance: '348 km',
     duration: '6 hrs 30 mins',
@@ -261,8 +261,8 @@ export const POPULAR_ROUTES: PopularRoute[] = [
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80'
   },
   {
-    id: 'vizag-rajahmundry',
-    from: 'Visakhapatnam',
+    id: 'Bangalore-rajahmundry',
+    from: 'Bengaluru',
     to: 'Rajahmundry',
     distance: '190 km',
     duration: '3 hrs 45 mins',
@@ -272,8 +272,8 @@ export const POPULAR_ROUTES: PopularRoute[] = [
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80'
   },
   {
-    id: 'vizag-srikakulam',
-    from: 'Visakhapatnam',
+    id: 'Bangalore-srikakulam',
+    from: 'Bengaluru',
     to: 'Srikakulam',
     distance: '105 km',
     duration: '2 hrs 15 mins',
@@ -283,8 +283,8 @@ export const POPULAR_ROUTES: PopularRoute[] = [
     image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80'
   },
   {
-    id: 'vizag-kakinada',
-    from: 'Visakhapatnam',
+    id: 'Bangalore-kakinada',
+    from: 'Bengaluru',
     to: 'Kakinada',
     distance: '152 km',
     duration: '3 hrs 10 mins',
@@ -300,10 +300,10 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
     id: 'rev-1',
     name: 'Suresh Varma K.',
     rating: 5,
-    location: 'Siripuram, Vizag',
-    serviceUsed: 'Bhogapuram Airport Drop',
+    location: 'Indiranagar, Bangalore',
+    serviceUsed: 'Kempegowda BLR Airport Drop',
     date: '2 days ago',
-    comment: 'Booked Waltair Cabs for my early 5:30 AM flight to Bhogapuram Airport. Driver Satish arrived 15 minutes before time, sanitized cab, smooth expressway drive. No surge pricing like other apps. Truly top notch!',
+    comment: 'Booked Tiyanshi Airport Taxi for my early 5:30 AM flight to Kempegowda BLR Airport. Driver Satish arrived 15 minutes before time, sanitized cab, smooth expressway drive. No surge pricing like other apps. Truly top notch!',
     verified: true,
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80'
   },
@@ -311,7 +311,7 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
     id: 'rev-2',
     name: 'Dr. Ananya Reddy',
     rating: 5,
-    location: 'MVP Colony, Vizag',
+    location: 'Whitefield, Bangalore',
     serviceUsed: 'Araku Valley 2-Day Tour',
     date: '1 week ago',
     comment: 'Took the Innova Crysta for family trip with elderly parents to Araku Valley. The driver was extremely polite, drove carefully on the hairpin bends, and showed us hidden scenic viewpoints. Great value for money!',
@@ -322,7 +322,7 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
     id: 'rev-3',
     name: 'Rohan Deshmukh',
     rating: 5,
-    location: 'Rushikonda IT SEZ, Vizag',
+    location: 'Electronic City, Bangalore',
     serviceUsed: 'Outstation to Vijayawada',
     date: '2 weeks ago',
     comment: 'Corporate booking was seamless. Instant tax invoice received on WhatsApp & email, live GPS tracking shared with my office team, and super clean Dzire sedan. Highly recommended!',
@@ -333,10 +333,10 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
     id: 'rev-4',
     name: 'Padma & Venkat Rao',
     rating: 5,
-    location: 'Gajuwaka, Vizag',
+    location: 'Koramangala, Bangalore',
     serviceUsed: 'Simhachalam & Annavaram Darshan',
     date: '3 weeks ago',
-    comment: 'Smooth and devotional trip to Simhachalam & Annavaram. The driver knew exact temple timings, parking spots, and assisted our parents with wheelchairs. God bless Waltair Cabs team!',
+    comment: 'Smooth and devotional trip to Simhachalam & Annavaram. The driver knew exact temple timings, parking spots, and assisted our parents with wheelchairs. God bless Tiyanshi Airport Taxi team!',
     verified: true,
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80'
   },
@@ -344,10 +344,10 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
     id: 'rev-5',
     name: 'K. Satyanarayana Murthy',
     rating: 5,
-    location: 'Dwaraka Nagar, Vizag',
-    serviceUsed: 'Bhogapuram Airport Transfer',
+    location: 'HSR Layout, Bangalore',
+    serviceUsed: 'Kempegowda BLR Airport Transfer',
     date: '3 days ago',
-    comment: 'Traveled from Dwaraka Nagar to Bhogapuram Airport (ASI). Chauffeur was punctual, AC was powerful in the Vizag heat, and the fare was exactly what was confirmed on WhatsApp. Zero hidden charges!',
+    comment: 'Traveled from Indiranagar to Kempegowda BLR Airport Terminal 2. Chauffeur was punctual, AC was powerful in the Bangalore traffic, and the fare was exactly what was confirmed on WhatsApp. Zero hidden charges!',
     verified: true,
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80'
   },
@@ -355,10 +355,10 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
     id: 'rev-6',
     name: 'Lakshmi Prasanna P.',
     rating: 5,
-    location: 'Madhurawada, Vizag',
-    serviceUsed: 'Lambasingi & Borra Caves Package',
+    location: 'Hebbal, Bangalore',
+    serviceUsed: 'Nandi Hills Sunrise & Temple Tour',
     date: '5 days ago',
-    comment: 'Hired an Ertiga for outstation trip to Lambasingi & Borra Caves. The chauffeur Chaitanya was punctual, soft-spoken and very familiar with Eastern Ghat roads. Safe and comfortable ride for families!',
+    comment: 'Hired an Ertiga for an early morning outstation trip to Nandi Hills. The chauffeur Manjunath was punctual at 4:30 AM, soft-spoken and drove very safely up the hairpin bends. Safe and comfortable ride for our family!',
     verified: true,
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80'
   },
@@ -366,10 +366,10 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
     id: 'rev-7',
     name: 'Rajesh Chowdary',
     rating: 5,
-    location: 'Seethammadhara, Vizag',
-    serviceUsed: 'Vizag to Kakinada Outstation',
+    location: 'Jayanagar, Bangalore',
+    serviceUsed: 'Bangalore to Mysore Expressway Outstation',
     date: '1 week ago',
-    comment: 'Frequent business commuter between Vizag and Kakinada. Waltair Cabs is my trusted cab partner. Well-maintained cars, professional drivers in uniform, and courteous customer support 24/7.',
+    comment: 'Frequent business commuter between Bangalore and Mysore. Tiyanshi Airport Taxi is my trusted cab partner. Well-maintained cars, professional drivers in uniform, and courteous customer support 24/7.',
     verified: true,
     avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80'
   },
@@ -377,10 +377,10 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
     id: 'rev-8',
     name: 'Praveen Kumar Varma',
     rating: 5,
-    location: 'Jagadamba Center, Vizag',
-    serviceUsed: 'VSKP Railway Station Pickup',
+    location: 'MG Road, Bangalore',
+    serviceUsed: 'KSR Bengaluru Station Pickup',
     date: '2 weeks ago',
-    comment: 'Midnight arrival at Visakhapatnam Junction Railway Station (VSKP) after a 2-hour train delay. The cab was patiently waiting outside platform 1 with our name board. Truly dependable service in Vizag!',
+    comment: 'Midnight arrival at KSR Bengaluru Railway Station after a 2-hour train delay. The cab was patiently waiting outside platform 1 with our name board. Truly dependable service in Bangalore!',
     verified: true,
     avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80'
   }
@@ -389,7 +389,7 @@ export const INITIAL_REVIEWS: CustomerReview[] = [
 export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
   {
     id: 'notif-1',
-    title: '✈️ Bhogapuram Airport Express',
+    title: '✈️ Kempegowda BLR Airport Express',
     message: 'Express cabs for Bhogapuram International Airport pickups & drops with zero delay surcharges. Custom quotes on request.',
     time: '10 mins ago',
     read: false,
@@ -398,7 +398,7 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
   {
     id: 'notif-2',
     title: '🟢 24x7 Live Fleet Active',
-    message: 'Over 140 cabs currently active across Visakhapatnam, Rushikonda, and Highway zones.',
+    message: 'Over 150 cabs currently active across Kempegowda Airport, Whitefield, Electronic City, and Highway corridors.',
     time: '1 hr ago',
     read: false,
     type: 'alert'
@@ -416,13 +416,13 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
 export const INITIAL_BLOG_POSTS: BlogPost[] = [
   {
     id: 'seed-blog-1',
-    title: 'Complete Guide to Bhogapuram Airport (ASI) Transfers: Fares, Route & Timings',
+    title: 'Complete Guide to Kempegowda BLR Airport (ASI) Transfers: Fares, Route & Timings',
     excerpt: 'Everything you need to know about reaching the upcoming Alluri Sitharama Raju International Airport with dedicated express cab bookings.',
-    content: `The upcoming Bhogapuram International Airport (ASI) is set to become the premier aviation gateway for Andhra Pradesh. Located approximately 42 kilometers northeast of Visakhapatnam city center along NH-16, planning your airport commute in advance ensures a hassle-free trip.
+    content: `The upcoming Bhogapuram International Airport (ASI) is set to become the premier aviation gateway for Andhra Pradesh. Located approximately 42 kilometers northeast of Bengaluru city center along NH-16, planning your airport commute in advance ensures a hassle-free trip.
 
 ### Why Pre-Booking Your Airport Cab Matters
 1. **Distance & Travel Time:** The commute from Siripuram, Gajuwaka, or Rushikonda takes roughly 45 to 65 minutes depending on traffic. Pre-booking guarantees on-time doorstep pickup.
-2. **Fixed Toll-Inclusive Pricing:** Waltair Cabs offers transparent upfront pricing with zero surge charges and toll inclusions for the Tagarapuvalasa plaza.
+2. **Fixed Toll-Inclusive Pricing:** Tiyanshi Airport Taxi offers transparent upfront pricing with zero surge charges and toll inclusions for the Tagarapuvalasa plaza.
 3. **Flight Delay Adjustments:** Our dispatch team monitors incoming flight tracking so your chauffeur is stationed at the arrivals bay even if your flight lands ahead or behind schedule.
 
 ### Recommended Vehicle Classes
@@ -430,18 +430,18 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 * **Innova Crysta / SUV:** Perfect for families or business delegates carrying excess luggage.
 * **12-Seater Tempo Traveller:** Best suited for corporate teams and wedding delegations.`,
     author: 'Suresh Varma',
-    authorEmail: 'suresh@waltairtravels.com',
+    authorEmail: 'suresh@tiyanshiairporttaxi.com',
     date: '2025-05-10',
     category: 'Airport & Commute',
     readTime: '4 min read',
     coverImage: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80',
-    tags: ['Bhogapuram', 'Airport Taxi', 'Vizag Airport', 'Travel Tips']
+    tags: ['Kempegowda Airport', 'Airport Taxi Bangalore', 'BLR Airport', 'Travel Tips']
   },
   {
     id: 'seed-blog-2',
-    title: 'Top 7 Scenic Stops on the Vizag to Araku Valley Road Trip',
+    title: 'Top 7 Scenic Stops on the Bangalore to Araku Valley Road Trip',
     excerpt: 'Discover breathtaking viewpoint highlights, coffee plantations, Borra Caves, and tribal eateries along the Eastern Ghats highway.',
-    content: `A road trip from Visakhapatnam to Araku Valley is one of South India's most enchanting mountain drives. Spanning 115 km of scenic winding roads and lush coffee estates, here are the must-visit stops:
+    content: `A road trip from Bengaluru to Araku Valley is one of South India's most enchanting mountain drives. Spanning 115 km of scenic winding roads and lush coffee estates, here are the must-visit stops:
 
 1. **Tyda Jungle Bells & Eco-Tourism:** An ideal morning refreshment pitstop surrounded by natural deciduous flora.
 2. **Ananthagiri Hills Coffee Plantations:** Stop by organic tribal coffee stalls for freshly brewed world-renowned Araku Arabica coffee.
@@ -451,7 +451,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 6. **Tribal Museum & Dhimsa Dance:** Experience authentic indigenous lifestyle artifacts and interactive folk arts.
 7. **Chaparai Water Cascades:** Relax by smoothed natural rock stream flows before your drive back.`,
     author: 'Ananya Reddy',
-    authorEmail: 'ananya@waltairtravels.com',
+    authorEmail: 'ananya@tiyanshiairporttaxi.com',
     date: '2025-05-02',
     category: 'Sightseeing & Roadtrips',
     readTime: '6 min read',
@@ -473,7 +473,7 @@ Early mornings between 5:30 AM and 8:00 AM offer the densest fog cover and tempe
 * **Kothapalli Waterfalls:** A multi-tiered cascading fall with natural bamboo observation decks.
 * **Tajangi Reservoir Camping:** Scenic reservoir surrounded by tranquil hills and sunrise viewpoints.`,
     author: 'Rohan Deshmukh',
-    authorEmail: 'rohan@waltairtravels.com',
+    authorEmail: 'rohan@tiyanshiairporttaxi.com',
     date: '2025-04-24',
     category: 'Travel Guide',
     readTime: '5 min read',
@@ -485,11 +485,11 @@ Early mornings between 5:30 AM and 8:00 AM offer the densest fog cover and tempe
 export const FAQS = [
   {
     q: 'How do I book a taxi to Alluri Sitharama Raju Int\'l Airport (ASI), Bhogapuram?',
-    a: 'You can select "Airport Taxi" on our booking widget, choose "Airport Drop" or "Airport Pickup", select Bhogapuram Airport, pick your date & time, and click Search & Book. You will receive an instant confirmation SMS & WhatsApp with driver details.'
+    a: 'You can select "Airport Taxi" on our booking widget, choose "Airport Drop" or "Airport Pickup", select Kempegowda BLR Airport, pick your date & time, and click Search & Book. You will receive an instant confirmation SMS & WhatsApp with driver details.'
   },
   {
     q: 'Are toll charges, parking, and driver allowances included in the fare?',
-    a: 'Yes! Waltair Cabs believes in 100% transparent pricing. The estimated fare displayed includes base fare, distance, estimated tolls, and GST. There are no hidden surcharges or surprise extra fees at the end of the trip.'
+    a: 'Yes! Tiyanshi Airport Taxi believes in 100% transparent pricing. The estimated fare displayed includes base fare, distance, estimated tolls, and GST. There are no hidden surcharges or surprise extra fees at the end of the trip.'
   },
   {
     q: 'What if my flight arrives late at the airport?',
@@ -497,10 +497,10 @@ export const FAQS = [
   },
   {
     q: 'Can I cancel or reschedule my ride?',
-    a: 'Yes, free cancellation is available up to 2 hours prior to scheduled pickup for city rides, and up to 4 hours for outstation journeys via the "Manage Trip" section or by calling 24x7 support at +91 91234 56789.'
+    a: 'Yes, free cancellation is available up to 2 hours prior to scheduled pickup for city rides, and up to 4 hours for outstation journeys via the "Manage Trip" section or by calling 24x7 support at +91 76762 52579.'
   },
   {
     q: 'Are the cabs sanitized and drivers verified?',
-    a: 'Every vehicle undergoes routine hygiene checks and AC servicing. All drivers are verified with valid commercial badges, background checks, and extensive route knowledge across Andhra Pradesh and Odisha.'
+    a: 'Every vehicle undergoes routine hygiene checks and AC servicing. All drivers are verified with valid commercial badges, background checks, and extensive route knowledge across Karnataka and South India.'
   }
 ];

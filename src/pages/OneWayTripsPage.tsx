@@ -30,30 +30,30 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
 }) => {
   const oneWayFaqs = [
     {
-      question: 'What is a one-way cab service from Visakhapatnam?',
-      answer: 'A one-way cab allows you to travel from Visakhapatnam to any destination (such as Rajahmundry, Kakinada, Vijayawada, or Srikakulam) and pay only for the distance traveled in that single direction. You do not pay for the driver’s return journey.'
+      question: 'What is a one-way cab service from Bengaluru?',
+      answer: 'A one-way cab allows you to travel from Bengaluru to any destination (such as Rajahmundry, Kakinada, Vijayawada, or Srikakulam) and pay only for the distance traveled in that single direction. You do not pay for the driver’s return journey.'
     },
     {
       question: 'Are there hidden toll or driver charges on one-way trips?',
       answer: 'No. All one-way fare quotes are transparent and clearly state toll inclusions and driver batta so you never experience unexpected costs.'
     },
     {
-      question: 'How soon can I get a one-way cab dispatched in Vizag?',
+      question: 'How soon can I get a one-way cab dispatched in Bangalore?',
       answer: 'We recommend booking 2 to 3 hours ahead for guaranteed preferred vehicle allocation, though urgent bookings can often be dispatched within 30 to 45 minutes.'
     }
   ];
   const oneWayRoutes = [
     { 
-      from: 'Visakhapatnam', 
+      from: 'Bengaluru', 
       to: 'Rajahmundry', 
       distance: '190 KM', 
       time: '3.5 hrs', 
       saves: 'Best Value',
       img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80',
-      description: 'Doorstep pickup in Vizag, direct drop to Rajahmundry railway station, airport, or hotel.'
+      description: 'Doorstep pickup in Bangalore, direct drop to Rajahmundry railway station, airport, or hotel.'
     },
     { 
-      from: 'Visakhapatnam', 
+      from: 'Bengaluru', 
       to: 'Kakinada Port', 
       distance: '155 KM', 
       time: '3.0 hrs', 
@@ -62,7 +62,7 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
       description: 'Direct commute to Kakinada smart city, port terminals, and fertilizers industrial hub.'
     },
     { 
-      from: 'Visakhapatnam', 
+      from: 'Bengaluru', 
       to: 'Vijayawada', 
       distance: '350 KM', 
       time: '6.5 hrs', 
@@ -71,7 +71,7 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
       description: 'Capital city transit without paying return taxi charges. FASTag toll equipped.'
     },
     { 
-      from: 'Visakhapatnam', 
+      from: 'Bengaluru', 
       to: 'Srikakulam', 
       distance: '110 KM', 
       time: '2.0 hrs', 
@@ -80,7 +80,7 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
       description: 'Swift transit to Srikakulam town, Arasavalli Sun temple, and industrial areas.'
     },
     { 
-      from: 'Visakhapatnam', 
+      from: 'Bengaluru', 
       to: 'Vizianagaram', 
       distance: '60 KM', 
       time: '1.2 hrs', 
@@ -89,7 +89,7 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
       description: 'Affordable one-way intercity cab for college students, hospital visits, and business.'
     },
     { 
-      from: 'Visakhapatnam', 
+      from: 'Bengaluru', 
       to: 'Berhampur (Odisha)', 
       distance: '260 KM', 
       time: '5.0 hrs', 
@@ -102,8 +102,8 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
   return (
     <>
       <SEOHead
-        title="One-Way Outstation Cabs from Visakhapatnam | Zero Return Fare | Waltair Cabs"
-        description="Book one-way cabs from Visakhapatnam to Rajahmundry, Kakinada, Vijayawada, Srikakulam, and Vizianagaram. Pay only for the distance traveled with zero return kilometer charges."
+        title="One-Way Outstation Cabs from Bengaluru | Zero Return Fare | Tiyanshi Airport Taxi"
+        description="Book one-way cabs from Bengaluru to Rajahmundry, Kakinada, Vijayawada, Srikakulam, and Vizianagaram. Pay only for the distance traveled with zero return kilometer charges."
         canonicalPath="/one-way-trips"
         keywords={[
           'one way cab vizag',
@@ -120,7 +120,7 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
       />
       <PageLayout
         title="One-Way Intercity Cab Drops"
-        subtitle="Why pay double when you're only travelling one way? Save up to 50% with our guaranteed single-sided outstation fares from Visakhapatnam."
+        subtitle="Why pay double when you're only travelling one way? Save up to 50% with our guaranteed single-sided outstation fares from Bengaluru."
         categoryBadge="One-Way Economy"
         breadcrumbs={[{ label: 'Top Services', onClick: () => onNavigatePage('services') }, { label: 'One-Way Trips' }]}
         onNavigateHome={onNavigateHome}
@@ -144,7 +144,7 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
               Pay Only for the Kilometers You Actually Ride
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Traditional offline operators and taxi stands charge round-trip fare even when you are relocating or staying at your destination. With Waltair Cabs One-Way Drops, you pay strictly for the single journey.
+              Traditional offline operators and taxi stands charge round-trip fare even when you are relocating or staying at your destination. With Tiyanshi Airport Taxi One-Way Drops, you pay strictly for the single journey.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2">
@@ -162,7 +162,7 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
           {/* Comparison Card */}
           <div className="lg:col-span-6">
             <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-5">
-              <h3 className="text-lg font-bold text-slate-900">Traditional Cabs vs Waltair One-Way</h3>
+              <h3 className="text-lg font-bold text-slate-900">Traditional Cabs vs Tiyanshi One-Way</h3>
               
               <div className="space-y-3">
                 <div className="p-4 rounded-2xl bg-red-50/60 border border-red-200 space-y-1.5">
@@ -178,10 +178,10 @@ export const OneWayTripsPage: React.FC<OneWayTripsPageProps> = ({
                 <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-1.5">
                   <div className="flex items-center gap-2 text-xs font-bold text-emerald-800">
                     <Check className="w-4 h-4" />
-                    <span>Waltair Cabs Guaranteed One-Way:</span>
+                    <span>Tiyanshi Airport Taxi Guaranteed One-Way:</span>
                   </div>
                   <p className="text-xs text-slate-700 pl-6">
-                    Fixed flat rate based only on one-way distance. Doorstep pickup in Vizag, direct drop to exact address, tolls & driver included.
+                    Fixed flat rate based only on one-way distance. Doorstep pickup in Bangalore, direct drop to exact address, tolls & driver included.
                   </p>
                 </div>
               </div>

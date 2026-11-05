@@ -46,10 +46,10 @@ import { syncFetchBookings, syncSaveBooking } from './services/dbSync';
 
 export const PAGE_URL_MAP: Record<string, string> = {
   'home': '/',
-  'airport-taxi': '/airport-taxi-vizag',
-  'vizag-to-araku-cab': '/vizag-to-araku-cab',
-  'outstation-cabs': '/outstation-cabs-vizag',
-  'local-rentals': '/local-rentals-vizag',
+  'airport-taxi': '/airport-taxi-bangalore',
+  'vizag-to-araku-cab': '/bangalore-to-mysore-cab',
+  'outstation-cabs': '/outstation-cabs-bangalore',
+  'local-rentals': '/local-rentals-bangalore',
   'packages': '/packages',
   'one-way-trips': '/one-way-trips',
   'round-trips': '/round-trips',
@@ -73,10 +73,10 @@ export const resolveRouteFromLocation = (): string => {
   // 1. Resolve from standard clean pathname first
   const pathname = window.location.pathname.replace(/^\/|\/$/g, '');
   if (pathname) {
-    if (pathname === 'airport-taxi-vizag' || pathname === 'airport-taxi') return 'airport-taxi';
-    if (pathname === 'vizag-to-araku-cab' || pathname === 'araku-cab') return 'vizag-to-araku-cab';
-    if (pathname === 'outstation-cabs-vizag' || pathname === 'outstation-cabs') return 'outstation-cabs';
-    if (pathname === 'local-rentals-vizag' || pathname === 'local-rentals') return 'local-rentals';
+    if (pathname === 'airport-taxi-bangalore' || pathname === 'airport-taxi' || pathname === 'airport-taxi-vizag') return 'airport-taxi';
+    if (pathname === 'bangalore-to-mysore-cab' || pathname === 'bangalore-to-nandi-hills-cab' || pathname === 'vizag-to-araku-cab' || pathname === 'araku-cab' || pathname === 'mysore-cab') return 'vizag-to-araku-cab';
+    if (pathname === 'outstation-cabs-bangalore' || pathname === 'outstation-cabs-vizag' || pathname === 'outstation-cabs') return 'outstation-cabs';
+    if (pathname === 'local-rentals-bangalore' || pathname === 'local-rentals-vizag' || pathname === 'local-rentals') return 'local-rentals';
     if (pathname === 'packages' || pathname === 'tour-packages') return 'packages';
     if (pathname === 'one-way-trips' || pathname === 'one-way-cabs-vizag') return 'one-way-trips';
     if (pathname === 'round-trips' || pathname === 'round-trip-cabs-vizag') return 'round-trips';
@@ -114,7 +114,7 @@ export const resolveRouteFromLocation = (): string => {
 };
 
 export default function App() {
-  const [currentCity, setCurrentCity] = useState<string>('Visakhapatnam, IN');
+  const [currentCity, setCurrentCity] = useState<string>('Bengaluru, IN');
   const [allBookings, setAllBookings] = useState<Booking[]>([]);
 
   // Page Routing State (resolved from pathname or hash)
@@ -139,7 +139,7 @@ export default function App() {
     const hash = window.location.hash.replace('#', '');
     if (path === 'admin' || hash === 'admin') return false;
     try {
-      const seen = sessionStorage.getItem('waltair_splash_viewed');
+      const seen = sessionStorage.getItem('tiyanshi_splash_viewed');
       return !seen;
     } catch {
       return false;
@@ -148,7 +148,7 @@ export default function App() {
 
   const handleSplashComplete = () => {
     try {
-      sessionStorage.setItem('waltair_splash_viewed', 'true');
+      sessionStorage.setItem('tiyanshi_splash_viewed', 'true');
     } catch {}
     setShowSplash(false);
   };
@@ -193,7 +193,7 @@ export default function App() {
   // User session state
   const [user, setUser] = useState<AppUser | null>(() => {
     try {
-      const saved = localStorage.getItem('waltair_user_session');
+      const saved = localStorage.getItem('tiyanshi_user_session');
       if (!saved) return null;
       const parsed = JSON.parse(saved);
       if (parsed && (parsed.uid || parsed.email || parsed.name || parsed.phone)) {
@@ -216,7 +216,7 @@ export default function App() {
   useEffect(() => {
     const handleAuthSync = () => {
       try {
-        const saved = localStorage.getItem('waltair_user_session');
+        const saved = localStorage.getItem('tiyanshi_user_session');
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed && (parsed.uid || parsed.email || parsed.name || parsed.phone)) {
@@ -238,10 +238,10 @@ export default function App() {
     };
 
     window.addEventListener('storage', handleAuthSync);
-    window.addEventListener('waltair_auth_change', handleAuthSync);
+    window.addEventListener('tiyanshi_auth_change', handleAuthSync);
     return () => {
       window.removeEventListener('storage', handleAuthSync);
-      window.removeEventListener('waltair_auth_change', handleAuthSync);
+      window.removeEventListener('tiyanshi_auth_change', handleAuthSync);
     };
   }, []);
 
@@ -261,8 +261,8 @@ export default function App() {
           };
           setUser(appUser);
           try {
-            localStorage.setItem('waltair_user_session', JSON.stringify(appUser));
-            window.dispatchEvent(new Event('waltair_auth_change'));
+            localStorage.setItem('tiyanshi_user_session', JSON.stringify(appUser));
+            window.dispatchEvent(new Event('tiyanshi_auth_change'));
           } catch (storageErr) {
             console.warn('Redirect storage note:', storageErr);
           }
@@ -289,8 +289,8 @@ export default function App() {
           };
           setUser(appUser);
           try {
-            localStorage.setItem('waltair_user_session', JSON.stringify(appUser));
-            window.dispatchEvent(new Event('waltair_auth_change'));
+            localStorage.setItem('tiyanshi_user_session', JSON.stringify(appUser));
+            window.dispatchEvent(new Event('tiyanshi_auth_change'));
           } catch (storageErr) {
             console.warn('Session save note:', storageErr);
           }
@@ -327,7 +327,7 @@ export default function App() {
     const handleBookingsChanged = () => {
       fetchBookings();
     };
-    window.addEventListener('waltair_bookings_changed', handleBookingsChanged);
+    window.addEventListener('tiyanshi_bookings_changed', handleBookingsChanged);
     window.addEventListener('storage', handleBookingsChanged);
 
     // Set up real-time listener if Firestore is connected
@@ -343,7 +343,7 @@ export default function App() {
     }
 
     return () => {
-      window.removeEventListener('waltair_bookings_changed', handleBookingsChanged);
+      window.removeEventListener('tiyanshi_bookings_changed', handleBookingsChanged);
       window.removeEventListener('storage', handleBookingsChanged);
       unsubscribe();
     };
@@ -373,8 +373,8 @@ export default function App() {
     setBookingInitialData({
       serviceType: 'airport',
       subType: 'pickup',
-      pickupLocation: 'Alluri Sitharama Raju International Airport ASI , Bhogapuram',
-      dropoffLocation: 'Visakhapatnam City Center',
+      pickupLocation: 'Kempegowda International Airport (BLR), Bengaluru',
+      dropoffLocation: 'Bengaluru City Center (MG Road / Majestic)',
       travelDate: new Date().toISOString().split('T')[0],
       pickupTime: '10:30',
       preSelectedVehicleId: vehicleId,
@@ -402,7 +402,7 @@ export default function App() {
     setBookingInitialData({
       serviceType: 'packages',
       subType: 'package',
-      pickupLocation: 'Visakhapatnam (Doorstep Pickup)',
+      pickupLocation: 'Bengaluru (Doorstep Pickup)',
       dropoffLocation: `${pkg.title} Sightseeing Tour`,
       travelDate: new Date().toISOString().split('T')[0],
       pickupTime: '07:00',
@@ -422,8 +422,8 @@ export default function App() {
     } catch (e) {
       console.warn('Sign out info:', e);
     }
-    localStorage.removeItem('waltair_user_session');
-    window.dispatchEvent(new Event('waltair_auth_change'));
+    localStorage.removeItem('tiyanshi_user_session');
+    window.dispatchEvent(new Event('tiyanshi_auth_change'));
     setUser(null);
   };
 
@@ -432,8 +432,8 @@ export default function App() {
     return (
       <div className="min-h-screen w-full bg-slate-950 font-sans">
         <SEOHead
-          title="Admin Portal | Waltair Travels & Cabs"
-          description="Waltair Travels & Cabs administration and operations portal."
+          title="Admin Portal | Tiyanshi Airport Taxi"
+          description="Tiyanshi Airport Taxi administration and operations portal."
           canonicalPath="/admin"
         />
         <AdminPanel
@@ -464,8 +464,8 @@ export default function App() {
           setBookingInitialData({
             serviceType: 'airport',
             subType: 'pickup',
-            pickupLocation: 'Alluri Sitharama Raju International Airport ASI , Bhogapuram',
-            dropoffLocation: 'Siripuram Circle, Visakhapatnam',
+            pickupLocation: 'Kempegowda International Airport (BLR), Bengaluru',
+            dropoffLocation: 'MG Road / Indiranagar, Bengaluru',
             travelDate: new Date().toISOString().split('T')[0],
             pickupTime: '10:30',
             phone: user?.phone
@@ -490,19 +490,19 @@ export default function App() {
             {currentPage === 'home' && (
               <>
                 <SEOHead
-                  title="Waltair Cabs | Premier Taxi & Cab Service in Visakhapatnam (Vizag)"
-                  description="Book verified cabs in Visakhapatnam with Waltair Cabs. 24/7 airport taxi to VTZ & Bhogapuram ASI, outstation rides to Araku, local hourly rentals, and zero surge pricing."
+                  title="Tiyanshi Airport Taxi | Bangalore Airport Taxi & Cabs (Kempegowda BLR Airport)"
+                  description="Book 24/7 verified Bangalore Airport Taxi with Tiyanshi Airport Taxi. Instant Kempegowda Airport (BLR) pickups & drops, outstation cabs to Mysore, Coorg, Nandi Hills, local rentals, fixed rates & zero surge pricing."
                   canonicalPath="/"
                   keywords={[
-                    'cab service in vizag',
-                    'taxi in visakhapatnam',
-                    'vizag cabs',
-                    'airport taxi vizag',
-                    'bhogapuram airport cab',
-                    'vizag to araku cab',
-                    'outstation cab vizag',
-                    'local cabs vizag',
-                    'taxi near me vizag'
+                    'bangalore airport taxi',
+                    'airport cab bangalore',
+                    'kempegowda airport taxi',
+                    'blr airport cab',
+                    'bangalore airport drop',
+                    'airport taxi bangalore to electronic city',
+                    'airport cab bangalore to whitefield',
+                    'outstation cabs bangalore',
+                    'bangalore to mysore cab'
                   ]}
                   breadcrumbs={[{ name: 'Home', item: '/' }]}
                 />
@@ -520,11 +520,11 @@ export default function App() {
                       serviceType: service,
                       subType: subType || (service === 'airport' ? 'pickup' : 'oneway'),
                       pickupLocation: service === 'airport' 
-                        ? 'Alluri Sitharama Raju International Airport ASI , Bhogapuram' 
-                        : 'Visakhapatnam City Center',
+                        ? 'Kempegowda International Airport (BLR), Bengaluru' 
+                        : 'Bengaluru City Center (MG Road / Majestic)',
                       dropoffLocation: service === 'airport'
-                        ? 'Visakhapatnam City Center'
-                        : 'Araku Valley (Hill Station)',
+                        ? 'Bengaluru City Center (MG Road / Majestic)'
+                        : 'Mysore Palace & Chamundi Hills',
                       travelDate: new Date().toISOString().split('T')[0],
                       pickupTime: '09:00',
                       phone: user?.phone
@@ -557,8 +557,8 @@ export default function App() {
                   setBookingInitialData({
                     serviceType: 'airport',
                     subType: 'pickup',
-                    pickupLocation: 'Alluri Sitharama Raju International Airport ASI , Bhogapuram',
-                    dropoffLocation: 'Visakhapatnam City Center',
+                    pickupLocation: 'Kempegowda International Airport (BLR), Bengaluru',
+                    dropoffLocation: 'Bengaluru City Center (MG Road / Majestic)',
                     travelDate: new Date().toISOString().split('T')[0],
                     pickupTime: '10:30',
                     phone: user?.phone
@@ -576,11 +576,11 @@ export default function App() {
                     serviceType: service,
                     subType: subType || (service === 'airport' ? 'pickup' : 'oneway'),
                     pickupLocation: service === 'airport'
-                      ? 'Alluri Sitharama Raju International Airport ASI , Bhogapuram'
-                      : 'Visakhapatnam City Center',
+                      ? 'Kempegowda International Airport (BLR), Bengaluru'
+                      : 'Bengaluru City Center (MG Road / Majestic)',
                     dropoffLocation: service === 'airport'
-                      ? 'Visakhapatnam City Center'
-                      : 'Araku Valley (Hill Station)',
+                      ? 'Bengaluru City Center (MG Road / Majestic)'
+                      : 'Mysore Palace & Chamundi Hills',
                     travelDate: new Date().toISOString().split('T')[0],
                     pickupTime: '09:00',
                     phone: user?.phone
@@ -630,8 +630,8 @@ export default function App() {
                   setBookingInitialData({
                     serviceType: 'airport',
                     subType: 'pickup',
-                    pickupLocation: 'Alluri Sitharama Raju International Airport ASI , Bhogapuram',
-                    dropoffLocation: 'Siripuram Circle, Visakhapatnam',
+                    pickupLocation: 'Kempegowda International Airport (BLR), Bengaluru',
+                    dropoffLocation: 'MG Road / Indiranagar, Bengaluru',
                     travelDate: new Date().toISOString().split('T')[0],
                     pickupTime: '10:30',
                     phone: user?.phone
@@ -657,8 +657,8 @@ export default function App() {
                   setBookingInitialData({
                     serviceType: 'outstation',
                     subType: 'roundtrip',
-                    pickupLocation: 'Visakhapatnam City Center',
-                    dropoffLocation: 'Araku Valley & Borra Caves (Sightseeing Tour)',
+                    pickupLocation: 'Bengaluru City Center (MG Road / Majestic)',
+                    dropoffLocation: 'Mysore Palace & Chamundi Hills (Heritage Tour)',
                     travelDate: new Date().toISOString().split('T')[0],
                     pickupTime: '06:00',
                     phone: user?.phone
@@ -676,8 +676,8 @@ export default function App() {
                   setBookingInitialData({
                     serviceType: 'local',
                     subType: 'rental_8hr',
-                    pickupLocation: 'Visakhapatnam City Center',
-                    dropoffLocation: 'Local Visakhapatnam Sightseeing (8 Hrs / 80 KM)',
+                    pickupLocation: 'Bengaluru City Center (MG Road / Majestic)',
+                    dropoffLocation: 'Bengaluru City Sightseeing & Tech Hubs (8 Hrs / 80 KM)',
                     travelDate: new Date().toISOString().split('T')[0],
                     pickupTime: '09:00',
                     phone: user?.phone
@@ -799,7 +799,7 @@ export default function App() {
           setBookingInitialData({
             serviceType: dest.toLowerCase().includes('airport') ? 'airport' : 'packages',
             subType: 'oneway',
-            pickupLocation: 'Visakhapatnam City Center',
+            pickupLocation: 'Bengaluru City Center (MG Road / Majestic)',
             dropoffLocation: dest,
             travelDate: new Date().toISOString().split('T')[0],
             pickupTime: '06:00',

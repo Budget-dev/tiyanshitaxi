@@ -1,7 +1,7 @@
 import { Booking, BookingStatus } from '../types';
 import { db, auth, collection, addDoc, doc, updateDoc, deleteDoc, getDocs } from '../firebase';
 
-const LOCAL_BOOKINGS_KEY = 'waltair_user_bookings';
+const LOCAL_BOOKINGS_KEY = 'tiyanshi_user_bookings';
 
 // Helper to get admin auth header if signed in
 async function getAdminAuthHeaders(): Promise<Record<string, string>> {
@@ -70,7 +70,7 @@ export async function syncFetchBookings(userFilter?: { email?: string; phone?: s
 
     if (!email && !phone && typeof window !== 'undefined') {
       try {
-        const saved = localStorage.getItem('waltair_user_session');
+        const saved = localStorage.getItem('tiyanshi_user_session');
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed.email) email = parsed.email;
@@ -179,7 +179,7 @@ export async function syncSaveBooking(booking: Booking): Promise<Booking> {
 
   // 2. Dispatch instant reactive event across all open tabs/views
   try {
-    window.dispatchEvent(new CustomEvent('waltair_bookings_changed', { detail: prepared }));
+    window.dispatchEvent(new CustomEvent('tiyanshi_bookings_changed', { detail: prepared }));
   } catch {}
 
   // 3. Persist to Backend API in parallel
@@ -232,7 +232,7 @@ export async function syncUpdateBookingStatus(
   // 2. Dispatch reactive event
   try {
     window.dispatchEvent(
-      new CustomEvent('waltair_bookings_changed', {
+      new CustomEvent('tiyanshi_bookings_changed', {
         detail: { bookingId, bookingRef, newStatus }
       })
     );
@@ -281,7 +281,7 @@ export async function syncDeleteBooking(
   // 2. Dispatch reactive event
   try {
     window.dispatchEvent(
-      new CustomEvent('waltair_bookings_changed', {
+      new CustomEvent('tiyanshi_bookings_changed', {
         detail: { deleted: true, bookingId, bookingRef }
       })
     );

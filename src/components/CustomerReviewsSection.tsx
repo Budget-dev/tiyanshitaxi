@@ -17,7 +17,7 @@ export const CustomerReviewsSection: React.FC = () => {
   
   // Review form states
   const [name, setName] = useState<string>('');
-  const [location, setLocation] = useState<string>('Visakhapatnam');
+  const [location, setLocation] = useState<string>('Bengaluru');
   const [serviceUsed, setServiceUsed] = useState<string>('Airport Taxi');
   const [rating, setRating] = useState<number>(5);
   const [comment, setComment] = useState<string>('');
@@ -93,7 +93,7 @@ export const CustomerReviewsSection: React.FC = () => {
               Trusted by 50,000+ Travelers in Vizag
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
-              Read authentic feedback from families, airport commuters, corporate executives, and tourists who ride with Waltair Cabs.
+              Read authentic feedback from families, airport commuters, corporate executives, and tourists who ride with Tiyanshi Airport Taxi.
             </p>
           </div>
 

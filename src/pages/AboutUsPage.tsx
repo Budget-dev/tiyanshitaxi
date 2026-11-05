@@ -55,7 +55,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
       seats: '7 Passengers + 1 Driver',
       luggage: '5 Large Bags + Overhead Carrier',
       ac: 'Triple-Row Dual Zone AC',
-      ideal: 'VIP delegates, wedding parties, Araku Ghat hairpin roads & long-distance interstate tours.',
+      ideal: 'VIP delegates, wedding parties, Karnataka Western Ghats, Nandi Hills, Coorg & interstate highway tours.',
       img: '/fleet/crysta.jpg',
       badge: 'Ultimate Highway Comfort'
     }
@@ -72,7 +72,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
     },
     {
       title: 'Ghat Road Specialists',
-      desc: 'Trained specifically in defensive hairpin curve navigation on Araku, Lambasingi, and Ananthagiri passes.'
+      desc: 'Trained specifically in defensive mountain curve navigation on Nandi Hills, Coorg, and Nilgiri ghats.'
     },
     {
       title: 'Zero-Tolerance Policy',
@@ -82,23 +82,23 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
 
   const regionalHubs = [
     {
-      hub: 'Bhogapuram Airport ASI Corridor',
+      hub: 'Kempegowda Airport BLR Corridor',
       coverage: 'Express highway taxi pickups & drops with real-time flight tracking.',
       status: 'Primary Hub'
     },
     {
-      hub: 'Visakhapatnam Urban limits',
-      coverage: 'Siripuram, MVP Colony, Gajuwaka, Madhurawada, Rushikonda IT SEZ.',
+      hub: 'Bengaluru Tech & Urban Corridors',
+      coverage: 'Whitefield, Electronic City, Indiranagar, Koramangala, Manyata Tech Park, Hebbal.',
       status: 'Instant 15m Dispatch'
     },
     {
-      hub: 'Eastern Ghats Tourist Circuit',
-      coverage: 'Araku Valley, Borra Caves, Tyda, Lambasingi & Katiki Waterfalls.',
+      hub: 'Karnataka Heritage & Hill Circuit',
+      coverage: 'Mysore Palace, Nandi Hills, Coorg, Kabini, Chikmagalur & Ooty.',
       status: 'Daily Departures'
     },
     {
       hub: 'Intercity Highway Corridors',
-      coverage: 'Kakinada Port, Rajahmundry, Vijayawada, Srikakulam & Berhampur.',
+      coverage: 'Mysore, Hassan, Mangalore, Tirupati, Coimbatore & Chennai.',
       status: 'One-Way & Round Trip'
     }
   ];
@@ -106,15 +106,15 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
   return (
     <>
       <SEOHead
-        title="About Waltair Cabs | Visakhapatnam's Trusted Taxi Service"
-        description="Learn about Waltair Cabs, Visakhapatnam's premier taxi company. Serving travelers with zero surge pricing, verified commercial drivers, and punctual 24/7 airport transfers."
+        title="About Tiyanshi Airport Taxi | Bangalore's Trusted Airport Cab Service"
+        description="Learn about Tiyanshi Airport Taxi, Bengaluru's premier taxi company. Serving Kempegowda Airport (BLR), outstation trips to Mysore and Coorg, with zero surge pricing and verified chauffeurs."
         canonicalPath="/about-us"
         keywords={[
-          'waltair cabs visakhapatnam',
-          'about waltair cabs',
-          'taxi company vizag',
-          'visakhapatnam cab service provider',
-          'reliable taxi vizag'
+          'Tiyanshi Airport Taxi bangalore',
+          'about Tiyanshi Airport Taxi',
+          'taxi company bangalore',
+          'bangalore airport cab service provider',
+          'reliable airport taxi bangalore'
         ]}
         breadcrumbs={[
           { name: 'Home', item: '/' },
@@ -122,8 +122,8 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
         ]}
       />
       <PageLayout
-        title="About Waltair Cabs"
-        subtitle="The trusted mobility partner of Visakhapatnam. Delivering punctual airport transfers, premium outstation travel, and transparent fares with verified local chauffeurs."
+        title="About Tiyanshi Airport Taxi"
+        subtitle="The trusted mobility partner of Bengaluru. Delivering punctual Kempegowda airport transfers, premium outstation travel across Karnataka, and transparent fares with verified local chauffeurs."
         categoryBadge="Our Story & Standards"
         breadcrumbs={[{ label: 'About Us' }]}
       onNavigateHome={onNavigateHome}
@@ -137,19 +137,19 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-800 text-xs font-bold border border-teal-200">
-              <span>Pioneering Andhra's Coastal Mobility</span>
+              <span>Pioneering Bengaluru & Karnataka Airport Mobility</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Reliable, Transparent, and Safe Cab Travel in the City of Destiny
+              Reliable, Transparent, and Safe Airport Cab Travel in Bengaluru
             </h2>
 
             <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
               <p>
-                Founded in Visakhapatnam, <strong className="text-slate-900">Waltair Cabs</strong> was born out of frustration with predatory surge pricing, unexpected ride cancellations, and substandard vehicles.
+                Founded in Bengaluru, <strong className="text-slate-900">Tiyanshi Airport Taxi</strong> was born out of frustration with predatory surge pricing, unexpected ride cancellations, and substandard vehicles on airport and outstation routes.
               </p>
               <p>
-                Today, as Visakhapatnam gears up with the world-class <strong className="text-teal-700">Alluri Sitharama Raju International Airport (ASI) in Bhogapuram</strong> and continues to grow as Andhra Pradesh’s economic capital, our fleet of 150+ commercially certified vehicles provides seamless connectivity 24 hours a day, 365 days a year.
+                Today, serving India's tech capital and the world-class <strong className="text-teal-700">Kempegowda International Airport (BLR Terminals 1 & 2)</strong>, our fleet of 150+ commercially certified vehicles provides seamless connectivity 24 hours a day, 365 days a year across Bengaluru and Karnataka.
               </p>
             </div>
 
@@ -174,22 +174,22 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
             <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-2xl relative group">
               <img
                 src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80"
-                alt="Waltair Cabs Fleet and Professional Chauffeurs"
+                alt="Tiyanshi Airport Taxi Fleet and Professional Chauffeurs"
                 className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
               <div className="absolute top-4 left-4 p-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-teal-500/30 flex items-center gap-2.5 shadow-xl">
                 <img 
                   src="/logo.png" 
-                  alt="Waltair Cabs Official Mark" 
+                  alt="Tiyanshi Airport Taxi Official Mark" 
                   className="w-9 h-9 rounded-xl object-cover" 
                   onError={(e) => {
-                    e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                    e.currentTarget.src = '/logo.png';
                   }}
                 />
                 <div>
                   <div className="text-[10px] text-teal-300 font-bold uppercase tracking-wider">Official Mark</div>
-                  <div className="text-xs font-extrabold text-white">Waltair Cabs</div>
+                  <div className="text-xs font-extrabold text-white">Tiyanshi Airport Taxi</div>
                 </div>
               </div>
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200">
@@ -275,10 +275,10 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
           </div>
         </div>
 
-        {/* 4 Pillars of Waltair Trust */}
+        {/* 4 Pillars of Tiyanshi Trust */}
         <div className="space-y-8">
           <div className="text-center max-w-xl mx-auto space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Why Travelers Choose Waltair</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Why Travelers Choose Tiyanshi</h2>
             <p className="text-xs sm:text-sm text-slate-500">Built on integrity, transparent pricing, and veteran commercial chauffeurs.</p>
           </div>
 
@@ -309,7 +309,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
               </div>
               <h3 className="text-base font-bold text-slate-900">24/7 Airport Tracking</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                We monitor incoming flights into Bhogapuram ASI & VTZ. If flight timings shift, cab arrival synchronizes automatically.
+                We monitor incoming flights into Kempegowda International Airport (BLR). If flight timings shift, cab arrival synchronizes automatically.
               </p>
             </div>
 
@@ -319,7 +319,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
               </div>
               <h3 className="text-base font-bold text-slate-900">Instant Human Support</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                Talk directly with our Visakhapatnam dispatch desk via phone or WhatsApp. No automated chatbot frustration.
+                Talk directly with our Bengaluru 24/7 dispatch desk via phone or WhatsApp. No automated chatbot frustration.
               </p>
             </div>
           </div>
@@ -353,10 +353,10 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
         {/* Regional Coverage Grid */}
         <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 text-white space-y-8">
           <div className="max-w-2xl space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-300">Andhra Pradesh Wide Network</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Serving Over 40+ Mandals and Districts</h2>
+            <span className="text-xs font-bold uppercase tracking-wider text-teal-300">Karnataka & South India Wide Network</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Serving Over 40+ Tech Hubs, Towns & Karnataka Districts</h2>
             <p className="text-xs sm:text-sm text-teal-100">
-              From urban Visakhapatnam to remote Eastern Ghats hamlets and south coastal arterial highways.
+              From urban Bengaluru and tech parks to Mysore, Nandi Hills, Coorg coffee plantations, and intercity highways.
             </p>
           </div>
 
@@ -371,7 +371,7 @@ export const AboutUsPage: React.FC<AboutUsPageProps> = ({
           </div>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/10">
-            <span className="text-xs text-slate-300">Ready to travel with Visakhapatnam's highest-rated taxi service?</span>
+            <span className="text-xs text-slate-300">Ready to travel with Bangalore's highest-rated airport taxi service?</span>
             <button
               onClick={onOpenBooking}
               className="w-full sm:w-auto px-8 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-lg shadow-teal-950/40 cursor-pointer"

@@ -1,13 +1,13 @@
 {
-  "name": "Waltair Travels & Cabs",
-  "short_name": "Waltair Cabs",
-  "description": "Premier 24/7 taxi and outstation cab service in Visakhapatnam (Vizag). Airport transfers to VTZ & Bhogapuram ASI, Araku tours, and local rentals.",
+  "name": "Tiyanshi Airport Taxi",
+  "short_name": "Tiyanshi Airport Taxi",
+  "description": "Premier 24/7 taxi and outstation cab service in Premier 24/7 Kempegowda International Airport (BLR) taxi service in Bangalore. Instant airport pickups, outstation cabs to Mysore, Coorg & Nandi Hills, and local rentals.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#0f172a",
-  "theme_color": "#0f766e",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1d4ed8",
   "categories": ["travel", "transportation"],
   "icons": [
     {

@@ -209,7 +209,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
       bookingRef,
       customerName,
       customerPhone: cleanPhone,
-      customerEmail: customerEmail || 'guest@waltairtravels.com',
+      customerEmail: customerEmail || 'guest@tiyanshiairporttaxi.com',
       serviceType,
       subType,
       pickupLocation,
@@ -224,7 +224,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
       specialRequests,
       createdAt: serverTimestamp ? serverTimestamp() : new Date().toISOString(),
       city: currentCity,
-      isRegistered: Boolean(localStorage.getItem('waltair_user_session')),
+      isRegistered: Boolean(localStorage.getItem('tiyanshi_user_session')),
       leadId: getOrCreateLeadSessionId()
     };
 
@@ -294,16 +294,16 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md border border-cyan-400/30 shrink-0 bg-slate-900 flex items-center justify-center">
               <img 
                 src="/logo.png" 
-                alt="Waltair Cabs" 
+                alt="Tiyanshi Airport Taxi" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                  e.currentTarget.src = '/logo.png';
                 }}
               />
             </div>
             <div>
               <div className="flex items-center gap-2 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-0.5">
-                <span>Waltair Express Booking</span>
+                <span>Tiyanshi Express Booking</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold leading-tight">
                 {step === 4 ? '🎉 Booking Confirmed!' : 'Complete Your Reservation'}
@@ -485,15 +485,15 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
                 {/* Quick Selection Hubs for 1-Tap Convenience */}
                 <div>
-                  <div className="text-[11px] font-bold text-slate-500 mb-1.5">Quick Vizag & Transit Hubs:</div>
+                  <div className="text-[11px] font-bold text-slate-500 mb-1.5">Quick Bengaluru Transit Hubs:</div>
                   <div className="flex flex-wrap gap-1.5">
                     {[
-                      { label: '✈️ Bhogapuram Airport (ASI)', loc: 'Alluri Sitharama Raju International Airport (ASI), Bhogapuram' },
-                      { label: '✈️ Vizag Airport (VTZ)', loc: 'Visakhapatnam International Airport (VTZ), NAD Junction' },
-                      { label: '🚆 Visakhapatnam Junction', loc: 'Visakhapatnam Junction Railway Station (VSKP)' },
-                      { label: '🏖️ Rushikonda Beach & IT SEZ', loc: 'Rushikonda Beach & IT SEZ Hill, Visakhapatnam' },
-                      { label: '🏢 Siripuram / Waltair Uplands', loc: 'Siripuram Circle & Waltair Uplands, Visakhapatnam' },
-                      { label: '⛰️ Araku Valley', loc: 'Araku Valley Hill Station & Tribal Museum' },
+                      { label: '✈️ Kempegowda Airport (BLR T1)', loc: 'Kempegowda International Airport Terminal 1, Devanahalli, Bengaluru' },
+                      { label: '✈️ Kempegowda Airport (BLR T2)', loc: 'Kempegowda International Airport Terminal 2, Devanahalli, Bengaluru' },
+                      { label: '🚆 KSR Bengaluru Majestic', loc: 'KSR Bengaluru City Railway Station (Majestic)' },
+                      { label: '🏢 Whitefield ITPL & EPIP', loc: 'Whitefield ITPL & EPIP Zone, Bengaluru' },
+                      { label: '🏢 Electronic City Phase 1', loc: 'Electronic City Phase 1, Bengaluru' },
+                      { label: '⛰️ Mysore & Nandi Hills', loc: 'Mysore Palace & Srirangapatna Heritage Route' },
                     ].map((hub) => (
                       <button
                         key={hub.label}
@@ -777,7 +777,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   <span className="font-extrabold text-sm text-teal-300">Quote on Request via WhatsApp</span>
                 </div>
                 <p className="text-[11px] text-slate-400 leading-relaxed border-t border-slate-800 pt-2">
-                  Highway toll charges, parking, and driver allowances will be confirmed directly with you by the Waltair Cabs team over WhatsApp upon receiving this booking request.
+                  Highway toll charges, parking, and driver allowances will be confirmed directly with you by the Tiyanshi Airport Taxi team over WhatsApp upon receiving this booking request.
                 </p>
               </div>
 
@@ -923,7 +923,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <div>
                 <h4 className="text-xl font-extrabold text-slate-900">Your Ride is Confirmed!</h4>
                 <p className="text-xs text-slate-500 mt-1">
-                  Booking details sent to Waltair Cabs. Please share details on WhatsApp below.
+                  Booking details sent to Tiyanshi Airport Taxi. Please share details on WhatsApp below.
                 </p>
               </div>
 
@@ -941,10 +941,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   <div className="flex items-center gap-2.5">
                     <img 
                       src="/logo.png" 
-                      alt="Waltair Cabs" 
+                      alt="Tiyanshi Airport Taxi" 
                       className="w-9 h-9 rounded-lg border border-teal-500/30 object-cover shrink-0" 
                       onError={(e) => {
-                        e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                        e.currentTarget.src = '/logo.png';
                       }}
                     />
                     <div>
@@ -961,7 +961,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
 
                 <div className="p-3.5 bg-teal-50 rounded-xl border border-teal-200 text-teal-950 text-xs">
-                  <strong>Vehicle & Chauffeur Coordination:</strong> Waltair Cabs operations team will confirm your booking on WhatsApp, provide your fare quote upon request, and coordinate chauffeur details.
+                  <strong>Vehicle & Chauffeur Coordination:</strong> Tiyanshi Airport Taxi operations team will confirm your booking on WhatsApp, provide your fare quote upon request, and coordinate chauffeur details.
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-600">

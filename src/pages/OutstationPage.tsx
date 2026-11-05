@@ -41,8 +41,8 @@ export const OutstationPage: React.FC<OutstationPageProps> = ({
       heroImage="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80"
     >
       <SEOHead
-        title="Outstation Cabs from Vizag | One-Way & Round Trip Taxis | Waltair Cabs"
-        description="Book reliable outstation cabs from Visakhapatnam to Vijayawada, Rajahmundry, Kakinada, Srikakulam, Jagdalpur & Bhubaneswar. AC sedans, Ertiga & Crysta with expert drivers."
+        title="Outstation Cabs from Bangalore | One-Way & Round Trip Taxis | Tiyanshi Airport Taxi"
+        description="Book reliable outstation cabs from Bengaluru to Vijayawada, Rajahmundry, Kakinada, Srikakulam, Jagdalpur & Bhubaneswar. AC sedans, Ertiga & Crysta with expert drivers."
         canonicalUrl="/outstation"
         keywords={["outstation cab vizag", "outstation taxi visakhapatnam", "vizag outstation car rental", "one way outstation cab", "intercity taxi vizag"]}
       />
@@ -92,7 +92,7 @@ export const OutstationPage: React.FC<OutstationPageProps> = ({
                 <span>Intercity Corridors</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                Popular Outstation Routes from Visakhapatnam
+                Popular Outstation Routes from Bengaluru
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 mt-1">
                 Instant online booking with guaranteed commercial vehicle confirmation.
@@ -207,7 +207,7 @@ export const OutstationPage: React.FC<OutstationPageProps> = ({
                 <div className="mt-5 pt-3 border-t border-white/10 flex items-center justify-between">
                   <span className="text-xs font-bold text-teal-300">Quote on Request</span>
                   <button
-                    onClick={() => onBookRoute('Visakhapatnam', 'Araku Valley')}
+                    onClick={() => onBookRoute('Bengaluru', 'Araku Valley')}
                     className="px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-xs transition-colors cursor-pointer"
                   >
                     Select Cab

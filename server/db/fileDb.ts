@@ -25,8 +25,8 @@ function getInitialBookings() {
       customerEmail: 'suresh.varma@example.com',
       serviceType: 'airport',
       subType: 'pickup',
-      pickupLocation: 'Alluri Sitharama Raju International Airport ASI , Bhogapuram',
-      dropoffLocation: 'Siripuram Circle & Waltair Uplands, Visakhapatnam',
+      pickupLocation: 'Kempegowda International Airport (BLR), Terminal 1',
+      dropoffLocation: 'MG Road & Indiranagar, Bengaluru',
       travelDate: today,
       pickupTime: '11:00',
       vehicleCategory: 'Sedan',
@@ -41,7 +41,7 @@ function getInitialBookings() {
       status: 'on_the_way',
       driver: {
         name: 'K. Satish Varma',
-        phone: '+91 98480 23456',
+        phone: '+91 76762 52579',
         vehicleNumber: 'AP 31 TH 7842',
         vehicleModel: 'Maruti Suzuki Dzire (White)',
         rating: 4.9,
@@ -53,7 +53,7 @@ function getInitialBookings() {
       otp: '4821',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-      city: 'Visakhapatnam, IN',
+      city: 'Bengaluru, IN',
       isRegistered: false
     },
     {
@@ -64,8 +64,8 @@ function getInitialBookings() {
       customerEmail: 'ravi.naidu@gmail.com',
       serviceType: 'airport',
       subType: 'dropoff',
-      pickupLocation: 'Rushikonda Beach Road, Visakhapatnam',
-      dropoffLocation: 'Visakhapatnam Airport (VTZ)',
+      pickupLocation: 'Whitefield ITPL Main Road, Bengaluru',
+      dropoffLocation: 'Kempegowda International Airport (BLR)',
       travelDate: today,
       pickupTime: '15:30',
       vehicleCategory: 'SUV',
@@ -81,7 +81,7 @@ function getInitialBookings() {
       otp: '6192',
       createdAt: new Date(Date.now() - 3600000).toISOString(),
       updatedAt: new Date(Date.now() - 3600000).toISOString(),
-      city: 'Visakhapatnam, IN',
+      city: 'Bengaluru, IN',
       isRegistered: true
     }
   ];
@@ -100,8 +100,8 @@ function getInitialLeads() {
       isRegistered: false,
       serviceType: 'airport',
       subType: 'pickup',
-      pickupLocation: 'Visakhapatnam Airport (ASI / VTZ)',
-      dropoffLocation: 'Dwaraka Nagar, Visakhapatnam',
+      pickupLocation: 'Kempegowda International Airport (BLR), Terminal 2',
+      dropoffLocation: 'Koramangala 4th Block, Bengaluru',
       travelDate: today,
       pickupTime: '12:00',
       vehicleCategory: 'Sedan',
@@ -126,8 +126,8 @@ function getInitialLeads() {
       isRegistered: true,
       serviceType: 'outstation',
       subType: 'round_trip',
-      pickupLocation: 'Siripuram, Vizag',
-      dropoffLocation: 'Araku Valley Sightseeing, Vizag',
+      pickupLocation: 'MG Road, Bengaluru',
+      dropoffLocation: 'Mysore Palace & Chamundi Hills Heritage Tour',
       travelDate: today,
       pickupTime: '06:30',
       vehicleCategory: 'SUV',
@@ -150,10 +150,10 @@ function getInitialLeads() {
 function getInitialUsers() {
   return [
     {
-      uid: 'usr_admin_waltair',
-      name: 'Waltair Operations Dispatch',
-      email: 'admin@waltaircabs.in',
-      phone: '9848012345',
+      uid: 'usr_admin_tiyanshi',
+      name: 'Tiyanshi Operations Dispatch',
+      email: 'admin@tiyanshiairporttaxi.in',
+      phone: '7676252579',
       totalBookings: 14,
       createdAt: new Date().toISOString(),
       lastActive: new Date().toISOString()

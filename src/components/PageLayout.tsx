@@ -22,7 +22,7 @@ interface PageLayoutProps {
 export const PageLayout: React.FC<PageLayoutProps> = ({
   title,
   subtitle,
-  categoryBadge = 'Waltair Cabs Official',
+  categoryBadge = 'Tiyanshi Airport Taxi Official',
   breadcrumbs,
   children,
   onNavigateHome,
@@ -39,7 +39,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
             alt={title}
             className="w-full h-full object-cover object-center scale-105"
             onError={(e) => {
-              e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Golden-Hour%20Airport%20Taxi%20Arrival%20(1).png';
+              e.currentTarget.src = '/hero-banner.jpg';
             }}
           />
         </div>
@@ -108,11 +108,11 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
               )}
 
               <a
-                href="tel:+919441873821"
+                href="tel:+917676252579"
                 className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/15 font-semibold text-sm transition-all flex items-center gap-2"
               >
                 <Phone className="w-4 h-4 text-teal-300" />
-                <span>+91 94418 73821</span>
+                <span>+91 76762 52579</span>
               </a>
             </div>
           </div>

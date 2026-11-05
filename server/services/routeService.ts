@@ -22,6 +22,18 @@ export interface RouteEstimateResponse {
 
 // Distance & Route Matrix for Coastal AP & Eastern Ghats
 const DISTANCE_MATRIX: Record<string, { km: number; mins: number; tolls: number; ghat: boolean; scenic: boolean }> = {
+  // Bangalore Kempegowda Airport Routes
+  'kempegowda_airport_blr:mg_road': { km: 36, mins: 45, tolls: 1, ghat: false, scenic: true },
+  'kempegowda_airport_blr:indiranagar': { km: 38, mins: 48, tolls: 1, ghat: false, scenic: true },
+  'kempegowda_airport_blr:whitefield': { km: 44, mins: 55, tolls: 1, ghat: false, scenic: false },
+  'kempegowda_airport_blr:electronic_city': { km: 54, mins: 65, tolls: 2, ghat: false, scenic: false },
+  'kempegowda_airport_blr:koramangala': { km: 41, mins: 50, tolls: 1, ghat: false, scenic: false },
+  'kempegowda_airport_blr:manyata': { km: 28, mins: 35, tolls: 1, ghat: false, scenic: false },
+  'kempegowda_airport_blr:nandi_hills': { km: 35, mins: 45, tolls: 0, ghat: true, scenic: true },
+  'bangalore:mysore': { km: 145, mins: 135, tolls: 2, ghat: false, scenic: true },
+  'bangalore:nandi_hills': { km: 60, mins: 75, tolls: 1, ghat: true, scenic: true },
+  'bangalore:coorg': { km: 260, mins: 330, tolls: 3, ghat: true, scenic: true },
+  'bangalore:ooty': { km: 275, mins: 360, tolls: 4, ghat: true, scenic: true },
   // Airport Routes
   'visakhapatnam_airport_vtz:rk_beach': { km: 16, mins: 35, tolls: 0, ghat: false, scenic: true },
   'visakhapatnam_airport_vtz:rushikonda': { km: 26, mins: 50, tolls: 0, ghat: false, scenic: true },
@@ -106,8 +118,12 @@ export class RouteService {
 
   private static normalizeLocation(loc: string): string {
     const l = loc.toLowerCase().replace(/[^a-z0-9]/g, '_');
+    if (l.includes('blr') || l.includes('kempegowda') || (l.includes('bangalore') && l.includes('airport'))) return 'kempegowda_airport_blr';
     if (l.includes('vtz') || (l.includes('visakhapatnam') && l.includes('airport'))) return 'visakhapatnam_airport_vtz';
     if (l.includes('bhogapuram')) return 'bhogapuram_airport';
+    if (l.includes('mysore')) return 'mysore';
+    if (l.includes('nandi')) return 'nandi_hills';
+    if (l.includes('coorg')) return 'coorg';
     if (l.includes('araku')) return 'araku_valley';
     if (l.includes('lambasingi')) return 'lambasingi';
     if (l.includes('beach') || l.includes('rk_beach')) return 'rk_beach';

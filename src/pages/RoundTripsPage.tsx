@@ -30,11 +30,11 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
 }) => {
   const roundTripFaqs = [
     {
-      question: 'How do multi-day round-trip cab rentals work from Visakhapatnam?',
+      question: 'How do multi-day round-trip cab rentals work from Bengaluru?',
       answer: 'When you book a round-trip outstation cab, the vehicle and assigned commercial chauffeur stay with you throughout the duration of your trip. There is no need to switch cabs or drivers at intermediate destinations.'
     },
     {
-      question: 'What are the popular round-trip circuits from Vizag?',
+      question: 'What are the popular round-trip circuits from Bangalore?',
       answer: 'Top round-trip circuits include the 2-Day Araku Valley & Borra Caves circuit, 1-Day Annavaram & Pithapuram pilgrimage, 1-Day Srikakulam Arasavalli temple tour, and coastal Bheemili beach drives.'
     },
     {
@@ -49,7 +49,7 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
       badge: '2 Days / 1 Night',
       km: '~380 KM Round',
       img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
-      description: 'Visakhapatnam → Padmapuram Gardens → Coffee Museum → Chaparai Waterfalls → Borra Caves → Return.',
+      description: 'Bengaluru → Padmapuram Gardens → Coffee Museum → Chaparai Waterfalls → Borra Caves → Return.',
       highlights: ['Chauffeur stays with you overnight', 'Unlimited stops at ghat viewpoints', 'Hairpin curve veteran drivers']
     },
     {
@@ -58,7 +58,7 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
       badge: '1 Day Return',
       km: '~260 KM Round',
       img: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80',
-      description: 'Visakhapatnam → Annavaram Temple Hill → Tuni Cashew Market → Payakaraopeta → Return.',
+      description: 'Bengaluru → Annavaram Temple Hill → Tuni Cashew Market → Payakaraopeta → Return.',
       highlights: ['Hilltop temple parking included', 'Pooja prasad waiting time included', 'Fast return drop by evening']
     },
     {
@@ -67,7 +67,7 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
       badge: '2 Days / 1 Night',
       km: '~360 KM Round',
       img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80',
-      description: 'Visakhapatnam → Narsipatnam → Lambasingi Apple Farms → Kothapalli Waterfalls → Return.',
+      description: 'Bengaluru → Narsipatnam → Lambasingi Apple Farms → Kothapalli Waterfalls → Return.',
       highlights: ['Early morning winter mist sunrise', 'Strawberry & apple farm stops', 'Bonfire and resort transfers']
     },
     {
@@ -76,7 +76,7 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
       badge: '3 Days / 2 Nights',
       km: '~600 KM Round',
       img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80',
-      description: 'Visakhapatnam → Kakinada Beach → Rajahmundry Godavari Ghats → Draksharamam → Return.',
+      description: 'Bengaluru → Kakinada Beach → Rajahmundry Godavari Ghats → Draksharamam → Return.',
       highlights: ['Godavari boat launch coordination', 'Draksharamam Pancharama temple visit', 'Complete family leisure tour']
     },
     {
@@ -85,7 +85,7 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
       badge: '1 Day Return',
       km: '~280 KM Round',
       img: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=600&q=80',
-      description: 'Visakhapatnam → Arasavalli Sun Temple → Srikakulam Town → Srimukhalingam Shivalayam → Return.',
+      description: 'Bengaluru → Arasavalli Sun Temple → Srikakulam Town → Srimukhalingam Shivalayam → Return.',
       highlights: ['Spiritual heritage circuit', 'Temple darshan waiting time covered', 'Family dining halt at clean dhabas']
     },
     {
@@ -94,7 +94,7 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
       badge: 'Half Day / Full Day',
       km: '~140 KM Round',
       img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80',
-      description: 'Visakhapatnam → Rushikonda → Thotlakonda Buddhist Complex → Bheemili Dutch Cemetery → Return.',
+      description: 'Bengaluru → Rushikonda → Thotlakonda Buddhist Complex → Bheemili Dutch Cemetery → Return.',
       highlights: ['Scenic coastal expressway drive', 'Historical Buddhist monastery ruins', 'Sunset seafood shacks']
     }
   ];
@@ -102,8 +102,8 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
   return (
     <>
       <SEOHead
-        title="Round-Trip Outstation Cabs from Visakhapatnam | Waltair Cabs"
-        description="Book round-trip cabs from Visakhapatnam for Araku Valley, Annavaram, and coastal circuits. Same verified chauffeur and dedicated vehicle throughout your entire family vacation."
+        title="Round-Trip Outstation Cabs from Bengaluru | Tiyanshi Airport Taxi"
+        description="Book round-trip cabs from Bengaluru for Araku Valley, Annavaram, and coastal circuits. Same verified chauffeur and dedicated vehicle throughout your entire family vacation."
         canonicalPath="/round-trips"
         keywords={[
           'round trip cabs vizag',
@@ -173,7 +173,7 @@ export const RoundTripsPage: React.FC<RoundTripsPageProps> = ({
                 <span>Curated Holiday Itineraries</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                Popular Round-Trip Circuits from Visakhapatnam
+                Popular Round-Trip Circuits from Bengaluru
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 mt-1">
                 Fixed round-trip packages with all highway toll estimates, driver allowances, and fuel covered.

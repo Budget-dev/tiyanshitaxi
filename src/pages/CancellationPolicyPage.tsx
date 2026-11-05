@@ -25,21 +25,21 @@ export const CancellationPolicyPage: React.FC<CancellationPolicyPageProps> = ({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    'name': 'Waltair Cabs Cancellation & Refund Policy',
+    'name': 'Tiyanshi Airport Taxi Cancellation & Refund Policy',
     'description': 'Clear and customer-friendly cancellation guidelines, advance token refund schedules, and rescheduling policy.',
     'publisher': {
       '@type': 'Organization',
-      'name': 'Waltair Cabs',
+      'name': 'Tiyanshi Airport Taxi',
     },
   };
 
   return (
     <>
       <SEOHead
-        title="Cancellation & Refund Policy | Waltair Cabs Visakhapatnam"
-        description="Learn about Waltair Cabs cancellation rules, refund timelines, and zero cancellation fee options for airport and outstation taxi bookings."
+        title="Cancellation & Refund Policy | Tiyanshi Airport Taxi Visakhapatnam"
+        description="Learn about Tiyanshi Airport Taxi cancellation rules, refund timelines, and zero cancellation fee options for airport and outstation taxi bookings."
         canonicalUrl="/cancellation-policy"
-        keywords={["waltair cabs cancellation policy", "taxi refund vizag", "cab cancellation terms visakhapatnam"]}
+        keywords={["Tiyanshi Airport Taxi cancellation policy", "taxi refund vizag", "cab cancellation terms visakhapatnam"]}
         structuredData={structuredData}
       />
       <PageLayout
@@ -131,7 +131,7 @@ export const CancellationPolicyPage: React.FC<CancellationPolicyPageProps> = ({
             <ol className="list-decimal pl-5 space-y-2 text-slate-600 text-xs sm:text-sm">
               <li>Open the <strong className="text-slate-900">Manage Trips</strong> portal from the website navigation using your Booking Reference Number and Mobile Number.</li>
               <li>Click <strong className="text-slate-900">Cancel Booking</strong> and select the reason for cancellation.</li>
-              <li>Alternatively, call our 24/7 helpline at <strong className="text-teal-700">+91 91234 56789</strong> or WhatsApp our support desk for instant cancellation.</li>
+              <li>Alternatively, call our 24/7 helpline at <strong className="text-teal-700">+91 76762 52579</strong> or WhatsApp our support desk for instant cancellation.</li>
               <li>If any advance payment was made, your refund is credited directly to your UPI ID, debit/credit card, or net banking account within 24 to 48 hours.</li>
             </ol>
           </div>

@@ -36,7 +36,7 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
 
   const localRentalFaqs = [
     {
-      question: 'What packages are available for local car rental with driver in Vizag?',
+      question: 'What packages are available for local car rental with driver in Bangalore?',
       answer: 'We offer 3 standardized flexible packages: 4 Hours / 40 KM (quick meetings & station drops), 8 Hours / 80 KM (standard full-day city sightseeing), and 12 Hours / 120 KM (extended day & industrial SEZ tours).'
     },
     {
@@ -61,7 +61,7 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
       badge: 'City Errands & Business',
       tag: 'Best for Quick Trips',
       description: 'Ideal for doctor visits in Maharanipeta, bank appointments in Siripuram, railway station drops, or quick shopping sprees at Jagadamba Center.',
-      highlights: ['Unlimited stops within 40 km', 'Chauffeur waits at every venue', 'AC on at all times', 'Doorstep pickup anywhere in Vizag'],
+      highlights: ['Unlimited stops within 40 km', 'Chauffeur waits at every venue', 'AC on at all times', 'Doorstep pickup anywhere in Bangalore'],
       img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=700&q=80'
     },
     {
@@ -81,7 +81,7 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
       badge: 'Extended Day / Industrial SEZ',
       tag: 'Complete Freedom',
       description: 'Perfect for visits to Parawada Jawaharlal Nehru Pharma City, Atchutapuram SEZ, multi-venue weddings, or day-long coastal photography trails.',
-      highlights: ['Covers all Vizag districts & SEZ', '12 hours chauffeur availability', 'Fuel & AC completely included', 'Toll receipt reimbursement'],
+      highlights: ['Covers all Bangalore districts & SEZ', '12 hours chauffeur availability', 'Fuel & AC completely included', 'Toll receipt reimbursement'],
       img: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=700&q=80'
     },
   ];
@@ -136,9 +136,9 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
   return (
     <>
       <SEOHead
-        title="Local Cab Rentals & Hourly Car Hire in Visakhapatnam | Waltair Cabs"
-        description="Rent a car with driver in Visakhapatnam for 4 hours, 8 hours, or 12 hours. Transparent hourly packages for city meetings, shopping, railway station drops, and sightseeing."
-        canonicalPath="/local-rentals-vizag"
+        title="Local Cab Rentals & Hourly Car Hire in Bengaluru | Tiyanshi Airport Taxi"
+        description="Rent a car with driver in Bengaluru for 4 hours, 8 hours, or 12 hours. Transparent hourly packages for city meetings, shopping, railway station drops, and sightseeing."
+        canonicalPath="/local-rentals-bangalore"
         keywords={[
           'local cabs vizag',
           'hourly cab rental vizag',
@@ -149,13 +149,13 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
         ]}
         breadcrumbs={[
           { name: 'Home', item: '/' },
-          { name: 'Local Rentals', item: '/local-rentals-vizag' }
+          { name: 'Local Rentals', item: '/local-rentals-bangalore' }
         ]}
         faqs={localRentalFaqs}
       />
       <PageLayout
         title="Hourly Local Car Rentals with Chauffeur"
-        subtitle="Keep a dedicated private car and veteran chauffeur at your command. Make unlimited stops across Visakhapatnam with zero surge pricing."
+        subtitle="Keep a dedicated private car and veteran chauffeur at your command. Make unlimited stops across Bengaluru with zero surge pricing."
         categoryBadge="Local City Rentals"
         breadcrumbs={[{ label: 'Top Services', onClick: () => onNavigatePage('services') }, { label: 'Local Rentals' }]}
         onNavigateHome={onNavigateHome}
@@ -219,7 +219,7 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
                 <span>Instant Package Configurator</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Choose Your Rental Package</h2>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">Select the duration that matches your daily schedule in Visakhapatnam.</p>
+              <p className="text-xs sm:text-sm text-slate-500 mt-1">Select the duration that matches your daily schedule in Bengaluru.</p>
             </div>
 
             {/* Duration Selector Tabs */}
@@ -323,7 +323,7 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
               <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-xl group">
                 <img
                   src={currentPkg.img}
-                  alt={`${currentPkg.hours} Hourly Rental in Visakhapatnam`}
+                  alt={`${currentPkg.hours} Hourly Rental in Bengaluru`}
                   className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -407,7 +407,7 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
           </div>
         </div>
 
-        {/* Visual Guide: Top Visakhapatnam Spots to Cover with Hourly Rental */}
+        {/* Visual Guide: Top Bengaluru Spots to Cover with Hourly Rental */}
         <div className="space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
@@ -477,7 +477,7 @@ export const LocalRentalsPage: React.FC<LocalRentalsPageProps> = ({
         {/* Why Hourly Rentals Beat Point-to-Point */}
         <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-6">
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 text-center">
-            Why Hourly Rentals Beat App-Based Ride Hailing in Vizag
+            Why Hourly Rentals Beat App-Based Ride Hailing in Bangalore
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

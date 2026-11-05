@@ -34,13 +34,13 @@ interface BlogSectionProps {
 const INITIAL_SEED_POSTS: BlogPost[] = [
   {
     id: 'seed-blog-1',
-    title: 'Complete Guide to Bhogapuram Airport (ASI) Transfers: Fares, Route & Timings',
-    excerpt: 'Everything you need to know about reaching the upcoming Alluri Sitharama Raju International Airport with dedicated express cab bookings.',
-    content: `The upcoming Bhogapuram International Airport (ASI) is set to become the premier aviation gateway for Andhra Pradesh. Located approximately 42 kilometers northeast of Visakhapatnam city center along NH-16, planning your airport commute in advance ensures a hassle-free trip.
+    title: 'Complete Guide to Kempegowda BLR Airport Transfers: Fares, Route & Timings',
+    excerpt: 'Everything you need to know about reaching Kempegowda International Airport (BLR T1 & T2) with dedicated express cab bookings.',
+    content: `Kempegowda International Airport (BLR) in Devanahalli is the premier aviation gateway for Bengaluru and Karnataka. Located approximately 36 to 45 kilometers from the city center, planning your airport commute with an authorized cab service ensures a punctual, stress-free flight catch.
 
 ### Why Pre-Booking Your Airport Cab Matters
 1. **Distance & Travel Time:** The commute from Siripuram, Gajuwaka, or Rushikonda takes roughly 45 to 65 minutes depending on traffic. Pre-booking guarantees on-time doorstep pickup.
-2. **Fixed Toll-Inclusive Pricing:** Waltair Cabs offers transparent upfront pricing with zero surge charges and toll inclusions for the Tagarapuvalasa plaza.
+2. **Fixed Toll-Inclusive Pricing:** Tiyanshi Airport Taxi offers transparent upfront pricing with zero surge charges and toll inclusions for the Tagarapuvalasa plaza.
 3. **Flight Delay Adjustments:** Our dispatch team monitors incoming flight tracking so your chauffeur is stationed at the arrivals bay even if your flight lands ahead or behind schedule.
 
 ### Recommended Vehicle Classes
@@ -48,7 +48,7 @@ const INITIAL_SEED_POSTS: BlogPost[] = [
 * **Innova Crysta / SUV:** Perfect for families or business delegates carrying excess luggage.
 * **12-Seater Tempo Traveller:** Best suited for corporate teams and wedding delegations.`,
     author: 'Suresh Varma',
-    authorEmail: 'suresh@waltairtravels.com',
+    authorEmail: 'suresh@tiyanshiairporttaxi.com',
     date: '2025-05-10',
     category: 'Airport & Commute',
     readTime: '4 min read',
@@ -56,9 +56,9 @@ const INITIAL_SEED_POSTS: BlogPost[] = [
   },
   {
     id: 'seed-blog-2',
-    title: 'Vizag to Araku Valley Road Trip: 7 Scenic Stops, Borra Caves & Coffee Trails',
-    excerpt: 'Discover the winding Eastern Ghats with our curated 2-day cab itinerary covering Tyda, Katiki Waterfalls, and Chaparai rapids.',
-    content: `A road trip from Visakhapatnam to Araku Valley through the misty Eastern Ghats is one of South India's most celebrated road journeys. Covering 115 kilometers of smooth ghat roads, this tour is best enjoyed with an experienced local driver.
+    title: 'Bangalore to Mysore Expressway Road Trip: Top Scenic Stops & Heritage Guide',
+    excerpt: 'Discover the rapid 10-lane expressway with our curated day-trip cab itinerary covering Ramanagara, Srirangapatna, and Mysore Palace.',
+    content: `A road trip from Bengaluru to Mysore via the new 10-lane expressway is one of South India's smoothest journeys. Covering 145 kilometers in just over 2 hours, this tour gives total freedom to explore palaces, temples, and craft villages.
 
 ### Top Stops Along the Route:
 1. **Tyda Jungle Bells Nature Camp:** A peaceful eco-tourism haven for bird watching and breakfast.
@@ -69,9 +69,9 @@ const INITIAL_SEED_POSTS: BlogPost[] = [
 
 ### Travel Tips from Our Drivers:
 * Start early by 6:00 AM from Vizag to beat city traffic and catch the morning mist atop Galikonda viewpoint.
-* Ask your Waltair Cabs driver to stop for authentic bamboo chicken and Araku honey tastings!`,
+* Ask your Tiyanshi Airport Taxi driver to stop for authentic bamboo chicken and Araku honey tastings!`,
     author: 'K. Satish',
-    authorEmail: 'satish.driver@waltairtravels.com',
+    authorEmail: 'satish.driver@tiyanshiairporttaxi.com',
     date: '2025-05-02',
     category: 'Travel Itineraries',
     readTime: '6 min read',
@@ -84,7 +84,7 @@ const INITIAL_SEED_POSTS: BlogPost[] = [
     content: `When booking intercity cabs between Vizag, Vijayawada, Rajahmundry, Kakinada, or Bhubaneswar, having complete clarity on fare structures ensures a relaxed journey.
 
 ### 1. Inquire About Driver Batta & Night Allowances
-Always confirm whether the quoted fare includes driver night allowances (typically applied between 10 PM and 6 AM) and daily food batta. At Waltair Cabs, all outstation quotes clearly separate base per-km rates from optional driver allowances.
+Always confirm whether the quoted fare includes driver night allowances (typically applied between 10 PM and 6 AM) and daily food batta. At Tiyanshi Airport Taxi, all outstation quotes clearly separate base per-km rates from optional driver allowances.
 
 ### 2. Check Vehicle Fitness & Commercial Permits
 Ensure your cab holds a valid commercial yellow plate (AP 31 / AP 39 registration) with active tourist road tax and comprehensive insurance. This prevents unexpected checkpoints delays at state borders.
@@ -134,12 +134,12 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
         items.push({ id: d.id, ...d.data() } as BlogPost);
       });
 
-      const local = JSON.parse(localStorage.getItem('waltair_blog_posts') || '[]');
+      const local = JSON.parse(localStorage.getItem('tiyanshi_blog_posts') || '[]');
       const combined = [...items, ...local.filter((l: BlogPost) => !items.some(i => i.id === l.id))];
 
       if (combined.length === 0) {
         setPosts(INITIAL_SEED_POSTS);
-        localStorage.setItem('waltair_blog_posts', JSON.stringify(INITIAL_SEED_POSTS));
+        localStorage.setItem('tiyanshi_blog_posts', JSON.stringify(INITIAL_SEED_POSTS));
         INITIAL_SEED_POSTS.forEach(async (p) => {
           try {
             await addDoc(collection(db, 'blog_posts'), {
@@ -155,7 +155,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
       }
     } catch (err) {
       console.warn('Firestore blog fetch fallback:', err);
-      const local = JSON.parse(localStorage.getItem('waltair_blog_posts') || '[]');
+      const local = JSON.parse(localStorage.getItem('tiyanshi_blog_posts') || '[]');
       setPosts(local.length > 0 ? local : INITIAL_SEED_POSTS);
     }
   };
@@ -171,7 +171,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
         });
         if (items.length > 0) {
           setPosts(items);
-          localStorage.setItem('waltair_blog_posts', JSON.stringify(items));
+          localStorage.setItem('tiyanshi_blog_posts', JSON.stringify(items));
         }
       }, (err) => {
         console.warn('Blog snapshot listener info:', err);
@@ -187,7 +187,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
     setEditingPostId(null);
     setFormTitle('');
     setFormContent('');
-    setFormAuthor(currentUser?.name || 'Waltair Traveler');
+    setFormAuthor(currentUser?.name || 'Tiyanshi Traveler');
     setFormCategory('Travel Itineraries');
     setFormDate(new Date().toISOString().split('T')[0]);
     setFormExcerpt('');
@@ -232,7 +232,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
 
     const updated = posts.filter(p => p.id !== post.id);
     setPosts(updated);
-    localStorage.setItem('waltair_blog_posts', JSON.stringify(updated));
+    localStorage.setItem('tiyanshi_blog_posts', JSON.stringify(updated));
     if (activeReadingPost?.id === post.id) {
       setActiveReadingPost(null);
     }
@@ -271,7 +271,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
         await updateDoc(doc(db, 'blog_posts', editingPostId), { ...postPayload });
         const updatedList = posts.map(p => p.id === editingPostId ? { ...postPayload, id: editingPostId } : p);
         setPosts(updatedList);
-        localStorage.setItem('waltair_blog_posts', JSON.stringify(updatedList));
+        localStorage.setItem('tiyanshi_blog_posts', JSON.stringify(updatedList));
       } else {
         const docRef = await addDoc(collection(db, 'blog_posts'), {
           ...postPayload,
@@ -280,7 +280,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
         const newPost = { ...postPayload, id: docRef.id };
         const updatedList = [newPost, ...posts];
         setPosts(updatedList);
-        localStorage.setItem('waltair_blog_posts', JSON.stringify(updatedList));
+        localStorage.setItem('tiyanshi_blog_posts', JSON.stringify(updatedList));
       }
 
       setFormSuccess(true);
@@ -296,7 +296,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
         ? posts.map(p => p.id === editingPostId ? savedPost : p)
         : [savedPost, ...posts];
       setPosts(updatedList);
-      localStorage.setItem('waltair_blog_posts', JSON.stringify(updatedList));
+      localStorage.setItem('tiyanshi_blog_posts', JSON.stringify(updatedList));
       setFormSuccess(true);
       setTimeout(() => {
         setIsSaving(false);
@@ -327,7 +327,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
               <span>Travel Guides & Driver Insights</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Waltair Cabs Blog & Road Guides
+              Tiyanshi Airport Taxi Blog & Road Guides
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
               Practical airport transfers, scenic Araku itineraries, and local Vizag travel secrets written by our chauffeurs.
@@ -643,7 +643,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ currentUser, onOpenAut
                     type="text"
                     value={formTitle}
                     onChange={(e) => setFormTitle(e.target.value)}
-                    placeholder="e.g. Navigating Bhogapuram Airport Transfers: Fares & Timings"
+                    placeholder="e.g. Navigating Kempegowda BLR Airport Transfers: Fares & Timings"
                     className="w-full p-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-teal-600 bg-slate-50"
                     required
                   />

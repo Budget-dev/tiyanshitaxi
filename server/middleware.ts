@@ -108,9 +108,9 @@ export function errorHandler(err: any, req: Request, res: Response, _next: NextF
 
 /**
  * Strict Admin Authorization Middleware
- * Enforces access solely for waltairtravelsandcabs@gmail.com
+ * Enforces access solely for tiyanshiairporttaxi@gmail.com
  */
-export const AUTHORIZED_ADMIN_EMAIL = 'waltairtravelsandcabs@gmail.com';
+export const AUTHORIZED_ADMIN_EMAIL = 'tiyanshiairporttaxi@gmail.com';
 
 interface VerifiedTokenRecord {
   email: string;

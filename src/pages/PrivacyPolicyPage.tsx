@@ -17,21 +17,21 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    'name': 'Waltair Cabs Privacy Policy',
-    'description': 'Information on how Waltair Cabs collects, stores, protects, and handles personal passenger data and GPS information.',
+    'name': 'Tiyanshi Airport Taxi Privacy Policy',
+    'description': 'Information on how Tiyanshi Airport Taxi collects, stores, protects, and handles personal passenger data and GPS information.',
     'publisher': {
       '@type': 'Organization',
-      'name': 'Waltair Cabs',
+      'name': 'Tiyanshi Airport Taxi',
     },
   };
 
   return (
     <>
       <SEOHead
-        title="Privacy Policy | Waltair Cabs Visakhapatnam"
-        description="Learn how Waltair Cabs protects your personal information, phone number, and location privacy during cab bookings and taxi rides."
+        title="Privacy Policy | Tiyanshi Airport Taxi Visakhapatnam"
+        description="Learn how Tiyanshi Airport Taxi protects your personal information, phone number, and location privacy during cab bookings and taxi rides."
         canonicalUrl="/privacy-policy"
-        keywords={["waltair cabs privacy policy", "taxi data privacy visakhapatnam"]}
+        keywords={["Tiyanshi Airport Taxi privacy policy", "taxi data privacy visakhapatnam"]}
         structuredData={structuredData}
       />
       <PageLayout
@@ -51,7 +51,7 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
             <div>
               <div className="font-bold text-slate-900 text-sm">Last Updated: August 2026</div>
               <p className="text-xs text-slate-600 mt-0.5">
-                This Privacy Policy applies to all services offered by Waltair Cabs across our website, mobile booking engines, and customer support channels.
+                This Privacy Policy applies to all services offered by Tiyanshi Airport Taxi across our website, mobile booking engines, and customer support channels.
               </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
               4. Your Rights & Data Deletion
             </h2>
             <p>
-              You have the right to request a copy of your trip history or request permanent deletion of your stored user profile by emailing <strong className="text-teal-700">privacy@waltairtravels.com</strong>.
+              You have the right to request a copy of your trip history or request permanent deletion of your stored user profile by emailing <strong className="text-teal-700">privacy@tiyanshiairporttaxi.com</strong>.
             </p>
           </section>
 

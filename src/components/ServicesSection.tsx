@@ -26,7 +26,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
       id: 'airport',
       subType: 'pickup' as TripSubType,
       title: 'Airport Taxi',
-      badge: 'ASI Bhogapuram & VTZ',
+      badge: 'Kempegowda BLR (T1 & T2)',
       desc: 'Guaranteed flight-delay adjusted transfers',
       btn: 'Book Airport',
       icon: Luggage,
@@ -37,7 +37,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
       subType: 'oneway' as TripSubType,
       title: 'Outstation Cabs',
       badge: 'Intercity Trips',
-      desc: 'Comfortable sedans & SUVs across AP',
+      desc: 'Comfortable sedans & SUVs across Karnataka',
       btn: 'Explore Routes',
       icon: Mountain,
       color: 'cyan'

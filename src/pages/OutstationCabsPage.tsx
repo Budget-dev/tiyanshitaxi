@@ -39,7 +39,7 @@ export const OutstationCabsPage: React.FC<OutstationCabsPageProps> = ({
     },
     {
       question: 'Are driver allowance (batta), night charges, and tolls included?',
-      answer: 'Yes. Waltair Cabs operates with zero hidden charges. Day driver allowances are included in our base quotation. Highway toll plazas and interstate taxes are clearly outlined prior to trip commencement.'
+      answer: 'Yes. Tiyanshi Airport Taxi operates with zero hidden charges. Day driver allowances are included in our base quotation. Highway toll plazas and interstate taxes are clearly outlined prior to trip commencement.'
     },
     {
       question: 'Can I book a cab from Visakhapatnam to Araku Valley or Borra Caves?',
@@ -137,10 +137,10 @@ export const OutstationCabsPage: React.FC<OutstationCabsPageProps> = ({
       <SEOHead
         title="Outstation Cabs from Visakhapatnam | One-Way & Round Trips"
         description="Book verified outstation cabs from Visakhapatnam to Rajahmundry, Kakinada, Vijayawada, Srikakulam, and Araku. Transparent per-km rates with zero return charges on one-way drops."
-        canonicalPath="/outstation-cabs-vizag"
+        canonicalPath="/outstation-cabs-bangalore"
         keywords={[
           'outstation cab vizag',
-          'one way cab vizag',
+          'one way cab bangalore',
           'intercity taxi visakhapatnam',
           'vizag outstation car rental with driver',
           'round trip cabs vizag',
@@ -149,7 +149,7 @@ export const OutstationCabsPage: React.FC<OutstationCabsPageProps> = ({
         ]}
         breadcrumbs={[
           { name: 'Home', item: '/' },
-          { name: 'Outstation Cabs', item: '/outstation-cabs-vizag' }
+          { name: 'Outstation Cabs', item: '/outstation-cabs-bangalore' }
         ]}
         faqs={outstationFaqs}
       />

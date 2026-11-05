@@ -100,10 +100,10 @@ export const FaqsPage: React.FC<FaqsPageProps> = ({
   return (
     <>
       <SEOHead
-        title="Frequently Asked Questions (FAQs) - Waltair Cabs Visakhapatnam"
+        title="Frequently Asked Questions (FAQs) - Tiyanshi Airport Taxi Visakhapatnam"
         description="Got questions about booking cabs, Bhogapuram airport transit, outstation per-km rates, GST invoicing, or payment methods? Browse our comprehensive FAQ guide."
         keywords={[
-          'Waltair Cabs FAQs',
+          'Tiyanshi Airport Taxi FAQs',
           'Vizag taxi booking questions',
           'Bhogapuram cab fare questions',
           'outstation taxi policies Visakhapatnam',
@@ -212,11 +212,11 @@ export const FaqsPage: React.FC<FaqsPageProps> = ({
               <p className="text-xs text-slate-500">Our customer support team is available 24/7 to assist you personally.</p>
             </div>
             <a
-              href="tel:+919441873821"
+              href="tel:+917676252579"
               className="px-6 py-3 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-md shrink-0 flex items-center gap-2 cursor-pointer"
             >
               <Phone className="w-4 h-4" />
-              <span>Call +91 94418 73821</span>
+              <span>Call +91 76762 52579</span>
             </a>
           </div>
 

@@ -1,7 +1,7 @@
 import { Booking } from '../types';
 
-export const WHATSAPP_PHONE_NUMBER = '919441873821';
-export const DISPLAY_PHONE_NUMBER = '+91 94418 73821';
+export const WHATSAPP_PHONE_NUMBER = '917676252579';
+export const DISPLAY_PHONE_NUMBER = '+91 76762 52579';
 
 export const createBookingWhatsAppUrl = (booking: Partial<Booking>): string => {
   const passengerList = booking.passengers && booking.passengers.length > 0
@@ -13,7 +13,7 @@ export const createBookingWhatsAppUrl = (booking: Partial<Booking>): string => {
     : 1;
 
   const lines = [
-    `*NEW CAB BOOKING - WALTAIR CABS*`,
+    `*NEW CAB BOOKING - Tiyanshi Airport Taxi*`,
     `--------------------------------`,
     `*Booking ID:* ${booking.bookingRef || 'N/A'}`,
     `*Primary Contact:* ${booking.customerName || ''}`,

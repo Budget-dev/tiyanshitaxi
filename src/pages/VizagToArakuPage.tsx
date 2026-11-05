@@ -78,7 +78,7 @@ export const VizagToArakuPage: React.FC<VizagToArakuPageProps> = ({
     },
     {
       question: 'Can I book a one-way cab to Araku Valley or do I have to pay for a round trip?',
-      answer: 'Waltair Cabs offers both one-way drop cabs to Araku hotels/resorts and same-day round-trip sightseeing packages. For verified one-way drops, you only pay for the one-way route without hidden return kilometer charges.'
+      answer: 'Tiyanshi Airport Taxi offers both one-way drop cabs to Araku hotels/resorts and same-day round-trip sightseeing packages. For verified one-way drops, you only pay for the one-way route without hidden return kilometer charges.'
     },
     {
       question: 'Are your drivers experienced on the Araku hairpin ghat road?',
@@ -97,40 +97,40 @@ export const VizagToArakuPage: React.FC<VizagToArakuPageProps> = ({
   return (
     <>
       <SEOHead
-        title="Vizag to Araku Cab Booking | Safe Ghat Road Drivers & Fares"
-        description="Book verified cabs from Visakhapatnam to Araku Valley and Borra Caves. Experienced hill chauffeurs, scenic stops at Tyda and Katiki, one-way drops, and same-day sightseeing."
-        canonicalPath="/vizag-to-araku-cab"
+        title="Bangalore to Mysore Cab Booking | Expressway Cabs & Sightseeing"
+        description="Book verified cabs from Bangalore to Mysore via the 10-lane Expressway. Chauffeur-driven sedans & SUVs, stops at Srirangapatna, Mysore Palace & Chamundi Hills, one-way drops & day tours."
+        canonicalPath="/bangalore-to-mysore-cab"
         keywords={[
-          'vizag to araku cab',
-          'araku cab from vizag',
-          'vizag to araku cab fare',
-          'borra caves cab',
-          'vizag to araku taxi package',
+          'bangalore to mysore cab',
+          'bangalore to mysore taxi fare',
+          'bangalore mysore expressway cab',
+          'mysore sightseeing car rental',
+          'innova for mysore trip bangalore',
           'visakhapatnam to araku valley car rental with driver',
           'innova for araku trip vizag'
         ]}
         breadcrumbs={[
           { name: 'Home', item: '/' },
-          { name: 'Outstation Cabs', item: '/outstation-cabs-vizag' },
-          { name: 'Vizag to Araku Cab', item: '/vizag-to-araku-cab' }
+          { name: 'Outstation Cabs', item: '/outstation-cabs-bangalore' },
+          { name: 'Bangalore to Mysore Cab', item: '/bangalore-to-mysore-cab' }
         ]}
         faqs={arakuFaqs}
       />
 
       <PageLayout
-        title="Vizag to Araku Valley Cab Service & Sightseeing"
-        subtitle="115 KM scenic journey through the Eastern Ghats with verified hill chauffeurs, stops at Borra Caves & Tyda, and transparent pricing."
+        title="Bangalore to Mysore Cab Service & Sightseeing Tour"
+        subtitle="145 KM fast expressway journey with verified highway chauffeurs, stops at Ramanagara, Srirangapatna & Mysore Palace, and transparent pricing."
         categoryBadge="Pillar Outstation Route"
         breadcrumbs={[
           { label: 'Outstation Cabs', onClick: () => onNavigatePage('outstation-cabs') },
-          { label: 'Vizag to Araku Cab' }
+          { label: 'Bangalore to Mysore Cab' }
         ]}
         onNavigateHome={onNavigateHome}
         onOpenBooking={() => {
           trackBookingStart('outstation', 'araku_route_hero');
           onOpenBooking();
         }}
-        ctaText="Book Araku Cab Now"
+        ctaText="Book Mysore Cab Now"
         heroImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
       >
         <div className="space-y-16">
@@ -342,12 +342,12 @@ export const VizagToArakuPage: React.FC<VizagToArakuPageProps> = ({
                 Book Araku Cab Online
               </button>
               <a
-                href="tel:+919441873821"
+                href="tel:+917676252579"
                 onClick={() => trackPhoneClick('araku_cta')}
                 className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 font-semibold text-sm transition-colors flex items-center gap-2"
               >
                 <Phone className="w-4 h-4 text-teal-300" />
-                <span>+91 94418 73821</span>
+                <span>+91 76762 52579</span>
               </a>
             </div>
           </div>

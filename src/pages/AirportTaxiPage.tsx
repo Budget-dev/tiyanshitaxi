@@ -35,67 +35,67 @@ export const AirportTaxiPage: React.FC<AirportTaxiPageProps> = ({
 }) => {
   const airportFaqs = [
     {
-      question: 'How do I book an airport taxi in Visakhapatnam with Waltair Cabs?',
-      answer: 'You can book online in seconds by selecting your pickup/drop location, flight arrival/departure time, and preferred vehicle. You can also call or WhatsApp our 24/7 dispatch desk directly at +91 94418 73821 for instant confirmation.'
+      question: 'How do I book an airport taxi in Bangalore with Tiyanshi Airport Taxi?',
+      answer: 'You can book online in seconds by selecting your pickup/drop location, flight arrival/departure time, and preferred vehicle. You can also call or WhatsApp our 24/7 dispatch desk directly at +91 76762 52579 for instant confirmation.'
     },
     {
-      question: 'Do you provide cab transfers to the new Bhogapuram International Airport (ASI)?',
-      answer: 'Yes. Waltair Cabs operates dedicated express airport transfers between Visakhapatnam city center, Siripuram, MVP Colony, Rushikonda, Gajuwaka, and the upcoming Bhogapuram International Airport (ASI) along the NH-16 corridor.'
+      question: 'Do you serve Kempegowda International Airport (BLR) Terminal 1 and Terminal 2?',
+      answer: 'Yes. Tiyanshi Airport Taxi provides 24/7 dedicated pickups and drop-offs at both Kempegowda International Airport (BLR) Terminal 1 and Terminal 2, connecting to Whitefield, Electronic City, Indiranagar, Koramangala, Manyata Tech Park, and all Bangalore neighborhoods.'
     },
     {
       question: 'What happens if my incoming flight is delayed?',
       answer: 'All airport pickups include automatic flight tracking. If your flight is delayed, our dispatch schedule adjusts automatically, and your driver will be waiting at the terminal without extra waiting penalties.'
     },
     {
-      question: 'Are NH-16 highway tolls and airport parking included in the fare?',
-      answer: 'Yes. Waltair Cabs maintains 100% transparent pricing with zero surprise charges. All tolls, airport entry slips, and driver charges are transparently communicated upfront.'
+      question: 'Are Bangalore airport tolls and terminal parking included in the fare?',
+      answer: 'Yes. Tiyanshi Airport Taxi maintains 100% transparent pricing with zero surprise charges. All tolls, airport entry slips, and driver charges are transparently communicated upfront.'
     }
   ];
 
   const airportRoutes = [
     { 
-      from: 'Bhogapuram Airport (ASI)', 
-      to: 'Siripuram Circle & Beach Road', 
+      from: 'Kempegowda Airport (BLR)', 
+      to: 'Indiranagar & MG Road', 
       distance: '42 KM', 
       estTime: '45 mins', 
       image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80',
       tag: 'Most Popular City Drop'
     },
     { 
-      from: 'Bhogapuram Airport (ASI)', 
-      to: 'Rushikonda Beach & IT SEZ', 
+      from: 'Kempegowda Airport (BLR)', 
+      to: 'Whitefield IT Hub (EPIP / ITPL)', 
       distance: '28 KM', 
       estTime: '32 mins', 
       image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=600&q=80',
       tag: 'IT Corridor & Resorts'
     },
     { 
-      from: 'Bhogapuram Airport (ASI)', 
-      to: 'Gajuwaka & Steel Plant', 
+      from: 'Kempegowda Airport (BLR)', 
+      to: 'Electronic City (Phase 1 & 2)', 
       distance: '58 KM', 
       estTime: '60 mins', 
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80',
       tag: 'Industrial Hub'
     },
     { 
-      from: 'Bhogapuram Airport (ASI)', 
-      to: 'Vizianagaram Fort Town', 
+      from: 'Kempegowda Airport (BLR)', 
+      to: 'Koramangala & HSR Layout', 
       distance: '22 KM', 
       estTime: '25 mins', 
       image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80',
       tag: 'Fast Regional Link'
     },
     { 
-      from: 'Bhogapuram Airport (ASI)', 
-      to: 'Srikakulam Town', 
+      from: 'Kempegowda Airport (BLR)', 
+      to: 'Manyata Tech Park & Hebbal', 
       distance: '65 KM', 
       estTime: '70 mins', 
       image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80',
       tag: 'North Coastal Express'
     },
     { 
-      from: 'Visakhapatnam Airport (VTZ)', 
-      to: 'Siripuram / MVP Colony', 
+      from: 'Kempegowda Airport (BLR)', 
+      to: 'Mysore City (Expressway Link)', 
       distance: '14 KM', 
       estTime: '25 mins', 
       image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80',
@@ -106,26 +106,26 @@ export const AirportTaxiPage: React.FC<AirportTaxiPageProps> = ({
   return (
     <>
       <SEOHead
-        title="Vizag Airport Taxi & Cab Booking | Bhogapuram ASI & VTZ Transfers"
-        description="Reliable 24/7 airport taxi in Visakhapatnam for VTZ and Bhogapuram International Airport (ASI). Flight delay tracking, doorstep pickup, and fixed transparent fares."
-        canonicalPath="/airport-taxi-vizag"
+        title="Bangalore Airport Taxi | Kempegowda Airport BLR Cabs Booking"
+        description="Book reliable 24/7 Bangalore airport taxi to & from Kempegowda International Airport (BLR T1 & T2). Flight delay tracking, doorstep pickup, fixed transparent rates."
+        canonicalPath="/airport-taxi-bangalore"
         keywords={[
-          'airport taxi vizag',
-          'vizag airport cab',
-          'bhogapuram airport cab',
-          'bhogapuram airport taxi fare',
-          'visakhapatnam airport taxi',
-          'airport transfer vizag',
-          'vtz airport taxi'
+          'bangalore airport taxi',
+          'airport cab bangalore',
+          'kempegowda airport cab',
+          'blr airport taxi booking',
+          'bangalore airport to whitefield cab',
+          'airport taxi bangalore electronic city',
+          'blr terminal 2 cab'
         ]}
         breadcrumbs={[
           { name: 'Home', item: '/' },
-          { name: 'Airport Taxi', item: '/airport-taxi-vizag' }
+          { name: 'Airport Taxi', item: '/airport-taxi-bangalore' }
         ]}
         faqs={airportFaqs}
       />
       <PageLayout
-        title="Airport Taxi Service (Bhogapuram ASI & VTZ)"
+        title="Bangalore Airport Taxi Service (Kempegowda BLR T1 & T2)"
         subtitle="Guaranteed punctual airport pickups and drops with flight delay tracking, meet & greet terminal service, and fixed transparent fares."
         categoryBadge="Dedicated Airport Transfer"
         breadcrumbs={[{ label: 'Top Services', onClick: () => onNavigatePage('services') }, { label: 'Airport Taxi' }]}
@@ -165,7 +165,7 @@ export const AirportTaxiPage: React.FC<AirportTaxiPageProps> = ({
             <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center border border-amber-200">
               <ShieldCheck className="w-6 h-6" />
             </div>
-            <h3 className="text-base font-extrabold text-slate-900">NH16 Tolls & Parking Included</h3>
+            <h3 className="text-base font-extrabold text-slate-900">Tolls & Airport Parking Included</h3>
             <p className="text-xs text-slate-500 leading-relaxed font-medium">
               Zero surprises at highway toll plazas or terminal parking gates. All government taxes, highway cess, and airport entry slips are transparently accounted for.
             </p>

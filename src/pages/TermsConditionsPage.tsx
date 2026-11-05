@@ -17,26 +17,26 @@ export const TermsConditionsPage: React.FC<TermsConditionsPageProps> = ({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    'name': 'Waltair Cabs Terms and Conditions',
-    'description': 'Standard operating terms, passenger codes of conduct, luggage limits, and legal service agreements for Waltair Cabs.',
+    'name': 'Tiyanshi Airport Taxi Terms and Conditions',
+    'description': 'Standard operating terms, passenger codes of conduct, luggage limits, and legal service agreements for Tiyanshi Airport Taxi.',
     'publisher': {
       '@type': 'Organization',
-      'name': 'Waltair Cabs',
+      'name': 'Tiyanshi Airport Taxi',
     },
   };
 
   return (
     <>
       <SEOHead
-        title="Terms & Conditions | Waltair Cabs Visakhapatnam"
-        description="Review standard terms of service, payment policies, luggage allowances, and passenger guidelines for Waltair Cabs operations."
+        title="Terms & Conditions | Tiyanshi Airport Taxi Visakhapatnam"
+        description="Review standard terms of service, payment policies, luggage allowances, and passenger guidelines for Tiyanshi Airport Taxi operations."
         canonicalUrl="/terms-and-conditions"
-        keywords={["waltair cabs terms and conditions", "taxi terms visakhapatnam", "cab service conditions vizag"]}
+        keywords={["Tiyanshi Airport Taxi terms and conditions", "taxi terms visakhapatnam", "cab service conditions vizag"]}
         structuredData={structuredData}
       />
       <PageLayout
         title="Terms & Conditions"
-        subtitle="Standard operating rules, user guidelines, luggage allowances, and legal provisions governing services provided by Waltair Cabs."
+        subtitle="Standard operating rules, user guidelines, luggage allowances, and legal provisions governing services provided by Tiyanshi Airport Taxi."
         categoryBadge="Service Agreement"
         breadcrumbs={[{ label: 'Support', onClick: () => onNavigatePage('help-center') }, { label: 'Terms & Conditions' }]}
         onNavigateHome={onNavigateHome}
@@ -51,7 +51,7 @@ export const TermsConditionsPage: React.FC<TermsConditionsPageProps> = ({
             <div>
               <div className="font-bold text-slate-900 text-sm">Agreement Overview</div>
               <p className="text-xs text-slate-600 mt-0.5">
-                By confirming a reservation with Waltair Cabs, passengers agree to the operational guidelines and tariff provisions outlined below.
+                By confirming a reservation with Tiyanshi Airport Taxi, passengers agree to the operational guidelines and tariff provisions outlined below.
               </p>
             </div>
           </div>
@@ -89,7 +89,7 @@ export const TermsConditionsPage: React.FC<TermsConditionsPageProps> = ({
           <section className="space-y-3 bg-white border border-slate-200 p-6 sm:p-8 rounded-3xl">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">5. Force Majeure & Route Diversions</h2>
             <p>
-              Waltair Cabs is not liable for travel delays caused by unavoidable natural calamities, road blockades, sudden heavy monsoon floods in ghat sectors, or severe traffic congestion. Alternative routes or replacement vehicles will be coordinated promptly.
+              Tiyanshi Airport Taxi is not liable for travel delays caused by unavoidable natural calamities, road blockades, sudden heavy monsoon floods in ghat sectors, or severe traffic congestion. Alternative routes or replacement vehicles will be coordinated promptly.
             </p>
           </section>
 

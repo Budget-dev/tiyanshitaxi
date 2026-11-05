@@ -40,8 +40,8 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({
 
   const packageFaqs = [
     {
-      question: 'What is included in Waltair Cabs holiday tour packages?',
-      answer: 'Our tour packages include doorstep pickup and drop anywhere in Visakhapatnam, air-conditioned vehicle hire, commercial driver allowance, fuel, and standard parking/toll charges. Entry tickets to monuments/museums and meals are paid directly by guests.'
+      question: 'What is included in Tiyanshi Airport Taxi holiday tour packages?',
+      answer: 'Our tour packages include doorstep pickup and drop anywhere in Bengaluru, air-conditioned vehicle hire, commercial driver allowance, fuel, and standard parking/toll charges. Entry tickets to monuments/museums and meals are paid directly by guests.'
     },
     {
       question: 'Can we customize the sightseeing spots in our package?',
@@ -59,7 +59,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({
 
   const gallerySpots = [
     { name: 'Million-Year-Old Borra Caves', loc: 'Araku Ghats', img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80' },
-    { name: 'Rishikonda Blue Flag Beach', loc: 'Visakhapatnam', img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80' },
+    { name: 'Rishikonda Blue Flag Beach', loc: 'Bengaluru', img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80' },
     { name: 'Misty Lambasingi Apple Woods', loc: 'Eastern Ghats', img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80' },
     { name: 'Sacred Ratnagiri Hill Temple', loc: 'Annavaram', img: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80' },
   ];
@@ -67,8 +67,8 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({
   return (
     <>
       <SEOHead
-        title="Vizag Sightseeing Cabs & Holiday Tour Packages | Waltair Cabs"
-        description="Explore Visakhapatnam, Araku Valley, and Lambasingi with curated cab tour packages. Transparent all-inclusive fares covering Kailasagiri, Submarine Museum, Rushikonda, and Borra Caves."
+        title="Bangalore Sightseeing Cabs & Holiday Tour Packages | Tiyanshi Airport Taxi"
+        description="Explore Bengaluru, Araku Valley, and Lambasingi with curated cab tour packages. Transparent all-inclusive fares covering Kailasagiri, Submarine Museum, Rushikonda, and Borra Caves."
         canonicalPath="/packages"
         keywords={[
           'vizag sightseeing cab',

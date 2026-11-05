@@ -16,7 +16,7 @@ export const apiRouter = Router();
 apiRouter.get('/health', (_req: Request, res: Response) => {
   res.json({
     status: 'UP',
-    service: 'waltair-travels-backend',
+    service: 'tiyanshi-airport-taxi-backend',
     version: '2.4.0',
     timestamp: new Date().toISOString(),
     uptimeSeconds: Math.floor(process.uptime()),
@@ -66,8 +66,8 @@ apiRouter.post('/fares/calculate', (req: Request, res: Response) => {
     serviceType = 'airport',
     subType = 'pickup',
     vehicleCategory = 'sedan',
-    pickupLocation = 'Visakhapatnam Airport (VTZ)',
-    dropoffLocation = 'Beach Road, Vizag',
+    pickupLocation = 'Kempegowda International Airport (BLR)',
+    dropoffLocation = 'MG Road, Bengaluru',
     distanceKm,
     durationHours,
     days,
@@ -140,7 +140,7 @@ apiRouter.post('/bookings', (req: Request, res: Response) => {
       ...body,
       bookingRef: persistentBooking.bookingRef,
       customerName: customerName || 'Passenger',
-      customerPhone: customerPhone || '9848012345',
+      customerPhone: customerPhone || '7676252579',
       pickupLocation: pickupLocation || 'Visakhapatnam',
       dropoffLocation: dropoffLocation || 'Visakhapatnam',
     });
@@ -217,7 +217,7 @@ apiRouter.patch('/bookings/:ref/status', requireAdminAuth, (req: Request, res: R
     // Sync with in-memory engine if exists
     try {
       bookingEngine.updateBookingStatus(req.params.ref, status as BookingStatus, note || `Status updated to ${status}`);
-    } catch {}
+    } catch { }
     res.json({ success: true, booking: updated });
   } catch (err: any) {
     res.status(400).json({ error: err.message || 'Invalid status transition' });

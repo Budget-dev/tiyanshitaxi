@@ -119,12 +119,12 @@ export const AiTripPlannerModal: React.FC<AiTripPlannerModalProps> = ({
                   onChange={(e) => setDestination(e.target.value)}
                   className="w-full pl-9 pr-3 py-2 text-xs font-semibold bg-white border border-slate-300 rounded-xl focus:ring-2 focus:ring-cyan-600 focus:outline-none"
                 >
-                  <option value="Araku Valley">Araku Valley & Borra Caves</option>
-                  <option value="Lambasingi">Lambasingi (Fog Valley)</option>
-                  <option value="Bhogapuram Airport">Bhogapuram International Airport</option>
-                  <option value="Visakhapatnam City Tour">Visakhapatnam Coastal City Tour</option>
-                  <option value="Annavaram">Annavaram Temple & Kakinada</option>
-                  <option value="Srikakulam Arasavalli">Srikakulam Sun Temple</option>
+                  <option value="Mysore Palace">Mysore Palace & Srirangapatna</option>
+                  <option value="Nandi Hills">Nandi Hills (Sunrise Cloudbed)</option>
+                  <option value="Kempegowda Airport">Kempegowda International Airport (BLR)</option>
+                  <option value="Bengaluru City Tour">Bengaluru City & Garden Tour</option>
+                  <option value="Coorg Hills">Coorg (Coffee Hills & Abbey Falls)</option>
+                  <option value="Ooty">Ooty & Nilgiri Hills</option>
                 </select>
               </div>
             </div>
@@ -301,7 +301,7 @@ export const AiTripPlannerModal: React.FC<AiTripPlannerModalProps> = ({
                   }}
                   className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all"
                 >
-                  <span>Book This Trip with Waltair Chauffeur</span>
+                  <span>Book This Trip with Tiyanshi Chauffeur</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

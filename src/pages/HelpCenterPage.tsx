@@ -93,10 +93,10 @@ export const HelpCenterPage: React.FC<HelpCenterPageProps> = ({
       heroImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80"
     >
       <SEOHead
-        title="Help Center & 24x7 Customer Support | Waltair Cabs Visakhapatnam"
-        description="Need help with your cab booking, driver contact, refund status, or Bhogapuram airport transit? Contact Waltair Cabs 24x7 support desk in Vizag."
+        title="Help Center & 24x7 Customer Support | Tiyanshi Airport Taxi Visakhapatnam"
+        description="Need help with your cab booking, driver contact, refund status, or Bhogapuram airport transit? Contact Tiyanshi Airport Taxi 24x7 support desk in Vizag."
         canonicalUrl="/help-center"
-        keywords={["waltair cabs help center", "vizag taxi customer care", "taxi booking support vizag", "cab helpline visakhapatnam"]}
+        keywords={["Tiyanshi Airport Taxi help center", "vizag taxi customer care", "taxi booking support vizag", "cab helpline visakhapatnam"]}
       />
       <div className="space-y-16">
 
@@ -180,17 +180,17 @@ export const HelpCenterPage: React.FC<HelpCenterPageProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
             <a
-              href="tel:+919441873821"
+              href="tel:+917676252579"
               className="p-5 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 text-center space-y-2 transition-all block group"
             >
               <Phone className="w-6 h-6 text-teal-300 mx-auto group-hover:scale-110 transition-transform" />
               <div className="text-xs font-bold text-white uppercase tracking-wider">Call Helpline</div>
-              <div className="text-base font-black text-teal-300">+91 94418 73821</div>
+              <div className="text-base font-black text-teal-300">+91 76762 52579</div>
               <div className="text-[11px] text-slate-300">Immediate human pickup</div>
             </a>
 
             <a
-              href="https://wa.me/919441873821"
+              href="https://wa.me/917676252579"
               target="_blank"
               rel="noopener noreferrer"
               className="p-5 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 text-center space-y-2 transition-all block group"
@@ -202,12 +202,12 @@ export const HelpCenterPage: React.FC<HelpCenterPageProps> = ({
             </a>
 
             <a
-              href="mailto:info@waltairtravels.com"
+              href="mailto:info@tiyanshiairporttaxi.com"
               className="p-5 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 text-center space-y-2 transition-all block group"
             >
               <Mail className="w-6 h-6 text-cyan-300 mx-auto group-hover:scale-110 transition-transform" />
               <div className="text-xs font-bold text-white uppercase tracking-wider">Email Support</div>
-              <div className="text-base font-black text-cyan-300">info@waltairtravels.com</div>
+              <div className="text-base font-black text-cyan-300">info@tiyanshiairporttaxi.com</div>
               <div className="text-[11px] text-slate-300">Corporate & billing queries</div>
             </a>
           </div>

@@ -57,7 +57,7 @@ export const TravelBlogPage: React.FC<TravelBlogPageProps> = ({
     <PageLayout
       title="Travel Guides & Road Trip Insights"
       subtitle="Expert local travel advice, Bhogapuram airport transit updates, seasonal itineraries, and scenic route recommendations across Andhra Pradesh."
-      categoryBadge="Waltair Travel Chronicles"
+      categoryBadge="Tiyanshi Travel Chronicles"
       breadcrumbs={
         selectedPost
           ? [
@@ -72,8 +72,8 @@ export const TravelBlogPage: React.FC<TravelBlogPageProps> = ({
       heroImage="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80"
     >
       <SEOHead
-        title={selectedPost ? `${selectedPost.title} | Waltair Cabs Travel Guides` : "Vizag Travel Guides, Bhogapuram Airport Updates & Road Trips | Waltair Cabs"}
-        description={selectedPost ? (selectedPost.excerpt || selectedPost.content.slice(0, 155)) : "Read expert Vizag travel guides, Araku Valley itineraries, Bhogapuram ASI airport transit advice, and road trip tips by Waltair Cabs Visakhapatnam."}
+        title={selectedPost ? `${selectedPost.title} | Tiyanshi Airport Taxi Travel Guides` : "Vizag Travel Guides, Bhogapuram Airport Updates & Road Trips | Tiyanshi Airport Taxi"}
+        description={selectedPost ? (selectedPost.excerpt || selectedPost.content.slice(0, 155)) : "Read expert Vizag travel guides, Araku Valley itineraries, Bhogapuram ASI airport transit advice, and road trip tips by Tiyanshi Airport Taxi Visakhapatnam."}
         canonicalUrl="/travel-blog"
         keywords={["vizag travel guide", "araku valley cab itinerary", "bhogapuram airport updates", "vizag road trips", "visakhapatnam sightseeing advice"]}
       />

@@ -1,5 +1,5 @@
 /**
- * Analytics and Conversion Tracking Engine: Waltair Cabs
+ * Analytics and Conversion Tracking Engine: Tiyanshi Airport Taxi
  * Handles Google Analytics (GA4) measurement for G-4MX7ZXV2JW and Firebase Analytics.
  */
 import { analytics } from '../firebase';
@@ -48,10 +48,10 @@ export function trackEvent(eventName: ConversionEvent, params: EventParams = {})
 
 // Shortcut Helpers for High-Value Conversion CTAs
 export const trackPhoneClick = (source: string = 'header') => 
-  trackEvent('click_phone', { source, phone: '+919441873821' });
+  trackEvent('click_phone', { source, phone: '+917676252579' });
 
 export const trackWhatsAppClick = (source: string = 'floating_button') => 
-  trackEvent('click_whatsapp', { source, phone: '+919441873821' });
+  trackEvent('click_whatsapp', { source, phone: '+917676252579' });
 
 export const trackBookingStart = (source: string = 'general', serviceType: string = 'taxi') => 
   trackEvent('booking_start', { source, serviceType });

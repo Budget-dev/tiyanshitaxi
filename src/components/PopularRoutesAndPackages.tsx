@@ -43,7 +43,7 @@ export const PopularRoutesAndPackages: React.FC<PopularRoutesAndPackagesProps> =
               Popular Intercity Routes & Holiday Tours
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
-              Transparent one-way tariffs with zero return charges, plus all-inclusive holiday packages for Araku Valley and Lambasingi.
+              Transparent one-way tariffs with zero return charges, plus all-inclusive holiday packages for Mysore Palace, Nandi Hills, and Coorg.
             </p>
           </div>
 

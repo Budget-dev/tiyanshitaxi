@@ -1,5 +1,5 @@
 /**
- * Open-Source Geocoding & Leaflet Map Service for Waltair Cabs
+ * Open-Source Geocoding & Leaflet Map Service for Tiyanshi Airport Taxi
  * Integrates:
  * 1. OpenStreetMap Photon Geocoder (Open-source, covers all Indian villages, towns, mandals, cities)
  * 2. OpenStreetMap Nominatim Geocoder (Open-source, detailed administrative village/district breakdown)
@@ -1146,7 +1146,7 @@ function categorizeOsmPlace(type: string, osmClass: string, name: string): { cat
 export async function queryPhotonGeocoder(query: string): Promise<PlaceResult[]> {
   try {
     // Location bias towards Andhra Pradesh (17.7°N, 83.3°E)
-    const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&limit=10&lat=17.72&lon=83.31&location_bias_scale=0.8`;
+    const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&limit=10&lat=13.1986&lon=77.7066&location_bias_scale=0.8`;
     const res = await fetch(url, {
       headers: {
         'Accept': 'application/json',
@@ -1251,7 +1251,7 @@ export async function queryNominatimGeocoder(query: string): Promise<PlaceResult
  * 2. OpenStreetMap Photon Geocoder (fast open-source geocoding for all Indian villages and towns)
  * 3. OpenStreetMap Nominatim Geocoder (fine-grained administrative village data)
  */
-export async function searchAnyLocation(query: string, cityBias = 'Visakhapatnam'): Promise<PlaceResult[]> {
+export async function searchAnyLocation(query: string, cityBias = 'Bengaluru'): Promise<PlaceResult[]> {
   const trimmed = query.trim().toLowerCase();
   if (!trimmed) {
     return CURATED_AP_LOCATIONS.slice(0, 10);

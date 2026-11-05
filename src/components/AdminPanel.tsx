@@ -80,7 +80,7 @@ interface AdminPanelProps {
   isFullPage?: boolean;
 }
 
-export const AUTHORIZED_ADMIN_EMAIL = 'waltairtravelsandcabs@gmail.com';
+export const AUTHORIZED_ADMIN_EMAIL = 'tiyanshiairporttaxi@gmail.com';
 
 type TabType = 'overview' | 'leads' | 'bookings' | 'users' | 'datewise' | 'dispatch';
 type DatePreset = 'all' | 'today' | 'yesterday' | 'week' | 'month' | 'custom';
@@ -167,8 +167,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   const handleSwitchAccount = async () => {
     try {
       await signOut(auth);
-      localStorage.removeItem('waltair_user_session');
-      window.dispatchEvent(new Event('waltair_auth_change'));
+      localStorage.removeItem('tiyanshi_user_session');
+      window.dispatchEvent(new Event('tiyanshi_auth_change'));
       setAuthStatus('unauthenticated');
       googleProvider.setCustomParameters({ prompt: 'select_account' });
       const result = await signInWithPopup(auth, googleProvider);
@@ -186,8 +186,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   const handleAdminSignOut = async () => {
     try {
       await signOut(auth);
-      localStorage.removeItem('waltair_user_session');
-      window.dispatchEvent(new Event('waltair_auth_change'));
+      localStorage.removeItem('tiyanshi_user_session');
+      window.dispatchEvent(new Event('tiyanshi_auth_change'));
       setAuthStatus('unauthenticated');
       setCurrentUser(null);
     } catch (err) {
@@ -198,7 +198,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   // Navigation & Tabs with persistent memory across refresh
   const [activeTab, setActiveTabState] = useState<TabType>(() => {
     try {
-      const saved = localStorage.getItem('waltair_admin_active_tab') as TabType;
+      const saved = localStorage.getItem('tiyanshi_admin_active_tab') as TabType;
       return saved && ['overview', 'leads', 'bookings', 'users', 'datewise', 'dispatch'].includes(saved)
         ? saved
         : 'overview';
@@ -210,7 +210,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   const setActiveTab = (tab: TabType) => {
     setActiveTabState(tab);
     try {
-      localStorage.setItem('waltair_admin_active_tab', tab);
+      localStorage.setItem('tiyanshi_admin_active_tab', tab);
     } catch {}
   };
   
@@ -235,8 +235,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   // Manual Dispatch State
   const [dispatchName, setDispatchName] = useState<string>('');
   const [dispatchPhone, setDispatchPhone] = useState<string>('');
-  const [dispatchPickup, setDispatchPickup] = useState<string>('Visakhapatnam Airport (ASI / VTZ)');
-  const [dispatchDropoff, setDispatchDropoff] = useState<string>('Siripuram Circle, Visakhapatnam');
+  const [dispatchPickup, setDispatchPickup] = useState<string>('Kempegowda International Airport (BLR)');
+  const [dispatchDropoff, setDispatchDropoff] = useState<string>('MG Road / Indiranagar, Bengaluru');
   const [dispatchDate, setDispatchDate] = useState<string>(new Date().toISOString().split('T')[0]);
   const [dispatchTime, setDispatchTime] = useState<string>('11:00');
   const [dispatchVehicle, setDispatchVehicle] = useState<string>('Maruti Suzuki Dzire');
@@ -539,7 +539,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
       specialRequests: dispatchNotes || undefined,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-      city: 'Visakhapatnam, IN',
+      city: 'Bengaluru, IN',
       isRegistered: false,
     };
 
@@ -613,7 +613,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `waltair_${type}_export_${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `tiyanshi_${type}_export_${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -643,7 +643,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
           <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
             <ShieldCheck className="w-8 h-8 animate-pulse text-teal-400" />
           </div>
-          <h2 className="text-xl font-bold tracking-tight text-white mb-1">Waltair Travels & Cabs</h2>
+          <h2 className="text-xl font-bold tracking-tight text-white mb-1">Tiyanshi Airport Taxi</h2>
           <p className="text-xs uppercase tracking-widest text-teal-400/90 font-semibold mb-4">Operations Administration</p>
           <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
             <RefreshCw className="w-3.5 h-3.5 animate-spin text-teal-400" />
@@ -668,7 +668,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                 <Lock className="w-3 h-3 text-teal-400" />
                 <span>Administration Portal</span>
               </div>
-              <h1 className="text-2xl font-extrabold text-white tracking-tight">Waltair Travels & Cabs</h1>
+              <h1 className="text-2xl font-extrabold text-white tracking-tight">Tiyanshi Airport Taxi</h1>
               <p className="text-xs text-slate-400 mt-1">Authorized Operations Personnel Only</p>
             </div>
 
@@ -716,7 +716,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                     type="email"
                     value={loginEmail}
                     onChange={(e) => setLoginEmail(e.target.value)}
-                    placeholder="waltairtravelsandcabs@gmail.com"
+                    placeholder="tiyanshiairporttaxi@gmail.com"
                     className="w-full pl-10 pr-4 py-2.5 bg-slate-950/70 border border-slate-800 rounded-xl text-white text-xs placeholder:text-slate-600 focus:outline-none focus:border-teal-500 transition-colors"
                   />
                 </div>
@@ -757,7 +757,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
           <div className="bg-slate-950/60 p-4 border-t border-slate-800/80 text-center flex items-center justify-between text-xs">
             <span className="text-[11px] text-slate-500 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-teal-500" />
-              <span>Restricted to waltairtravelsandcabs@gmail.com</span>
+              <span>Restricted to tiyanshiairporttaxi@gmail.com</span>
             </span>
             <button
               type="button"
@@ -797,7 +797,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
               {currentUser?.email || 'Unknown account'}
             </div>
             <div className="text-[11px] text-slate-500 mt-2">
-              Only <span className="text-teal-400 font-mono">waltairtravelsandcabs@gmail.com</span> is granted administrative privileges.
+              Only <span className="text-teal-400 font-mono">tiyanshiairporttaxi@gmail.com</span> is granted administrative privileges.
             </div>
           </div>
 
@@ -881,16 +881,16 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                 <div className="w-10 h-10 rounded-xl overflow-hidden shadow-xs border border-slate-200 shrink-0 bg-white flex items-center justify-center">
                   <img 
                     src="/logo.png" 
-                    alt="Waltair Cabs" 
+                    alt="Tiyanshi Airport Taxi" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                      e.currentTarget.src = '/logo.png';
                     }}
                   />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h2 className="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight">Waltair Cabs Operations & Lead Dispatch Center</h2>
+                    <h2 className="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight">Tiyanshi Airport Taxi Operations & Lead Dispatch Center</h2>
                     <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-300 text-[10.5px] font-bold text-emerald-800">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                       Live Sync Active
@@ -900,7 +900,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                     <p className="text-xs text-slate-500 font-medium">Real-Time Footprint Capture • Instant Lead WhatsApp & Dispatch</p>
                     <span className="text-slate-300">•</span>
                     <span className="text-[11px] font-semibold text-teal-800 bg-teal-50 px-2 py-0.5 rounded-md border border-teal-200">
-                      waltairtravelsandcabs@gmail.com
+                      tiyanshiairporttaxi@gmail.com
                     </span>
                   </div>
                 </div>
@@ -1221,7 +1221,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                                     <Phone className="w-3.5 h-3.5" />
                                   </a>
                                   <a
-                                    href={`https://wa.me/91${lead.customerPhone}?text=${encodeURIComponent(`Hi ${lead.customerName || 'there'}! Waltair Cabs customer support here. We noticed you were looking for a cab from ${lead.pickupLocation || 'Vizag'} to ${lead.dropoffLocation || 'destination'}. Would you like us to confirm a cab for you?`)}`}
+                                    href={`https://wa.me/91${lead.customerPhone}?text=${encodeURIComponent(`Hi ${lead.customerName || 'there'}! Tiyanshi Airport Taxi customer support here. We noticed you were looking for a cab from ${lead.pickupLocation || 'Bengaluru Airport'} to ${lead.dropoffLocation || 'destination'}. Would you like us to confirm a cab for you?`)}`}
                                     target="_blank"
                                     rel="noreferrer"
                                     className="p-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 transition-colors cursor-pointer"
@@ -1431,7 +1431,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                                   </a>
 
                                   <a
-                                    href={`https://wa.me/91${lead.customerPhone}?text=${encodeURIComponent(`Hello ${lead.customerName || 'Sir/Madam'}, Waltair Cabs Dispatch here. We saw your inquiry for a cab from ${lead.pickupLocation || 'Vizag'} to ${lead.dropoffLocation || 'destination'} on ${lead.travelDate || 'planned date'}. Our driver is ready. Would you like to confirm this trip?`)}`}
+                                    href={`https://wa.me/91${lead.customerPhone}?text=${encodeURIComponent(`Hello ${lead.customerName || 'Sir/Madam'}, Tiyanshi Airport Taxi Dispatch here. We saw your inquiry for a cab from ${lead.pickupLocation || 'Bengaluru Airport'} to ${lead.dropoffLocation || 'destination'} on ${lead.travelDate || 'planned date'}. Our driver is ready. Would you like to confirm this trip?`)}`}
                                     target="_blank"
                                     rel="noreferrer"
                                     className="flex-1 sm:flex-initial px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"

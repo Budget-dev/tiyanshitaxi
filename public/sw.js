@@ -1,5 +1,5 @@
-// Waltair Travels & Cabs - Production Service Worker
-const CACHE_NAME = 'waltair-cabs-v1';
+// Tiyanshi Airport Taxi - Production Service Worker
+const CACHE_NAME = 'tiyanshi-airport-taxi-v1';
 
 const STATIC_PRECACHE = [
   '/',

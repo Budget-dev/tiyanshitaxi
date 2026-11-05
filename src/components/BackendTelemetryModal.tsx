@@ -306,7 +306,7 @@ export const BackendTelemetryModal: React.FC<BackendTelemetryModalProps> = ({ is
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-xs sm:text-sm">Bhogapuram & VTZ Airport Transfer SLA</h4>
+                <h4 className="font-bold text-white text-xs sm:text-sm">Kempegowda BLR Airport (T1 & T2) Transfer SLA</h4>
                 <p className="text-slate-400 text-xs">
                   Chauffeurs stationed on standby at terminal parking for instant zero-wait departure.
                 </p>
@@ -323,7 +323,7 @@ export const BackendTelemetryModal: React.FC<BackendTelemetryModalProps> = ({ is
 
         {/* Footer */}
         <div className="px-6 py-4 border-t border-slate-800 bg-slate-950/80 flex items-center justify-between text-xs text-slate-400">
-          <span>Waltair Cabs Enterprise Service v2.4</span>
+          <span>Tiyanshi Airport Taxi Enterprise Service v2.4</span>
           <button
             onClick={onClose}
             className="px-4 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold transition-all cursor-pointer"

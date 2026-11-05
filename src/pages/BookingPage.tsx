@@ -76,7 +76,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
   // Try loading saved draft from localStorage so refresh NEVER wipes out data
   const getSavedDraft = () => {
     try {
-      const saved = localStorage.getItem('waltair_booking_draft');
+      const saved = localStorage.getItem('tiyanshi_booking_draft');
       return saved ? JSON.parse(saved) : null;
     } catch {
       return null;
@@ -107,7 +107,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [confirmedBooking, setConfirmedBooking] = useState<Booking | null>(() => {
     try {
-      const last = localStorage.getItem('waltair_last_booking');
+      const last = localStorage.getItem('tiyanshi_last_booking');
       return last ? JSON.parse(last) : null;
     } catch {
       return null;
@@ -166,13 +166,18 @@ export const BookingPage: React.FC<BookingPageProps> = ({
     const p = (pickupLocation || '').toLowerCase();
     const d = (dropoffLocation || '').toLowerCase();
 
-    if (p.includes('araku') || d.includes('araku')) return 115;
+    if (p.includes('mysore') || d.includes('mysore')) return 145;
+    if (p.includes('nandi') || d.includes('nandi')) return 60;
+    if (p.includes('coorg') || d.includes('coorg')) return 260;
+    if (p.includes('ooty') || d.includes('ooty')) return 275;
+    if (p.includes('whitefield') || d.includes('whitefield')) return 25;
+    if (p.includes('electronic') || d.includes('electronic')) return 32;
     if (p.includes('vijayawada') || d.includes('vijayawada')) return 350;
     if (p.includes('rajahmundry') || d.includes('rajahmundry')) return 190;
     if (p.includes('kakinada') || d.includes('kakinada')) return 155;
     if (p.includes('srikakulam') || d.includes('srikakulam')) return 105;
     if (p.includes('annavaram') || d.includes('annavaram')) return 125;
-    if (p.includes('bhogapuram') || d.includes('bhogapuram')) return 42;
+    if (p.includes('airport') || d.includes('airport') || p.includes('kempegowda') || d.includes('kempegowda')) return 38;
     if (p.includes('rushikonda') || d.includes('rushikonda')) return 24;
     if (p.includes('gajuwaka') || d.includes('gajuwaka')) return 22;
     if (p.includes('airport') || d.includes('airport')) return 32;
@@ -205,7 +210,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
         specialRequests,
         selectedVehicleId: selectedVehicle?.id
       };
-      localStorage.setItem('waltair_booking_draft', JSON.stringify(currentDraft));
+      localStorage.setItem('tiyanshi_booking_draft', JSON.stringify(currentDraft));
 
       // Real-time Footprint Tracking - captures partial field entries as live leads
       if (pickupLocation || dropoffLocation || customerPhone || customerName || customerEmail) {
@@ -339,7 +344,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
 
     const userSession = (() => {
       try {
-        const u = localStorage.getItem('waltair_user_session');
+        const u = localStorage.getItem('tiyanshi_user_session');
         return u ? JSON.parse(u) : null;
       } catch {
         return null;
@@ -394,7 +399,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
       });
 
       try {
-        localStorage.setItem('waltair_last_booking', JSON.stringify(newBooking));
+        localStorage.setItem('tiyanshi_last_booking', JSON.stringify(newBooking));
       } catch (err) {
         console.warn('LocalStorage save error:', err);
       }
@@ -498,20 +503,20 @@ export const BookingPage: React.FC<BookingPageProps> = ({
   return (
     <div className="animate-in fade-in duration-200 bg-slate-50 min-h-screen pb-36 sm:pb-20">
       <SEOHead
-        title="Book Cab Online in Vizag | Airport Taxi, Outstation & Sightseeing | Waltair Cabs"
+        title="Book Cab Online in Vizag | Airport Taxi, Outstation & Sightseeing | Tiyanshi Airport Taxi"
         description="Book verified cabs in Visakhapatnam online: Bhogapuram airport drops, Araku Valley packages, outstation one-way taxis and hourly rentals with zero advance payment."
         canonicalUrl="/booking"
-        keywords={["book cab vizag", "online taxi booking visakhapatnam", "vizag airport cab booking", "waltair cabs booking"]}
+        keywords={["book cab vizag", "online taxi booking visakhapatnam", "vizag airport cab booking", "Tiyanshi Airport Taxi booking"]}
       />
       {/* Top Header Banner: Compact on Mobile (46-50px), Spacious Hero on Desktop */}
       <div className="relative overflow-hidden bg-slate-950 text-white border-b border-teal-900/60">
         <div className="hidden sm:block absolute inset-0 opacity-20 pointer-events-none">
           <img 
             src="/hero-banner.png" 
-            alt="Waltair Cabs Golden-Hour Airport Taxi Arrival" 
+            alt="Tiyanshi Airport Taxi - Bangalore Kempegowda Airport & City Landmarks" 
             className="w-full h-full object-cover" 
             onError={(e) => {
-              e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Golden-Hour%20Airport%20Taxi%20Arrival%20(1).png';
+              e.currentTarget.src = '/hero-banner.jpg';
             }}
           />
         </div>
@@ -656,16 +661,16 @@ export const BookingPage: React.FC<BookingPageProps> = ({
               <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-md border border-teal-400/30 shrink-0 bg-slate-900 flex items-center justify-center">
                 <img 
                   src="/logo.png" 
-                  alt="Waltair Cabs" 
+                  alt="Tiyanshi Airport Taxi" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                    e.currentTarget.src = '/logo.png';
                   }}
                 />
               </div>
               <div>
                 <div className="flex items-center gap-1.5 text-teal-400 text-xs font-bold uppercase tracking-wider mb-0.5">
-                  <span>Waltair Cabs Booking Desk</span>
+                  <span>Tiyanshi Airport Taxi Booking Desk</span>
                 </div>
                 <h1 className="text-xl sm:text-3xl font-extrabold text-white">
                   {step === 4 ? '🎉 Booking Received!' : 'Book Your Cab'}
@@ -889,7 +894,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
                         { label: '✈️ Vizag Airport (VTZ)', loc: 'Visakhapatnam International Airport (VTZ), NAD Junction', coords: { lat: 17.7215, lng: 83.2245 } },
                         { label: '🚆 Vizag Railway Station', loc: 'Visakhapatnam Junction Railway Station (VSKP)', coords: { lat: 17.7217, lng: 83.2929 } },
                         { label: '🏖️ Rushikonda Beach & IT SEZ', loc: 'Rushikonda Beach & IT SEZ Hill, Visakhapatnam', coords: { lat: 17.7819, lng: 83.3853 } },
-                        { label: '🏢 Siripuram Circle', loc: 'Siripuram Circle & Waltair Uplands, Visakhapatnam', coords: { lat: 17.7217, lng: 83.3150 } },
+                        { label: '🏢 Siripuram Circle', loc: 'Siripuram Circle & Kempegowda International Airport Terminal Road, Devanahalli, Bengaluru', coords: { lat: 17.7217, lng: 83.3150 } },
                         { label: '⛰️ Araku Valley', loc: 'Araku Valley Hill Station & Tribal Museum', coords: { lat: 18.3273, lng: 82.8775 } },
                       ].map((hub) => (
                         <button
@@ -1259,8 +1264,8 @@ export const BookingPage: React.FC<BookingPageProps> = ({
                     </motion.button>
 
                     <a
-                      href={`https://wa.me/919441873821?text=${encodeURIComponent(
-                        `Hi Waltair Cabs, I want to book a ${selectedVehicle?.name || 'Cab'}.\nPickup: ${pickupLocation}\nDrop: ${dropoffLocation}\nDate: ${travelDate} at ${pickupTime}\nName: ${customerName || 'Passenger'}`
+                      href={`https://wa.me/917676252579?text=${encodeURIComponent(
+                        `Hi Tiyanshi Airport Taxi, I want to book a ${selectedVehicle?.name || 'Cab'}.\nPickup: ${pickupLocation}\nDrop: ${dropoffLocation}\nDate: ${travelDate} at ${pickupTime}\nName: ${customerName || 'Passenger'}`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -1352,7 +1357,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
                         { label: '✈️ Vizag Airport (VTZ)', loc: 'Visakhapatnam International Airport (VTZ), NAD Junction', coords: { lat: 17.7215, lng: 83.2245 } },
                         { label: '🚆 Vizag Railway Station', loc: 'Visakhapatnam Junction Railway Station (VSKP)', coords: { lat: 17.7217, lng: 83.2929 } },
                         { label: '🏖️ Rushikonda Beach & IT SEZ', loc: 'Rushikonda Beach & IT SEZ Hill, Visakhapatnam', coords: { lat: 17.7819, lng: 83.3853 } },
-                        { label: '🏢 Siripuram / Waltair Uplands', loc: 'Siripuram Circle & Waltair Uplands, Visakhapatnam', coords: { lat: 17.7217, lng: 83.3150 } },
+                        { label: '🏢 Siripuram / Waltair Uplands', loc: 'Siripuram Circle & Kempegowda International Airport Terminal Road, Devanahalli, Bengaluru', coords: { lat: 17.7217, lng: 83.3150 } },
                         { label: '⛰️ Araku Valley', loc: 'Araku Valley Hill Station & Tribal Museum', coords: { lat: 18.3273, lng: 82.8775 } },
                       ].map((hub) => (
                         <button
@@ -1755,7 +1760,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
                   {/* Payment Info Note */}
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-600 text-xs flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0" />
-                    <span>No online advance needed. Fare is quoted upon request and discussed directly with Waltair Cabs via WhatsApp.</span>
+                    <span>No online advance needed. Fare is quoted upon request and discussed directly with Tiyanshi Airport Taxi via WhatsApp.</span>
                   </div>
 
                   {formError && (
@@ -1812,7 +1817,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
                   </p>
                 </div>
 
-                {/* PRIMARY WHATSAPP ACTION BUTTON TO 9441873821 */}
+                {/* PRIMARY WHATSAPP ACTION BUTTON TO 7676252579 */}
                 <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-left space-y-3">
                   <div className="flex items-center gap-2 text-emerald-900 text-xs font-bold">
                     <MessageCircle className="w-4 h-4 text-emerald-700" />
@@ -1840,10 +1845,10 @@ export const BookingPage: React.FC<BookingPageProps> = ({
                     <div className="flex items-center gap-2.5">
                       <img 
                         src="/logo.png" 
-                        alt="Waltair Cabs" 
+                        alt="Tiyanshi Airport Taxi" 
                         className="w-10 h-10 rounded-xl border border-teal-500/30 object-cover shrink-0" 
                         onError={(e) => {
-                          e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                          e.currentTarget.src = '/logo.png';
                         }}
                       />
                       <div>
@@ -1915,7 +1920,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
 
                   {/* Dispatch Notice */}
                   <div className="p-3 rounded-xl bg-teal-50/70 border border-teal-200/70 text-teal-950 text-xs">
-                    <strong>Vehicle & Reservation Coordination:</strong> Waltair Cabs operations team will confirm your booking via WhatsApp, provide your customized fare quote on request, and coordinate vehicle dispatch.
+                    <strong>Vehicle & Reservation Coordination:</strong> Tiyanshi Airport Taxi operations team will confirm your booking via WhatsApp, provide your customized fare quote on request, and coordinate vehicle dispatch.
                   </div>
                 </div>
 

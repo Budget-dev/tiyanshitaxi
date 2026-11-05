@@ -67,8 +67,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           isLoggedIn: true,
         };
         try {
-          localStorage.setItem('waltair_user_session', JSON.stringify(appUser));
-          window.dispatchEvent(new Event('waltair_auth_change'));
+          localStorage.setItem('tiyanshi_user_session', JSON.stringify(appUser));
+          window.dispatchEvent(new Event('tiyanshi_auth_change'));
         } catch {
           // ignore localStorage error
         }
@@ -178,8 +178,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
       // 1. Instantly save session & complete login UI flow (zero lag)
       try {
-        localStorage.setItem('waltair_user_session', JSON.stringify(appUser));
-        window.dispatchEvent(new Event('waltair_auth_change'));
+        localStorage.setItem('tiyanshi_user_session', JSON.stringify(appUser));
+        window.dispatchEvent(new Event('tiyanshi_auth_change'));
       } catch (storageErr) {
         console.warn('Local session storage note:', storageErr);
       }
@@ -237,8 +237,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
       // 1. Instantly save session & complete login UI flow (zero lag)
       try {
-        localStorage.setItem('waltair_user_session', JSON.stringify(appUser));
-        window.dispatchEvent(new Event('waltair_auth_change'));
+        localStorage.setItem('tiyanshi_user_session', JSON.stringify(appUser));
+        window.dispatchEvent(new Event('tiyanshi_auth_change'));
       } catch (storageErr) {
         console.warn('Local session storage note:', storageErr);
       }
@@ -308,8 +308,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
       // 1. Instantly save session & complete login UI flow (zero lag)
       try {
-        localStorage.setItem('waltair_user_session', JSON.stringify(appUser));
-        window.dispatchEvent(new Event('waltair_auth_change'));
+        localStorage.setItem('tiyanshi_user_session', JSON.stringify(appUser));
+        window.dispatchEvent(new Event('tiyanshi_auth_change'));
       } catch (storageErr) {
         console.warn('Local session storage note:', storageErr);
       }
@@ -369,16 +369,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             <div className="w-8 h-8 rounded-lg overflow-hidden shadow-xs border border-teal-400/30 shrink-0 bg-slate-900 flex items-center justify-center">
               <img 
                 src="/logo.png" 
-                alt="Waltair Cabs" 
+                alt="Tiyanshi Airport Taxi" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.currentTarget.src = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png';
+                  e.currentTarget.src = '/logo.png';
                 }}
               />
             </div>
             <div>
               <div className="text-[10px] text-teal-300 font-bold uppercase tracking-wider leading-none mb-0.5">
-                Waltair Cabs Rider Portal
+                Tiyanshi Airport Taxi Rider Portal
               </div>
               <h3 className="font-bold text-sm sm:text-base text-white leading-tight">
                 {authMode === 'signin' && 'Sign In to Your Account'}

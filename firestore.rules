@@ -10,7 +10,7 @@ service cloud.firestore {
     function isAdmin() {
       return isSignedIn() && 
              request.auth.token.email != null && 
-             request.auth.token.email.lower() == 'waltairtravelsandcabs@gmail.com';
+             request.auth.token.email.lower() == 'tiyanshiairporttaxi@gmail.com';
     }
 
     // Bookings collection

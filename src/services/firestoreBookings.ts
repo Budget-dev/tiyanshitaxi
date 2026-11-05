@@ -211,7 +211,7 @@ export class FirestoreBookingService {
       console.warn('[FirestoreBookingService] Paginated fetch falling back to local storage:', error);
 
       // Local storage fallback for offline / mock resilience
-      const local = JSON.parse(localStorage.getItem('waltair_user_bookings') || '[]');
+      const local = JSON.parse(localStorage.getItem('tiyanshi_user_bookings') || '[]');
       let filtered = [...local];
 
       if (params.status && params.status !== 'all') {
@@ -302,7 +302,7 @@ export class FirestoreBookingService {
         localCount,
       };
     } catch (e) {
-      const local = JSON.parse(localStorage.getItem('waltair_user_bookings') || '[]');
+      const local = JSON.parse(localStorage.getItem('tiyanshi_user_bookings') || '[]');
       return {
         totalRevenue: local.reduce((sum: number, b: any) => sum + (b.totalFare || 0), 0),
         activeCount: local.filter((b: any) => b.status !== 'completed' && b.status !== 'cancelled').length,

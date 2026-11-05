@@ -27,35 +27,36 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
   keywords = [
-    'Visakhapatnam taxi',
-    'Vizag cabs',
-    'Waltair Cabs',
-    'Bhogapuram airport taxi',
-    'Airport taxi Vizag',
-    'Vizag to Araku cab',
-    'Outstation cabs Vizag',
-    'Local cabs Vizag',
-    'Andhra Pradesh taxi service',
+        'Bangalore airport taxi',
+    'Bangalore airport cab',
+    'Tiyanshi Airport Taxi',
+    'Kempegowda airport taxi',
+    'BLR airport cab',
+    'Bangalore airport drop',
+    'Outstation cabs Bangalore',
+    'Bangalore to Mysore cab',
+    'Nandi Hills cab Bangalore',
+    'Karnataka airport taxi service',
   ],
   canonicalPath,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://waltairtravelsandcabs.sirv.com/Waltair%20Cabs%20Coastal%20Travel%20Badge.png',
+  ogImage = 'https://tiyanshiairporttaxi.in/hero-banner.jpg',
   breadcrumbs,
   faqs,
   structuredData,
 }) => {
   useEffect(() => {
-    const CANONICAL_BASE = 'https://waltaircabs.in';
+    const CANONICAL_BASE = 'https://tiyanshiairporttaxi.in';
     const effectivePath = canonicalPath || canonicalUrl;
     const formattedCanonical = effectivePath
       ? `${CANONICAL_BASE}${effectivePath.startsWith('/') ? '' : '/'}${effectivePath}`
       : `${CANONICAL_BASE}${window.location.pathname.length > 1 ? window.location.pathname : '/'}`;
 
     // 1. Update Title (Human-first, localized)
-    const fullTitle = title.includes('Waltair Cabs')
+    const fullTitle = title.includes('Tiyanshi Airport Taxi')
       ? title
-      : `${title} | Waltair Cabs Visakhapatnam`;
+      : `${title} | Tiyanshi Airport Taxi Bangalore`;
     document.title = fullTitle;
 
     // 2. Update Meta Description
@@ -92,7 +93,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       'og:type': ogType,
       'og:image': ogImage,
       'og:url': formattedCanonical,
-      'og:site_name': 'Waltair Cabs',
+      'og:site_name': 'Tiyanshi Airport Taxi',
     };
 
     Object.entries(ogTags).forEach(([property, content]) => {
@@ -124,7 +125,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     });
 
     // 7. Structured Data Graph Generation (JSON-LD)
-    const scriptId = 'waltair-page-jsonld';
+    const scriptId = 'tiyanshi-page-jsonld';
     let scriptTag = document.getElementById(scriptId) as HTMLScriptElement | null;
     if (!scriptTag) {
       scriptTag = document.createElement('script');
@@ -138,22 +139,24 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     // Core TaxiService Entity
     graphEntities.push({
       '@type': 'TaxiService',
-      '@id': 'https://waltaircabs.in/#service',
-      'name': 'Waltair Cabs Visakhapatnam',
+      '@id': 'https://tiyanshiairporttaxi.in/#service',
+      'name': 'Tiyanshi Airport Taxi Bengaluru',
       'url': formattedCanonical,
       'provider': {
-        '@id': 'https://waltaircabs.in/#organization',
+        '@id': 'https://tiyanshiairporttaxi.in/#organization',
       },
       'serviceType': 'Cab and Taxi Service',
-      'telephone': '+91-9441873821',
+      'telephone': '+91-7676252579',
       'priceRange': '₹₹',
       'areaServed': [
-        { '@type': 'City', 'name': 'Visakhapatnam' },
-        { '@type': 'AdministrativeArea', 'name': 'Bhogapuram' },
-        { '@type': 'City', 'name': 'Araku Valley' },
-        { '@type': 'City', 'name': 'Vizianagaram' },
-        { '@type': 'City', 'name': 'Srikakulam' },
-        { '@type': 'City', 'name': 'Anakapalle' },
+        { '@type': 'City', 'name': 'Bengaluru' },
+        { '@type': 'AdministrativeArea', 'name': 'Kempegowda International Airport (BLR)' },
+        { '@type': 'City', 'name': 'Whitefield' },
+        { '@type': 'City', 'name': 'Electronic City' },
+        { '@type': 'City', 'name': 'Indiranagar' },
+        { '@type': 'City', 'name': 'Koramangala' },
+        { '@type': 'City', 'name': 'Mysore' },
+        { '@type': 'City', 'name': 'Nandi Hills' },
       ],
       'offers': {
         '@type': 'Offer',
@@ -166,25 +169,25 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     // Core LocalBusiness Entity
     graphEntities.push({
       '@type': 'LocalBusiness',
-      '@id': 'https://waltaircabs.in/#organization',
-      'name': 'Waltair Cabs',
-      'url': 'https://waltaircabs.in',
-      'logo': 'https://waltaircabs.in/logo.png',
+      '@id': 'https://tiyanshiairporttaxi.in/#organization',
+      'name': 'Tiyanshi Airport Taxi',
+      'url': 'https://tiyanshiairporttaxi.in',
+      'logo': 'https://tiyanshiairporttaxi.in/logo.png',
       'image': ogImage,
-      'telephone': '+91-9441873821',
+      'telephone': '+91-7676252579',
       'priceRange': '₹₹',
       'address': {
         '@type': 'PostalAddress',
-        'streetAddress': 'Waltair Uplands, Siripuram',
-        'addressLocality': 'Visakhapatnam',
-        'addressRegion': 'Andhra Pradesh',
-        'postalCode': '530003',
+        'streetAddress': 'Kempegowda International Airport Terminal Road, Devanahalli',
+        'addressLocality': 'Bengaluru',
+        'addressRegion': 'Karnataka',
+        'postalCode': '560300',
         'addressCountry': 'IN',
       },
       'geo': {
         '@type': 'GeoCoordinates',
-        'latitude': 17.7208,
-        'longitude': 83.3184,
+        'latitude': 13.1986,
+        'longitude': 77.7066,
       },
       'openingHoursSpecification': {
         '@type': 'OpeningHoursSpecification',

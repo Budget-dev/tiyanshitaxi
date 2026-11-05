@@ -47,8 +47,8 @@ export const FastBookingBar: React.FC<FastBookingBarProps> = ({
   currentPage = 'home'
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [pickup, setPickup] = useState('Alluri Sitharama Raju International Airport ASI , Bhogapuram');
-  const [dropoff, setDropoff] = useState('Siripuram Circle, Visakhapatnam');
+  const [pickup, setPickup] = useState('Kempegowda International Airport (BLR), Bengaluru');
+  const [dropoff, setDropoff] = useState('MG Road / Indiranagar, Bengaluru');
   const [selectedVehicle, setSelectedVehicle] = useState<'dzire' | 'ertiga' | 'crysta'>('dzire');
   const [mobile, setMobile] = useState('');
   const [passengerName, setPassengerName] = useState('');
@@ -104,7 +104,7 @@ export const FastBookingBar: React.FC<FastBookingBarProps> = ({
 
     const userSession = (() => {
       try {
-        const u = localStorage.getItem('waltair_user_session');
+        const u = localStorage.getItem('tiyanshi_user_session');
         return u ? JSON.parse(u) : null;
       } catch {
         return null;
@@ -144,7 +144,7 @@ export const FastBookingBar: React.FC<FastBookingBarProps> = ({
       trackLeadGenerated('fast_booking_bar', cleanPhone);
 
       try {
-        localStorage.setItem('waltair_last_booking', JSON.stringify(newBooking));
+        localStorage.setItem('tiyanshi_last_booking', JSON.stringify(newBooking));
       } catch {}
 
       setBookingConfirmed(newBooking);
@@ -194,7 +194,7 @@ export const FastBookingBar: React.FC<FastBookingBarProps> = ({
           {/* Quick CTA Buttons */}
           <div className="flex items-center gap-1.5 shrink-0">
             <a
-              href="https://wa.me/919441873821?text=Hi%20Waltair%20Travels,%20I%20want%20to%20express%20book%20a%20cab%20now."
+              href="https://wa.me/917676252579?text=Hi%20Tiyanshi%20Airport%20Taxi,%20I%20want%20to%20express%20book%20a%20cab%20now."
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick('fast_bar')}

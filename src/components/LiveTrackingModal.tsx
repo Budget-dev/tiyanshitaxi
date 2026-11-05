@@ -86,7 +86,7 @@ export const LiveTrackingModal: React.FC<LiveTrackingModalProps> = ({
 
   const handleShareTrip = () => {
     if (!activeBooking) return;
-    const shareText = `Live Tracking: My Waltair Cabs taxi (${activeBooking.driver?.vehicleNumber || 'AP31'}) is en route. Booking Ref: ${activeBooking.bookingRef}. Track live at: ${window.location.origin}`;
+    const shareText = `Live Tracking: My Tiyanshi Airport Taxi taxi (${activeBooking.driver?.vehicleNumber || 'AP31'}) is en route. Booking Ref: ${activeBooking.bookingRef}. Track live at: ${window.location.origin}`;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(shareText);
       setIsCopied(true);
@@ -185,7 +185,7 @@ export const LiveTrackingModal: React.FC<LiveTrackingModalProps> = ({
               {/* Map grid lines / styling */}
               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
               
-              {/* Visakhapatnam Road Network Overlay lines */}
+              {/* Bengaluru Airport Expressway Road Network Overlay lines */}
               <svg className="w-full h-full absolute inset-0 pointer-events-none" viewBox="0 0 600 300">
                 {/* Coastal Highway Route */}
                 <path
@@ -284,7 +284,7 @@ export const LiveTrackingModal: React.FC<LiveTrackingModalProps> = ({
                   </div>
                   <div>
                     <div className="flex items-center gap-1.5">
-                      <h4 className="font-bold text-slate-900 text-sm">Waltair Cabs Operations</h4>
+                      <h4 className="font-bold text-slate-900 text-sm">Tiyanshi Airport Taxi Operations</h4>
                       <span className="text-xs bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.2 rounded-md">
                         Verified Dispatch
                       </span>
@@ -301,7 +301,7 @@ export const LiveTrackingModal: React.FC<LiveTrackingModalProps> = ({
                 <div className="flex items-center gap-2">
                   <a
                     href={`https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encodeURIComponent(
-                      `Hi Waltair Cabs, checking on status for Booking ID ${activeBooking.bookingRef} (${activeBooking.customerName}).`
+                      `Hi Tiyanshi Airport Taxi, checking on status for Booking ID ${activeBooking.bookingRef} (${activeBooking.customerName}).`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -369,7 +369,7 @@ export const LiveTrackingModal: React.FC<LiveTrackingModalProps> = ({
                   }`}
                 >
                   <ShieldAlert className="w-4 h-4" />
-                  <span>{sosActive ? '🚨 SOS Alert Dispatched to Police & Waltair HQ' : 'Emergency SOS'}</span>
+                  <span>{sosActive ? '🚨 SOS Alert Dispatched to Police & Tiyanshi HQ' : 'Emergency SOS'}</span>
                 </button>
 
                 <button
@@ -383,11 +383,11 @@ export const LiveTrackingModal: React.FC<LiveTrackingModalProps> = ({
               </div>
 
               <a
-                href="tel:+919123456789"
+                href="tel:+917676252579"
                 className="text-xs text-cyan-700 hover:underline font-semibold flex items-center gap-1"
               >
                 <Phone className="w-3 h-3" />
-                24x7 Control Room: +91 91234 56789
+                24x7 Control Room: +91 76762 52579
               </a>
             </div>
 

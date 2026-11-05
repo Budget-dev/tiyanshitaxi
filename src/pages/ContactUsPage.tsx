@@ -52,9 +52,9 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
       console.warn('Inquiry submission fallback:', err);
       // Fallback save to localStorage
       try {
-        const existing = JSON.parse(localStorage.getItem('waltair_offline_inquiries') || '[]');
+        const existing = JSON.parse(localStorage.getItem('tiyanshi_offline_inquiries') || '[]');
         existing.push({ ...formData, createdAt: new Date().toISOString() });
-        localStorage.setItem('waltair_offline_inquiries', JSON.stringify(existing));
+        localStorage.setItem('tiyanshi_offline_inquiries', JSON.stringify(existing));
       } catch {
         // ignore
       }
@@ -66,43 +66,43 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
 
   const dispatchLocations = [
     {
-      title: 'Headquarters & Operations Desk',
-      address: 'Waltair Uplands, Siripuram Circle, Visakhapatnam, AP - 530003',
+      title: 'Headquarters & Airport Operations Desk',
+      address: 'Kempegowda International Airport Terminal Road, Devanahalli, Bengaluru, Karnataka 560300',
       timings: '24 Hours Open / 365 Days',
-      phone: '+91 94418 73821',
+      phone: '+91 76762 52579',
       icon: Building2,
-      badge: 'Main HQ'
+      badge: 'Main Airport HQ'
     },
     {
-      title: 'Bhogapuram Airport Transit Counter',
-      address: 'Near NH-16 Airport Expressway Junction, Bhogapuram, AP',
-      timings: 'Synchronized with Flight Schedules',
-      phone: '+91 94418 73821',
+      title: 'Kempegowda Airport (BLR) T1 & T2 Transit Counter',
+      address: 'Arrival Hall Pickup Zone, Kempegowda Int\'l Airport, Devanahalli, Bengaluru',
+      timings: 'Synchronized 24/7 with Flight Arrivals',
+      phone: '+91 76762 52579',
       icon: Plane,
-      badge: 'Airport Terminal'
+      badge: 'BLR Terminal Desk'
     },
     {
-      title: 'Railway Station Pickup Point',
-      address: 'Platform 1 & 8 Passenger Exits, Visakhapatnam Junction (VSKP)',
-      timings: '24/7 Train Arrivals',
-      phone: '+91 94418 73821',
+      title: 'Central City Operations Point',
+      address: 'MG Road / Indiranagar Metro Station Interchange, Bengaluru, Karnataka 560001',
+      timings: '24/7 Fast City Dispatch',
+      phone: '+91 76762 52579',
       icon: Train,
-      badge: 'Rail Kiosk'
+      badge: 'City Center'
     }
   ];
 
   return (
     <>
       <SEOHead
-        title="Contact Waltair Cabs | 24/7 Taxi Booking Visakhapatnam"
-        description="Contact Waltair Cabs in Visakhapatnam. 24/7 taxi booking hotline +91 94418 73821, WhatsApp dispatch desk, and office located at Waltair Uplands, Siripuram."
+        title="Contact Tiyanshi Airport Taxi | 24/7 Bangalore Airport Taxi Booking"
+        description="Contact Tiyanshi Airport Taxi in Bengaluru. 24/7 Bangalore airport taxi booking hotline +91 76762 52579, WhatsApp dispatch desk, and office located at Kempegowda International Airport, Devanahalli."
         canonicalPath="/contact-us"
         keywords={[
-          'contact waltair cabs vizag',
-          'vizag cab booking phone number',
-          'taxi office visakhapatnam',
-          'waltair cabs customer care',
-          'visakhapatnam airport taxi booking number'
+          'contact Tiyanshi Airport Taxi bangalore',
+          'bangalore airport cab booking phone number',
+          'kempegowda airport taxi office',
+          'Tiyanshi Airport Taxi customer care',
+          'bangalore airport taxi booking number'
         ]}
         breadcrumbs={[
           { name: 'Home', item: '/' },
@@ -110,7 +110,7 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
         ]}
       />
       <PageLayout
-        title="Contact Waltair Cabs"
+        title="Contact Tiyanshi Airport Taxi"
         subtitle="24/7 Operations Desk, Airport Transit Dispatch, and Dedicated Corporate Mobility Support. Always a call or message away."
         categoryBadge="Customer Support & Office"
         breadcrumbs={[{ label: 'Contact Us' }]}
@@ -127,7 +127,7 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
         {/* Quick Contact Action Banner */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a
-            href="tel:+919441873821"
+            href="tel:+917676252579"
             className="p-6 rounded-3xl bg-white border border-slate-200 shadow-md hover:border-teal-500 transition-all flex items-start gap-4 group"
           >
             <div className="p-3.5 rounded-2xl bg-teal-50 text-teal-700 group-hover:bg-teal-700 group-hover:text-white transition-colors">
@@ -136,14 +136,14 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
             <div>
               <div className="text-[11px] uppercase tracking-wider text-slate-500 font-bold">Direct Phone Dispatch</div>
               <div className="text-lg font-black text-slate-900 group-hover:text-teal-700 transition-colors mt-0.5">
-                +91 94418 73821
+                +91 76762 52579
               </div>
               <div className="text-xs text-slate-500 mt-1">Available 24x7 for urgent rides</div>
             </div>
           </a>
 
           <a
-            href="https://wa.me/919441873821?text=Hi%20Waltair%20Travels,%20I%20would%20like%20to%20inquire%20about%20a%20cab%20booking."
+            href="https://wa.me/917676252579?text=Hi%20Tiyanshi%20Airport%20Taxi,%20I%20would%20like%20to%20inquire%20about%20a%20cab%20booking."
             target="_blank"
             rel="noopener noreferrer"
             className="p-6 rounded-3xl bg-white border border-slate-200 shadow-md hover:border-emerald-500 transition-all flex items-start gap-4 group"
@@ -161,7 +161,7 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
           </a>
 
           <a
-            href="mailto:info@waltairtravels.com"
+            href="mailto:info@tiyanshiairporttaxi.com"
             className="p-6 rounded-3xl bg-white border border-slate-200 shadow-md hover:border-cyan-500 transition-all flex items-start gap-4 group"
           >
             <div className="p-3.5 rounded-2xl bg-cyan-50 text-cyan-700 group-hover:bg-cyan-700 group-hover:text-white transition-colors">
@@ -170,7 +170,7 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
             <div>
               <div className="text-[11px] uppercase tracking-wider text-slate-500 font-bold">Corporate & Invoicing</div>
               <div className="text-lg font-black text-slate-900 group-hover:text-cyan-700 transition-colors mt-0.5">
-                info@waltairtravels.com
+                info@tiyanshiairporttaxi.com
               </div>
               <div className="text-xs text-slate-500 mt-1">GST invoices & contract requests</div>
             </div>
@@ -225,7 +225,7 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
               <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center gap-3">
                 <ShieldCheck className="w-6 h-6 text-emerald-700 shrink-0" />
                 <div className="text-xs text-slate-700">
-                  <strong className="text-slate-900 font-bold">100% Commercial AP Permits:</strong> All Waltair vehicles hold state-wide valid tourist permits, insurance, and emergency GPS SOS tracking.
+                  <strong className="text-slate-900 font-bold">100% Commercial AP Permits:</strong> All Tiyanshi vehicles hold state-wide valid tourist permits, insurance, and emergency GPS SOS tracking.
                 </div>
               </div>
             </div>
@@ -286,7 +286,7 @@ export const ContactUsPage: React.FC<ContactUsPageProps> = ({
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 98480 12345"
+                        placeholder="+91 76762 52579"
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-teal-600 focus:bg-white transition-colors"
                       />
                     </div>
